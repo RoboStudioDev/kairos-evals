@@ -1,0 +1,20 @@
+{
+  "case": "ezra-not-chosen",
+  "model": "gemini-4-argon",
+  "repeat": 2,
+  "verdict": {
+    "focusFit": 5,
+    "focusReason": "The outline perfectly frames the bakery's flooding and community-led rebuilding as a resilience narrative tailored directly for family and neighbors.",
+    "unsupported": []
+  },
+  "response": {
+    "text": "{\n  \"focusFit\": 5,\n  \"focusReason\": \"The outline perfectly frames the bakery's flooding and community-led rebuilding as a resilience narrative tailored directly for family and neighbors.\",\n  \"unsupported\": []\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 4.17,
+    "inputTokens": 1733,
+    "outputTokens": 440,
+    "thinkingTokens": 389,
+    "costUsd": 0.0059
+  }
+}

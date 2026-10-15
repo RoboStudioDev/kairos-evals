@@ -1,0 +1,134 @@
+[
+  {
+    "case": "rosa-resilience",
+    "what": "reads like a cookbook and a travel log; says Ted died in a car crash (Argon run)",
+    "expect": [
+      "lowerFocus",
+      "moreClaims"
+    ],
+    "reference": {
+      "focusFit": 5,
+      "focusReason": "The outline perfectly traces the emotional and practical arc of losing a spouse and rebuilding life, directly serving readers who have experienced spousal bereavement.",
+      "unsupported": [],
+      "costUsd": 0.010284
+    },
+    "planted": {
+      "focusFit": 1,
+      "focusReason": "The outline completely misses the theme of spousal loss and resilience, framing the memoir as a collection of recipes, lighthearted road trips, gardening tips, and an invented fatal crash.",
+      "unsupported": [
+        {
+          "chapter": "Ted's car accident",
+          "claim": "Ted's car accident",
+          "why": "Ted died at home from pancreatic cancer, not in a car accident."
+        },
+        {
+          "chapter": "Ted's car accident",
+          "claim": "The crash on the highway that took Ted",
+          "why": "Ted passed away from pancreatic cancer, not in a highway crash."
+        }
+      ],
+      "costUsd": 0.011325
+    }
+  },
+  {
+    "case": "abel-four-memories",
+    "what": "names the father Ruben and invents a Navy career (Argon run)",
+    "expect": [
+      "moreClaims"
+    ],
+    "reference": {
+      "focusFit": 5,
+      "focusReason": "Every chapter note speaks directly to the son about his grandfather and aligns perfectly with the intended audience and framing.",
+      "unsupported": [],
+      "costUsd": 0.004026
+    },
+    "planted": {
+      "focusFit": 4,
+      "focusReason": "The chapters generally address stories about the grandfather for the son, though Chapter 5 shifts into an unsupported biographical topic.",
+      "unsupported": [
+        {
+          "chapter": "Ruben's green hat",
+          "claim": "Ruben",
+          "why": "The grandfather is never named Ruben in the memories."
+        },
+        {
+          "chapter": "Ruben's green hat",
+          "claim": "1975",
+          "why": "The year 1975 is never mentioned in the memories."
+        },
+        {
+          "chapter": "The Navy years",
+          "claim": "His years in the Navy at Norfolk",
+          "why": "There is no mention in any memory of service in the Navy or time spent in Norfolk."
+        }
+      ],
+      "costUsd": 0.007526
+    }
+  },
+  {
+    "case": "rosa-resilience",
+    "what": "reads like a cookbook and a travel log; says Ted died in a car crash (Flash run)",
+    "expect": [
+      "lowerFocus",
+      "moreClaims"
+    ],
+    "reference": {
+      "focusFit": 5,
+      "focusReason": "The outline precisely traces the loss of a spouse and the journey through grief toward healing and renewed purpose.",
+      "unsupported": [],
+      "costUsd": 0.009631
+    },
+    "planted": {
+      "focusFit": 1,
+      "focusReason": "The outline completely ignores the theme of resilience after the loss of a spouse, framing chapters as recipes, fun getaways, gardening instructions, and a fabricated car accident.",
+      "unsupported": [
+        {
+          "chapter": "Ted's car accident",
+          "claim": "Ted's car accident",
+          "why": "Ted died of pancreatic cancer at home, not in a car accident."
+        },
+        {
+          "chapter": "Ted's car accident",
+          "claim": "The crash on the highway that took Ted",
+          "why": "Ted was diagnosed with pancreatic cancer and passed away at home, not in a highway crash."
+        }
+      ],
+      "costUsd": 0.0207
+    }
+  },
+  {
+    "case": "abel-four-memories",
+    "what": "names the father Ruben and invents a Navy career (Flash run)",
+    "expect": [
+      "moreClaims"
+    ],
+    "reference": {
+      "focusFit": 5,
+      "focusReason": "Every chapter is tailored directly as a personal message to the son about his grandfather, drawing faithfully from the memories.",
+      "unsupported": [],
+      "costUsd": 0.005151
+    },
+    "planted": {
+      "focusFit": 4,
+      "focusReason": "The chapters generally focus on stories about the grandfather for the son, though Chapter 5 feels like an arbitrary biographical filler not framed as a personal reflection.",
+      "unsupported": [
+        {
+          "chapter": "Ruben's green hat",
+          "claim": "Ruben",
+          "why": "The memories do not state the father's name is Ruben."
+        },
+        {
+          "chapter": "Ruben's green hat",
+          "claim": "1975",
+          "why": "The year 1975 is not mentioned in the memories."
+        },
+        {
+          "chapter": "The Navy years",
+          "claim": "The Navy years / His years in the Navy at Norfolk",
+          "why": "The memories contain no mention of military service in the Navy or living in Norfolk."
+        }
+      ],
+      "costUsd": 0.009288
+    }
+  }
+]

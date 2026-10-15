@@ -1,0 +1,20 @@
+{
+  "case": "ida-shuffled",
+  "model": "gemini-3.8-flash",
+  "repeat": 2,
+  "verdict": {
+    "focusFit": 5,
+    "focusReason": "The chapters follow the arc of Ida's life in clear chronological sequence, covering childhood, early adulthood, her career at the paper, and later community life.",
+    "unsupported": []
+  },
+  "response": {
+    "text": "{\n \"focusFit\": 5,\n \"focusReason\": \"The chapters follow the arc of Ida's life in clear chronological sequence, covering childhood, early adulthood, her career at the paper, and later community life.\",\n \"unsupported\": []\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 42.0,
+    "inputTokens": 1531,
+    "outputTokens": 641,
+    "thinkingTokens": 586,
+    "costUsd": 0.007104
+  }
+}

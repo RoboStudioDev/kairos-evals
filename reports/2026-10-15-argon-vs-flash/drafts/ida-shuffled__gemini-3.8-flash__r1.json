@@ -1,0 +1,16 @@
+{
+  "case": "ida-shuffled",
+  "model": "gemini-3.8-flash",
+  "repeat": 1,
+  "promptSha": "5f5022fef07e41cb",
+  "response": {
+    "text": "{\n  \"bookType\": \"life\",\n  \"chapters\": [\n    {\n      \"title\": \"Growing Up in the County\",\n      \"note\": \"Childhood on the farm, family memories, and early school days.\",\n      \"entryIds\": [\"im01\", \"im02\", \"im03\"]\n    },\n    {\n      \"title\": \"Leaving and Returning Home\",\n      \"note\": \"Starting out in Merriton and returning to help on the family farm.\",\n      \"entryIds\": [\"im04\", \"im05\"]\n    },\n    {\n      \"title\": \"The Brindle Courier\",\n      \"note\": \"Starting at the paper, serving as editor, and years of local reporting.\",\n      \"entryIds\": [\"im06\", \"im07\", \"im08\", \"im09\"]\n    },\n    {\n      \"title\": \"Later Years and Legacy\",\n      \"note\": \"Serving on county council, stitching memories, and family traditions.\",\n      \"entryIds\": [\"im10\", \"im11\", \"im12\"]\n    }\n  ]\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 31.72,
+    "inputTokens": 1117,
+    "outputTokens": 1761,
+    "thinkingTokens": 1508,
+    "costUsd": 0.014883
+  }
+}

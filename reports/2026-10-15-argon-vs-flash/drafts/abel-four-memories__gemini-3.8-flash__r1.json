@@ -1,0 +1,16 @@
+{
+  "case": "abel-four-memories",
+  "model": "gemini-3.8-flash",
+  "repeat": 1,
+  "promptSha": "718ab4b8ff13ba69",
+  "response": {
+    "text": "{\"bookType\": null, \"chapters\": [{\"title\": \"The Early Years with Dad\", \"note\": \"Stories of your grandfather's quirks, his patience, and learning from him.\", \"entryIds\": [\"am01\", \"am02\"]}, {\"title\": \"When You Arrived\", \"note\": \"The day your grandfather first held you in his arms.\", \"entryIds\": [\"am03\"]}, {\"title\": \"One Last Cast\", \"note\": \"Our final fishing trip together at Lake Orrin.\", \"entryIds\": [\"am04\"]}]}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 7.76,
+    "inputTokens": 561,
+    "outputTokens": 858,
+    "thinkingTokens": 741,
+    "costUsd": 0.007276
+  }
+}

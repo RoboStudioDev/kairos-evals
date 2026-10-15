@@ -1,0 +1,20 @@
+{
+  "case": "ida-shuffled",
+  "model": "gemini-4-argon",
+  "repeat": 1,
+  "verdict": {
+    "focusFit": 5,
+    "focusReason": "The outline follows the member's life chronologically from childhood through career and later years, perfectly matching a whole-life memoir.",
+    "unsupported": []
+  },
+  "response": {
+    "text": "{\"focusFit\": 5, \"focusReason\": \"The outline follows the member's life chronologically from childhood through career and later years, perfectly matching a whole-life memoir.\", \"unsupported\": []}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 6.67,
+    "inputTokens": 1534,
+    "outputTokens": 889,
+    "thinkingTokens": 845,
+    "costUsd": 0.008969
+  }
+}

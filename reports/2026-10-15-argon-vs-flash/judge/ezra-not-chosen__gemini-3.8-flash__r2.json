@@ -1,0 +1,26 @@
+{
+  "case": "ezra-not-chosen",
+  "model": "gemini-3.8-flash",
+  "repeat": 2,
+  "verdict": {
+    "focusFit": 5,
+    "focusReason": "The outline strongly centers on enduring and rebuilding after the flood with the support of the Ostrander Flats community.",
+    "unsupported": [
+      {
+        "chapter": "The Next Batch",
+        "claim": "the river",
+        "why": "The memories specify the waterway is a canal, not a river."
+      }
+    ]
+  },
+  "response": {
+    "text": "{\n \"focusFit\": 5,\n \"focusReason\": \"The outline strongly centers on enduring and rebuilding after the flood with the support of the Ostrander Flats community.\",\n \"unsupported\": [\n  {\n   \"chapter\": \"The Next Batch\",\n   \"claim\": \"the river\",\n   \"why\": \"The memories specify the waterway is a canal, not a river.\"\n  }\n ]\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 18.4,
+    "inputTokens": 1785,
+    "outputTokens": 2159,
+    "thinkingTokens": 2068,
+    "costUsd": 0.01887
+  }
+}

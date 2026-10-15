@@ -1,0 +1,20 @@
+{
+  "case": "june-selfhelp-kept",
+  "model": "gemini-4-argon",
+  "repeat": 1,
+  "verdict": {
+    "focusFit": 5,
+    "focusReason": "Every chapter title and note directly frames the author's experiences as actionable, hard-won lessons tailored specifically for young people starting a business.",
+    "unsupported": []
+  },
+  "response": {
+    "text": "{\n \"focusFit\": 5,\n \"focusReason\": \"Every chapter title and note directly frames the author's experiences as actionable, hard-won lessons tailored specifically for young people starting a business.\",\n \"unsupported\": []\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 17.22,
+    "inputTokens": 1591,
+    "outputTokens": 766,
+    "thinkingTokens": 715,
+    "costUsd": 0.008131
+  }
+}

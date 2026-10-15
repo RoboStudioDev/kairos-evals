@@ -1,0 +1,16 @@
+{
+  "case": "ida-shuffled",
+  "model": "gemini-3.8-flash",
+  "repeat": 3,
+  "promptSha": "5f5022fef07e41cb",
+  "response": {
+    "text": "{\n  \"bookType\": \"life\",\n  \"chapters\": [\n    {\n      \"title\": \"Coldwater Road\",\n      \"note\": \"Early memories of childhood, family, and growing up on the farm.\",\n      \"entryIds\": [\"im01\", \"im02\", \"im03\"]\n    },\n    {\n      \"title\": \"Finding My Way Back\",\n      \"note\": \"Leaving for the city typing pool and returning home to help Father.\",\n      \"entryIds\": [\"im04\", \"im05\"]\n    },\n    {\n      \"title\": \"The Courier\",\n      \"note\": \"From answering a want ad to leading the county paper for decades.\",\n      \"entryIds\": [\"im06\", \"im07\", \"im08\", \"im09\"]\n    },\n    {\n      \"title\": \"Full Circle\",\n      \"note\": \"Serving the county, stitching together memories, and family legacy.\",\n      \"entryIds\": [\"im10\", \"im11\", \"im12\"]\n    }\n  ]\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 8.9,
+    "inputTokens": 1117,
+    "outputTokens": 1554,
+    "thinkingTokens": 1310,
+    "costUsd": 0.013331
+  }
+}

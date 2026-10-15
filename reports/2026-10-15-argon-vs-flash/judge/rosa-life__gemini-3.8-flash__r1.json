@@ -1,0 +1,20 @@
+{
+  "case": "rosa-life",
+  "model": "gemini-3.8-flash",
+  "repeat": 1,
+  "verdict": {
+    "focusFit": 5,
+    "focusReason": "The outline seamlessly covers the author's full life in chronological order and is thoughtfully framed for their grandchildren.",
+    "unsupported": []
+  },
+  "response": {
+    "text": "{\n \"focusFit\": 5,\n \"focusReason\": \"The outline seamlessly covers the author's full life in chronological order and is thoughtfully framed for their grandchildren.\",\n \"unsupported\": []\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 6.28,
+    "inputTokens": 2507,
+    "outputTokens": 539,
+    "thinkingTokens": 495,
+    "costUsd": 0.007803
+  }
+}

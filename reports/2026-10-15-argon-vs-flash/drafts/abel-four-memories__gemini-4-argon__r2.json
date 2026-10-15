@@ -1,0 +1,16 @@
+{
+  "case": "abel-four-memories",
+  "model": "gemini-4-argon",
+  "repeat": 2,
+  "promptSha": "defaffb2f98a440c",
+  "response": {
+    "text": "{\n  \"bookType\": null,\n  \"chapters\": [\n    {\n      \"title\": \"Who He Was to Me\",\n      \"note\": \"The quiet, stubborn, and patient man who raised me.\",\n      \"entryIds\": [\n        \"am01\",\n        \"am02\"\n      ]\n    },\n    {\n      \"title\": \"The Day He Met You\",\n      \"note\": \"When my father became your grandfather.\",\n      \"entryIds\": [\n        \"am03\"\n      ]\n    },\n    {\n      \"title\": \"Our Last Days on the Water\",\n      \"note\": \"Saying goodbye at Lake Orrin.\",\n      \"entryIds\": [\n        \"am04\"\n      ]\n    }\n  ]\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-4-argon",
+    "seconds": 4.47,
+    "inputTokens": 652,
+    "outputTokens": 181,
+    "thinkingTokens": 0,
+    "costUsd": 0.003114
+  }
+}

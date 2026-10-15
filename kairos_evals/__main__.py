@@ -48,9 +48,9 @@ def _print_estimate(est: dict, max_usd: float | None = None) -> None:
     for line in est["lines"]:
         print(f"  {line['what']:50} {line['calls']:>5} {line['likely']:>8.2f} {line['ceiling']:>8.2f}")
     print(f"  {'TOTAL':50} {est['calls']:>5} {est['likely']:>8.2f} {est['ceiling']:>8.2f}\n")
-    print("  'likely' assumes about 400 output tokens per draft and 1,000 per judge reading, thinking")
-    print("  included (what the first run measured, rounded up). 'at most' is every call using its full")
-    print("  output allowance, the most Google can bill.")
+    print("  'likely' assumes the output measured on 2026-10-15, rounded up and thinking included: about")
+    print("  400 tokens per Argon draft, 2,000 per Flash draft, 1,000 per judge reading. 'at most' is")
+    print("  every call using its full output allowance, the most Google can bill.")
     if max_usd is not None:
         print(f"  This run stops itself if spending would pass ${max_usd:.2f}.")
     print()

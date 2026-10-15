@@ -1,0 +1,20 @@
+{
+  "case": "rosa-life",
+  "model": "gemini-4-argon",
+  "repeat": 3,
+  "verdict": {
+    "focusFit": 5,
+    "focusReason": "The outline chronologically charts the author's full life journey from childhood to retirement and family milestones, creating a cohesive and heartfelt memoir for her grandchildren while appropriately omitting mundane administrative logs.",
+    "unsupported": []
+  },
+  "response": {
+    "text": "{\n \"focusFit\": 5,\n \"focusReason\": \"The outline chronologically charts the author's full life journey from childhood to retirement and family milestones, creating a cohesive and heartfelt memoir for her grandchildren while appropriately omitting mundane administrative logs.\",\n \"unsupported\": []\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 4.51,
+    "inputTokens": 2537,
+    "outputTokens": 638,
+    "thinkingTokens": 579,
+    "costUsd": 0.00859
+  }
+}

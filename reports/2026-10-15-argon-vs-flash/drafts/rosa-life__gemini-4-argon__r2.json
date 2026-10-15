@@ -1,0 +1,16 @@
+{
+  "case": "rosa-life",
+  "model": "gemini-4-argon",
+  "repeat": 2,
+  "promptSha": "e1f1ba275d1432e1",
+  "response": {
+    "text": "{\"bookType\": null, \"chapters\": [{\"title\": \"Growing Up in Larkspur Bend\", \"note\": \"Childhood days in Papa's shoe shop, skating on the river, and family life before graduation.\", \"entryIds\": [\"rv01\", \"rv02\", \"rv03\", \"rv04\"]}, {\"title\": \"Corran City and Meeting Ted\", \"note\": \"Leaving home for nursing school, learning the ropes on Ward Four, and meeting Ted.\", \"entryIds\": [\"rv05\", \"rv06\", \"rv07\", \"rv08\"]}, {\"title\": \"The Willet Road Years\", \"note\": \"Raising June and Sam, ordinary evenings at the kitchen table, and becoming head nurse.\", \"entryIds\": [\"rv09\", \"rv10\", \"rv11\", \"rv12\"]}, {\"title\": \"Losing Ted and Finding My Way\", \"note\": \"Ted's illness and passing, the quiet months after, and finding friendship and courage again.\", \"entryIds\": [\"rv13\", \"rv14\", \"rv15\", \"rv16\", \"rv17\", \"rv18\"]}, {\"title\": \"The Chapters After\", \"note\": \"Retiring after forty-three years of nursing, watching grandchildren grow, and seeing the ocean.\", \"entryIds\": [\"rv19\", \"rv20\", \"rv21\"]}]}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-4-argon",
+    "seconds": 5.2,
+    "inputTokens": 1914,
+    "outputTokens": 304,
+    "thinkingTokens": 0,
+    "costUsd": 0.006868
+  }
+}

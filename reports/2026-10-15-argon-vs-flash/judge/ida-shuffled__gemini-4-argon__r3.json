@@ -1,0 +1,20 @@
+{
+  "case": "ida-shuffled",
+  "model": "gemini-4-argon",
+  "repeat": 3,
+  "verdict": {
+    "focusFit": 5,
+    "focusReason": "The chapters follow a clean chronological arc through Ida's life from childhood on the farm to career and retirement.",
+    "unsupported": []
+  },
+  "response": {
+    "text": "{\n  \"focusFit\": 5,\n  \"focusReason\": \"The chapters follow a clean chronological arc through Ida's life from childhood on the farm to career and retirement.\",\n  \"unsupported\": []\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 4.93,
+    "inputTokens": 1540,
+    "outputTokens": 561,
+    "thinkingTokens": 513,
+    "costUsd": 0.006517
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "case": "rosa-life",
+  "model": "gemini-3.8-flash",
+  "repeat": 3,
+  "promptSha": "8c633490c0b8f297",
+  "response": {
+    "text": "{\n  \"bookType\": null,\n  \"chapters\": [\n    {\n      \"title\": \"Growing Up in Larkspur Bend\",\n      \"note\": \"Memories of childhood with Mama and Papa, school, and growing up in Larkspur Bend.\",\n      \"entryIds\": [\"rv01\", \"rv02\", \"rv03\", \"rv04\"]\n    },\n    {\n      \"title\": \"Corran City and Meeting Ted\",\n      \"note\": \"Leaving home for nursing school, working on Ward Four, and getting married.\",\n      \"entryIds\": [\"rv05\", \"rv06\", \"rv07\", \"rv08\"]\n    },\n    {\n      \"title\": \"Willet Road and Family Years\",\n      \"note\": \"Raising June and Sam, nursing at Corran General, and everyday life at the kitchen table.\",\n      \"entryIds\": [\"rv09\", \"rv10\", \"rv11\", \"rv12\"]\n    },\n    {\n      \"title\": \"Saying Goodbye\",\n      \"note\": \"Ted's illness and passing, and the hard early months of grief.\",\n      \"entryIds\": [\"rv13\", \"rv14\", \"rv15\", \"rv16\"]\n    },\n    {\n      \"title\": \"Finding My Way Forward\",\n      \"note\": \"Learning to drive alone, Ted's Garden, retirement, and watching grandchildren grow.\",\n      \"entryIds\": [\"rv17\", \"rv18\", \"rv19\", \"rv20\", \"rv21\"]\n    }\n  ]\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 13.67,
+    "inputTokens": 1843,
+    "outputTokens": 1833,
+    "thinkingTokens": 1473,
+    "costUsd": 0.016512
+  }
+}

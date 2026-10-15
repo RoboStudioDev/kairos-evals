@@ -1,0 +1,16 @@
+{
+  "case": "june-selfhelp-kept",
+  "model": "gemini-4-argon",
+  "repeat": 3,
+  "promptSha": "0540625ce69aa941",
+  "response": {
+    "text": "{\"bookType\": null, \"chapters\": [{\"title\": \"Starting with what you have\", \"note\": \"How to get your first customers with a small budget and simple tools.\", \"entryIds\": [\"jh01\"]}, {\"keep\": \"price-out-loud\"}, {\"title\": \"Mistakes, bids, and bad deals\", \"note\": \"Making things right when you fail, tracking your costs, and knowing when to walk away.\", \"entryIds\": [\"jh04\", \"jh05\", \"jh06\"]}, {\"keep\": \"first-hire\"}, {\"title\": \"Keeping the crew paid in hard times\", \"note\": \"Finding a way through a downturn by putting your people first.\", \"entryIds\": [\"jh07\"]}, {\"title\": \"Letting go of the wheel\", \"note\": \"Learning to trust your people, set boundaries, and pass the business on.\", \"entryIds\": [\"jh09\", \"jh10\", \"jh11\"]}]}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-4-argon",
+    "seconds": 20.77,
+    "inputTokens": 1049,
+    "outputTokens": 209,
+    "thinkingTokens": 0,
+    "costUsd": 0.004188
+  }
+}

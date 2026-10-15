@@ -1,0 +1,20 @@
+{
+  "case": "rosa-life",
+  "model": "gemini-4-argon",
+  "repeat": 2,
+  "verdict": {
+    "focusFit": 5,
+    "focusReason": "The outline chronologically captures the author's full life journey from childhood to later years, beautifully tailored as a family legacy for her grandchildren while appropriately omitting trivial administrative notes.",
+    "unsupported": []
+  },
+  "response": {
+    "text": "{\n  \"focusFit\": 5,\n  \"focusReason\": \"The outline chronologically captures the author's full life journey from childhood to later years, beautifully tailored as a family legacy for her grandchildren while appropriately omitting trivial administrative notes.\",\n  \"unsupported\": []\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 14.64,
+    "inputTokens": 2474,
+    "outputTokens": 1383,
+    "thinkingTokens": 1323,
+    "costUsd": 0.014084
+  }
+}

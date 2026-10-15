@@ -1,0 +1,16 @@
+{
+  "case": "rosa-resilience",
+  "model": "gemini-4-argon",
+  "repeat": 1,
+  "promptSha": "7439b340873c6926",
+  "response": {
+    "text": "{\"bookType\": null, \"chapters\": [{\"title\": \"What We Built Together\", \"note\": \"Meeting Ted, raising June and Sam, and the quiet joy of our ordinary days on Willet Road.\", \"entryIds\": [\"rv07\", \"rv08\", \"rv09\", \"rv10\", \"rv11\", \"rv12\"]}, {\"title\": \"The Long Goodbye\", \"note\": \"Ted's diagnosis, the deck he finished, and his last morning at home.\", \"entryIds\": [\"rv13\", \"rv14\"]}, {\"title\": \"The Empty Side of the Bed\", \"note\": \"The quiet months after Ted died and finding a friend who understood.\", \"entryIds\": [\"rv15\", \"rv16\"]}, {\"title\": \"Finding My Footing\", \"note\": \"Learning to do things on my own and planting something new with Hattie.\", \"entryIds\": [\"rv17\", \"rv18\"]}, {\"title\": \"The Life That Kept Growing\", \"note\": \"Retiring from nursing, watching my granddaughter grow, and carrying Ted with me to the ocean.\", \"entryIds\": [\"rv19\", \"rv20\", \"rv21\"]}]}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-4-argon",
+    "seconds": 4.91,
+    "inputTokens": 1911,
+    "outputTokens": 261,
+    "thinkingTokens": 0,
+    "costUsd": 0.006432
+  }
+}

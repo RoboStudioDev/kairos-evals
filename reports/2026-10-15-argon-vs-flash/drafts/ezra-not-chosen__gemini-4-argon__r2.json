@@ -1,0 +1,16 @@
+{
+  "case": "ezra-not-chosen",
+  "model": "gemini-4-argon",
+  "repeat": 2,
+  "promptSha": "bfb99e06b074747b",
+  "response": {
+    "text": "{\"bookType\": \"resilience\", \"chapters\": [{\"title\": \"Learning the Trade\", \"note\": \"Starting out with Uncle Remy and opening Crumb & Kettle on Canal Street.\", \"entryIds\": [\"ep01\", \"ep02\", \"ep03\", \"ep04\"]}, {\"title\": \"When the Canal Came Over\", \"note\": \"The flood that ruined the bakery and the hard days that followed.\", \"entryIds\": [\"ep05\", \"ep06\", \"ep07\"]}, {\"title\": \"Ostrander Flats Steps In\", \"note\": \"Baking in the church basement and the neighbors who brought the shop back.\", \"entryIds\": [\"ep08\", \"ep09\", \"ep10\"]}, {\"title\": \"Higher Ground\", \"note\": \"Adapting after the flood and passing the craft to Nia and local kids.\", \"entryIds\": [\"ep11\", \"ep12\", \"ep13\"]}]}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-4-argon",
+    "seconds": 4.0,
+    "inputTokens": 1382,
+    "outputTokens": 206,
+    "thinkingTokens": 0,
+    "costUsd": 0.004824
+  }
+}

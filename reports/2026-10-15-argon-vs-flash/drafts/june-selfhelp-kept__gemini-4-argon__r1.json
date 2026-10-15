@@ -1,0 +1,16 @@
+{
+  "case": "june-selfhelp-kept",
+  "model": "gemini-4-argon",
+  "repeat": 1,
+  "promptSha": "0540625ce69aa941",
+  "response": {
+    "text": "{\"bookType\": null, \"chapters\": [{\"title\": \"Starting with what you have\", \"note\": \"How to begin with almost nothing and win trust when you make mistakes.\", \"entryIds\": [\"jh01\", \"jh04\"]}, {\"keep\": \"price-out-loud\"}, {\"title\": \"Knowing your numbers and when to walk away\", \"note\": \"Tracking what jobs really cost and turning down bad terms.\", \"entryIds\": [\"jh05\", \"jh06\"]}, {\"keep\": \"first-hire\"}, {\"title\": \"Taking care of your people\", \"note\": \"Keeping the crew paid in hard times and learning to let them lead.\", \"entryIds\": [\"jh07\", \"jh09\"]}, {\"title\": \"Stepping back and letting go\", \"note\": \"Setting boundaries before you burn out, and passing the business on.\", \"entryIds\": [\"jh10\", \"jh11\"]}]}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-4-argon",
+    "seconds": 4.28,
+    "inputTokens": 1049,
+    "outputTokens": 200,
+    "thinkingTokens": 0,
+    "costUsd": 0.004098
+  }
+}

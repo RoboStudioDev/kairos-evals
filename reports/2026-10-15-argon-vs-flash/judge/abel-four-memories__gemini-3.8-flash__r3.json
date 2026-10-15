@@ -1,0 +1,20 @@
+{
+  "case": "abel-four-memories",
+  "model": "gemini-3.8-flash",
+  "repeat": 3,
+  "verdict": {
+    "focusFit": 5,
+    "focusReason": "The chapters directly address the son and focus entirely on sharing memories and stories about his grandfather.",
+    "unsupported": []
+  },
+  "response": {
+    "text": "{\n  \"focusFit\": 5,\n  \"focusReason\": \"The chapters directly address the son and focus entirely on sharing memories and stories about his grandfather.\",\n  \"unsupported\": []\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 52.07,
+    "inputTokens": 780,
+    "outputTokens": 416,
+    "thinkingTokens": 372,
+    "costUsd": 0.00429
+  }
+}

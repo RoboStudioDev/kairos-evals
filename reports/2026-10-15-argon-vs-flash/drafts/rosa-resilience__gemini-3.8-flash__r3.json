@@ -1,0 +1,16 @@
+{
+  "case": "rosa-resilience",
+  "model": "gemini-3.8-flash",
+  "repeat": 3,
+  "promptSha": "d486dfde10e5aa83",
+  "response": {
+    "text": "{\"bookType\": null, \"chapters\": [{\"title\": \"Building a Life Together\", \"note\": \"Meeting Ted, raising our children, and the happy years we shared.\", \"entryIds\": [\"rv07\", \"rv08\", \"rv09\", \"rv10\", \"rv11\", \"rv12\"]}, {\"title\": \"Saying Goodbye\", \"note\": \"Ted's illness, finishing the deck, and his final morning at home.\", \"entryIds\": [\"rv13\", \"rv14\"]}, {\"title\": \"The Quiet After\", \"note\": \"Facing the empty house and finding friendship in the Tuesday grief group.\", \"entryIds\": [\"rv15\", \"rv16\"]}, {\"title\": \"Learning to Stand\", \"note\": \"Driving the highway alone, planting Ted's Garden, and retiring from nursing.\", \"entryIds\": [\"rv17\", \"rv18\", \"rv19\"]}, {\"title\": \"Looking Ahead\", \"note\": \"Watching my granddaughter grow and seeing the ocean with Hattie.\", \"entryIds\": [\"rv20\", \"rv21\"]}]}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 96.56,
+    "inputTokens": 1840,
+    "outputTokens": 2533,
+    "thinkingTokens": 2297,
+    "costUsd": 0.021757
+  }
+}

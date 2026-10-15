@@ -1,0 +1,41 @@
+You are Kairos, the member's ghost writing agent (powered by Gemini 3.8 Flash). A member is building a memoir from
+their own memories, and you are planning the book: grouping the memories into chapters.
+The book: a life memoir: the whole life, more or less in order.
+Who it is for: My grandchildren, when they're older.
+Rules:
+- Use ONLY the memory ids listed below. Never invent a memory, a person, a place or an event.
+- Put each memory in at most one chapter. Leave a memory out if it does not belong in this
+  book; it will wait under "Not in a chapter yet".
+- Plan 3 to 12 chapters (fewer if there are only a few memories), in the order the book
+  should read.
+- Chapter titles: short and plain, under 60 characters. Notes: one line under 140 characters
+  saying what the chapter is about, in plain words.
+- List each chapter's memory ids in reading order.
+- Set "bookType" to null.
+Answer with JSON only, in this shape:
+{"bookType": null, "chapters": [{"title": "…", "note": "…", "entryIds": ["…"]}, {"keep": "…"}]}
+KEPT: []
+MEMORIES (one per line: id, week as year.week, title, how it starts):
+{"id":"rv01","week":"1955.24","title":"Sorting heels in Papa's shop","start":"I was six and Papa let me sort the rubber heels by size in his shoe repair shop on Brannock Street. He paid me one penny a box. The smell of leather glue still takes me straight back to that back room."}
+{"id":"rv02","week":"1957.52","title":"The winter the Tamsin froze","start":"The Tamsin River froze solid the week after Christmas. Lou and I skated all the way to the grain elevator and back before Mama caught us and hauled us home by our scarves."}
+{"id":"rv03","week":"1960.9.7","title":"Mama's polka hour","start":"Every Saturday Mama turned the kitchen radio up for the polka hour and danced with the broom. Papa pretended to be annoyed and then cut in."}
+{"id":"rv04","week":"1967.22","title":"Graduating from Larkspur Bend High","start":"I graduated third in a class of forty-one. Papa closed the shop for the whole afternoon, the only time I ever saw him do that on a weekday."}
+{"id":"rv05","week":"1967.35","title":"The bus to Corran City","start":"I left for nursing school in Corran City with one suitcase and a tin of Mama's poppy seed cookies. I cried until the second bus stop and then ate half the cookies."}
+{"id":"rv06","week":"1968.44","title":"Night shifts on Ward Four","start":"First night shift on Ward Four. An old man named Mr. Abernathy asked me to read him the box scores, and I read him the same page three times because I was too nervous to turn it."}
+{"id":"rv07","week":"1969.20","title":"Meeting Ted at the laundromat","start":"Ted Varga lent me a quarter for the dryer at the Elm Street laundromat and then asked for it back with interest: a cup of coffee. We were married fourteen months later."}
+{"id":"rv08","week":"1970.29.7","title":"Our wedding at St. Casimir's","start":"We married at St. Casimir's in Larkspur Bend. It rained so hard the photographer gave up, so the only wedding picture is one Lou took, a little blurry, of us laughing under Ted's coat."}
+{"id":"rv09","week":"1973.11","title":"June is born","start":"June arrived three weeks early during an ice storm. Ted drove us to the hospital at twelve miles an hour the whole way, gripping the wheel and singing to keep himself calm."}
+{"id":"rv10","week":"1976.33","title":"Sam and the creek","start":"Sam was two when he walked straight into the creek behind the Willet Road house to catch a frog. He came out soaked, furious and holding the frog."}
+{"id":"rv11","week":"1981.48","title":"The kitchen table years","start":"Every night that winter the four of us sat at the kitchen table on Willet Road: homework, bills, Ted's crossword. I didn't know then that it was the happiest I would ever be."}
+{"id":"rv12","week":"1988.24","title":"Head nurse","start":"I was made head nurse of the children's floor at Corran General. Ted bought a sheet cake that said CONGRATULATIONS ROSE because the bakery got it wrong, and he called me Rose for a year."}
+{"id":"rv13","week":"2004.6","title":"The diagnosis","start":"Ted's doctor said the word pancreatic and I stopped hearing anything after that. Ted asked the doctor whether he'd still be able to finish the deck he was building. He did finish it."}
+{"id":"rv14","week":"2004.40.3","title":"Ted's last morning","start":"Ted died at home just after sunrise with June holding one hand and me holding the other. The deck was finished. The coffee he liked was still warm in the pot."}
+{"id":"rv15","week":"2005.9","title":"His side of the bed","start":"For months I slept on my side of the bed only, as if he might need the room. I kept his reading glasses on the nightstand. I couldn't move them, and nobody asked me to."}
+{"id":"rv16","week":"2005.30","title":"Hattie and the Tuesday group","start":"June made me go to the grief group at the library. A woman named Hattie Crowe said she still set two coffee cups out every morning. I laughed for the first time in a year, and so did she."}
+{"id":"rv17","week":"2006.15","title":"Driving the highway again","start":"Ted always drove the highway. In April I drove the two hours to Sam's place alone, white knuckles the whole way. When I pulled in, Sam was waiting on the porch and clapped."}
+{"id":"rv18","week":"2006.38","title":"Ted's Garden","start":"Hattie and I dug up the empty lot at the end of Willet Road and planted tomatoes, beans and too many zucchini. By August six neighbors had plots. We called it Ted's Garden."}
+{"id":"rv19","week":"2011.26","title":"Retirement party","start":"After forty-three years of nursing I retired. The children's floor gave me a quilt with every nurse's handprint on it. I hung it in the hallway where I see it every morning."}
+{"id":"rv20","week":"2016.13","title":"Pia learns to ride a bike","start":"My granddaughter Pia learned to ride her bike on Willet Road, the same stretch where June and Sam learned. I ran behind her holding the seat until she told me to let go."}
+{"id":"rv21","week":"2019.31","title":"Seeing the ocean at seventy","start":"At seventy I saw the ocean for the first time, on a trip with Hattie. We stood in the cold water up to our knees and shouted Ted's name and her husband Frank's name at the waves."}
+{"id":"rv22","week":"2021.10","title":"Car registration","start":"Renewed the car registration online. $86. New sticker comes in the mail in two weeks."}
+{"id":"rv23","week":"2023.4","title":"Phone plan","start":"Switched the phone plan to the cheaper one. Same number. Remember to cancel the old autopay."}

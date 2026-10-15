@@ -1,0 +1,16 @@
+{
+  "case": "rosa-life",
+  "model": "gemini-3.8-flash",
+  "repeat": 1,
+  "promptSha": "8c633490c0b8f297",
+  "response": {
+    "text": "{\n  \"bookType\": null,\n  \"chapters\": [\n    {\n      \"title\": \"Growing Up in Larkspur Bend\",\n      \"note\": \"My early years with Mama and Papa and graduating high school.\",\n      \"entryIds\": [\"rv01\", \"rv02\", \"rv03\", \"rv04\"]\n    },\n    {\n      \"title\": \"Nursing School and Meeting Ted\",\n      \"note\": \"Leaving home for Corran City and marrying your grandfather.\",\n      \"entryIds\": [\"rv05\", \"rv06\", \"rv07\", \"rv08\"]\n    },\n    {\n      \"title\": \"Life on Willet Road\",\n      \"note\": \"Raising June and Sam, work at the hospital, and family days.\",\n      \"entryIds\": [\"rv09\", \"rv10\", \"rv11\", \"rv12\"]\n    },\n    {\n      \"title\": \"Losing Ted\",\n      \"note\": \"Ted's sickness, saying goodbye, and the first quiet months after.\",\n      \"entryIds\": [\"rv13\", \"rv14\", \"rv15\"]\n    },\n    {\n      \"title\": \"Finding My Way Forward\",\n      \"note\": \"Friendship with Hattie, driving alone, and planting the garden.\",\n      \"entryIds\": [\"rv16\", \"rv17\", \"rv18\"]\n    },\n    {\n      \"title\": \"Retirement and Grandchildren\",\n      \"note\": \"Retiring from nursing, watching you grow up, and seeing the ocean.\",\n      \"entryIds\": [\"rv19\", \"rv20\", \"rv21\"]\n    }\n  ]\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 11.86,
+    "inputTokens": 1843,
+    "outputTokens": 1851,
+    "thinkingTokens": 1467,
+    "costUsd": 0.016647
+  }
+}

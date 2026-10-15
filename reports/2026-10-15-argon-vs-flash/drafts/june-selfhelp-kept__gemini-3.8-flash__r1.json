@@ -1,0 +1,16 @@
+{
+  "case": "june-selfhelp-kept",
+  "model": "gemini-3.8-flash",
+  "repeat": 1,
+  "promptSha": "6bb2ec7bd354ac9c",
+  "response": {
+    "text": "{\n  \"bookType\": null,\n  \"chapters\": [\n    {\n      \"title\": \"Getting Started\",\n      \"note\": \"Starting with what you have and finding your first customers.\",\n      \"entryIds\": [\"jh01\"]\n    },\n    {\n      \"title\": \"Owning Your Mistakes\",\n      \"note\": \"Why fixing your errors for free earns lifelong trust.\",\n      \"entryIds\": [\"jh04\"]\n    },\n    {\n      \"keep\": \"price-out-loud\"\n    },\n    {\n      \"title\": \"Knowing Your Numbers\",\n      \"note\": \"Tracking actual costs and learning when to walk away from bad terms.\",\n      \"entryIds\": [\"jh06\", \"jh05\"]\n    },\n    {\n      \"keep\": \"first-hire\"\n    },\n    {\n      \"title\": \"Surviving the Lean Times\",\n      \"note\": \"Keeping your team paid and finding work during a downturn.\",\n      \"entryIds\": [\"jh07\"]\n    },\n    {\n      \"title\": \"Learning to Delegate\",\n      \"note\": \"Trusting your team to do the job without micromanaging.\",\n      \"entryIds\": [\"jh09\"]\n    },\n    {\n      \"title\": \"Burnout and Boundaries\",\n      \"note\": \"Recognizing your limits and hiring help before you crash.\",\n      \"entryIds\": [\"jh10\"]\n    },\n    {\n      \"title\": \"Passing the Torch\",\n      \"note\": \"Building an exit strategy that leaves everyone in a good place.\",\n      \"entryIds\": [\"jh11\"]\n    }\n  ]\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 18.15,
+    "inputTokens": 963,
+    "outputTokens": 2759,
+    "thinkingTokens": 2385,
+    "costUsd": 0.022137
+  }
+}

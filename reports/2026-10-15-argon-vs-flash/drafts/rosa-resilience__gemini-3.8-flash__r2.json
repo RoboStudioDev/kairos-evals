@@ -1,0 +1,16 @@
+{
+  "case": "rosa-resilience",
+  "model": "gemini-3.8-flash",
+  "repeat": 2,
+  "promptSha": "d486dfde10e5aa83",
+  "response": {
+    "text": "{\"bookType\": null, \"chapters\": [{\"title\": \"The Years Together\", \"note\": \"Meeting Ted, building a life, and the quiet happiness of the kitchen table.\", \"entryIds\": [\"rv07\", \"rv08\", \"rv11\"]}, {\"title\": \"Saying Goodbye\", \"note\": \"Ted's illness, finishing his deck, and his final morning at home.\", \"entryIds\": [\"rv13\", \"rv14\"]}, {\"title\": \"The Weight of the Silence\", \"note\": \"The raw early months of grief and finding connection in a Tuesday support group.\", \"entryIds\": [\"rv15\", \"rv16\"]}, {\"title\": \"Small Steps Forward\", \"note\": \"Taking on the highway alone and creating a community garden in Ted's memory.\", \"entryIds\": [\"rv17\", \"rv18\"]}, {\"title\": \"Carrying His Name\", \"note\": \"Watching the next generation grow and finding joy again by the ocean.\", \"entryIds\": [\"rv20\", \"rv21\"]}]}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 25.51,
+    "inputTokens": 1840,
+    "outputTokens": 2213,
+    "thinkingTokens": 1989,
+    "costUsd": 0.019357
+  }
+}

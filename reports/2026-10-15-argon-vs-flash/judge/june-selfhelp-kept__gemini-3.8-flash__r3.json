@@ -1,0 +1,20 @@
+{
+  "case": "june-selfhelp-kept",
+  "model": "gemini-3.8-flash",
+  "repeat": 3,
+  "verdict": {
+    "focusFit": 5,
+    "focusReason": "Every agent chapter clearly frames the member's practical business experiences into actionable lessons for young entrepreneurs.",
+    "unsupported": []
+  },
+  "response": {
+    "text": "{\n  \"focusFit\": 5,\n  \"focusReason\": \"Every agent chapter clearly frames the member's practical business experiences into actionable lessons for young entrepreneurs.\",\n  \"unsupported\": []\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 6.9,
+    "inputTokens": 1700,
+    "outputTokens": 813,
+    "thinkingTokens": 768,
+    "costUsd": 0.008648
+  }
+}

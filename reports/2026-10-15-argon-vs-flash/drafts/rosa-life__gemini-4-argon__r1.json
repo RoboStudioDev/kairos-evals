@@ -1,0 +1,16 @@
+{
+  "case": "rosa-life",
+  "model": "gemini-4-argon",
+  "repeat": 1,
+  "promptSha": "e1f1ba275d1432e1",
+  "response": {
+    "text": "{\"bookType\": null, \"chapters\": [{\"title\": \"Growing Up in Larkspur Bend\", \"note\": \"Childhood days in Papa's shop, skating with Lou, and graduating high school.\", \"entryIds\": [\"rv01\", \"rv02\", \"rv03\", \"rv04\"]}, {\"title\": \"Corran City and Meeting Ted\", \"note\": \"Leaving home for nursing school, first hospital shifts, and marrying Ted.\", \"entryIds\": [\"rv05\", \"rv06\", \"rv07\", \"rv08\"]}, {\"title\": \"The Willet Road Years\", \"note\": \"Raising June and Sam, family nights at the kitchen table, and becoming head nurse.\", \"entryIds\": [\"rv09\", \"rv10\", \"rv11\", \"rv12\"]}, {\"title\": \"Losing Ted and Finding My Way\", \"note\": \"Ted's illness, grieving his loss, and starting over with Hattie and the garden.\", \"entryIds\": [\"rv13\", \"rv14\", \"rv15\", \"rv16\", \"rv17\", \"rv18\"]}, {\"title\": \"The Years Since\", \"note\": \"Retiring from nursing, watching Pia grow, and seeing the ocean at seventy.\", \"entryIds\": [\"rv19\", \"rv20\", \"rv21\"]}]}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-4-argon",
+    "seconds": 5.22,
+    "inputTokens": 1914,
+    "outputTokens": 295,
+    "thinkingTokens": 0,
+    "costUsd": 0.006778
+  }
+}

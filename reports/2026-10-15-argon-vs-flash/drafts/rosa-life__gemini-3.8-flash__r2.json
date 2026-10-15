@@ -1,0 +1,16 @@
+{
+  "case": "rosa-life",
+  "model": "gemini-3.8-flash",
+  "repeat": 2,
+  "promptSha": "8c633490c0b8f297",
+  "response": {
+    "text": "{\n  \"bookType\": null,\n  \"chapters\": [\n    {\n      \"title\": \"Growing Up in Larkspur Bend\",\n      \"note\": \"Memories of childhood, my parents, and school in Larkspur Bend.\",\n      \"entryIds\": [\"rv01\", \"rv02\", \"rv03\", \"rv04\"]\n    },\n    {\n      \"title\": \"Starting Out and Meeting Ted\",\n      \"note\": \"Leaving home for nursing school and meeting your grandfather Ted.\",\n      \"entryIds\": [\"rv05\", \"rv06\", \"rv07\", \"rv08\"]\n    },\n    {\n      \"title\": \"Life on Willet Road\",\n      \"note\": \"Raising June and Sam, family life, and my nursing career.\",\n      \"entryIds\": [\"rv09\", \"rv10\", \"rv11\", \"rv12\"]\n    },\n    {\n      \"title\": \"Losing Ted\",\n      \"note\": \"Ted's illness, saying goodbye, and the quiet months that followed.\",\n      \"entryIds\": [\"rv13\", \"rv14\", \"rv15\"]\n    },\n    {\n      \"title\": \"A New Season\",\n      \"note\": \"Finding support with Hattie, learning to drive alone, and planting Ted's Garden.\",\n      \"entryIds\": [\"rv16\", \"rv17\", \"rv18\"]\n    },\n    {\n      \"title\": \"Later Years\",\n      \"note\": \"Retirement, watching Pia learn to ride, and seeing the ocean at seventy.\",\n      \"entryIds\": [\"rv19\", \"rv20\", \"rv21\"]\n    }\n  ]\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 11.89,
+    "inputTokens": 1843,
+    "outputTokens": 1571,
+    "thinkingTokens": 1184,
+    "costUsd": 0.014547
+  }
+}

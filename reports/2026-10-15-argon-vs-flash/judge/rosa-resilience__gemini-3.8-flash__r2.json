@@ -1,0 +1,20 @@
+{
+  "case": "rosa-resilience",
+  "model": "gemini-3.8-flash",
+  "repeat": 2,
+  "verdict": {
+    "focusFit": 5,
+    "focusReason": "The outline precisely traces the journey of losing a spouse and rebuilding a meaningful life, perfectly matching the theme of resilience for widowed readers.",
+    "unsupported": []
+  },
+  "response": {
+    "text": "{\n \"focusFit\": 5,\n \"focusReason\": \"The outline precisely traces the journey of losing a spouse and rebuilding a meaningful life, perfectly matching the theme of resilience for widowed readers.\",\n \"unsupported\": []\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 5.85,
+    "inputTokens": 2375,
+    "outputTokens": 740,
+    "thinkingTokens": 691,
+    "costUsd": 0.009113
+  }
+}

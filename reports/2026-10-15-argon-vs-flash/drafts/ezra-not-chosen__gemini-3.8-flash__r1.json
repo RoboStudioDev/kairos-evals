@@ -1,0 +1,16 @@
+{
+  "case": "ezra-not-chosen",
+  "model": "gemini-3.8-flash",
+  "repeat": 1,
+  "promptSha": "7db5ab1abcf464af",
+  "response": {
+    "text": "{\"bookType\": \"resilience\", \"chapters\": [{\"title\": \"Learning to Bake\", \"note\": \"Starting out under Uncle Remy and finding my own way to the oven.\", \"entryIds\": [\"ep01\", \"ep02\"]}, {\"title\": \"Opening on Canal Street\", \"note\": \"Starting Crumb and Kettle and getting to know the regulars in Ostrander Flats.\", \"entryIds\": [\"ep03\", \"ep04\"]}, {\"title\": \"The Flood\", \"note\": \"The canal tops its banks, neighbors help muck out, and insurance turns us down.\", \"entryIds\": [\"ep05\", \"ep06\", \"ep07\"]}, {\"title\": \"Basement Loaves\", \"note\": \"Baking in the church basement while the town rallies behind prepaid loaves.\", \"entryIds\": [\"ep08\", \"ep09\"]}, {\"title\": \"A New Start\", \"note\": \"Reopening the doors on Canal Street with secondhand ovens and cinder blocks.\", \"entryIds\": [\"ep10\", \"ep11\"]}, {\"title\": \"Passing It Forward\", \"note\": \"Working with my daughter Nia and teaching neighborhood kids to shape bread.\", \"entryIds\": [\"ep12\", \"ep13\"]}]}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 67.51,
+    "inputTokens": 1305,
+    "outputTokens": 2114,
+    "thinkingTokens": 1851,
+    "costUsd": 0.017812
+  }
+}

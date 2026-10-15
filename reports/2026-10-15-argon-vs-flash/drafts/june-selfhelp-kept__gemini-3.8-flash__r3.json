@@ -1,0 +1,16 @@
+{
+  "case": "june-selfhelp-kept",
+  "model": "gemini-3.8-flash",
+  "repeat": 3,
+  "promptSha": "6bb2ec7bd354ac9c",
+  "response": {
+    "text": "{\"bookType\": null, \"chapters\": [{\"title\": \"Starting with what you have\", \"note\": \"How small beginnings and simple tools can build a real business.\", \"entryIds\": [\"jh01\"]}, {\"title\": \"Standing by your work\", \"note\": \"Turning mistakes into long-term customer loyalty.\", \"entryIds\": [\"jh04\"]}, {\"keep\": \"price-out-loud\"}, {\"title\": \"Protecting your cash flow\", \"note\": \"Tracking your true costs and turning down contracts that could sink you.\", \"entryIds\": [\"jh05\", \"jh06\"]}, {\"keep\": \"first-hire\"}, {\"title\": \"Weathering hard times\", \"note\": \"Finding creative ways to keep the business alive during a downturn.\", \"entryIds\": [\"jh07\"]}, {\"title\": \"Stepping back to grow\", \"note\": \"Delegating real authority and avoiding burnout by hiring support.\", \"entryIds\": [\"jh09\", \"jh10\"]}, {\"title\": \"Planning your exit\", \"note\": \"Handing over the company to the right person when the time comes.\", \"entryIds\": [\"jh11\"]}]}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 29.28,
+    "inputTokens": 963,
+    "outputTokens": 2276,
+    "thinkingTokens": 2033,
+    "costUsd": 0.018514
+  }
+}

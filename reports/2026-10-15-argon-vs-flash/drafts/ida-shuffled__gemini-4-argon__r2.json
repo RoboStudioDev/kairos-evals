@@ -1,0 +1,16 @@
+{
+  "case": "ida-shuffled",
+  "model": "gemini-4-argon",
+  "repeat": 2,
+  "promptSha": "69420c0c262e4c6d",
+  "response": {
+    "text": "{\"bookType\": \"life\", \"chapters\": [{\"title\": \"Growing Up on the Farm\", \"note\": \"Childhood days with family, winter snows, and moving from the one-room schoolhouse.\", \"entryIds\": [\"im01\", \"im02\", \"im03\"]}, {\"title\": \"Leaving and Coming Home\", \"note\": \"Working in the Merriton typing pool before returning home to help on the family farm.\", \"entryIds\": [\"im04\", \"im05\"]}, {\"title\": \"The Brindle Courier\", \"note\": \"Starting at the local paper, becoming its first woman editor, and covering the county's biggest stories.\", \"entryIds\": [\"im06\", \"im07\", \"im08\", \"im09\"]}, {\"title\": \"Later Years and Legacy\", \"note\": \"Serving on the county council, piecing together memories, and passing stories to the next generation.\", \"entryIds\": [\"im10\", \"im11\", \"im12\"]}]}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-4-argon",
+    "seconds": 21.72,
+    "inputTokens": 1195,
+    "outputTokens": 221,
+    "thinkingTokens": 0,
+    "costUsd": 0.0046
+  }
+}

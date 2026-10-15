@@ -1,0 +1,16 @@
+{
+  "case": "abel-four-memories",
+  "model": "gemini-3.8-flash",
+  "repeat": 2,
+  "promptSha": "718ab4b8ff13ba69",
+  "response": {
+    "text": "{\"bookType\": null, \"chapters\": [{\"title\": \"Growing Up with Him\", \"note\": \"Stories of his stubborn habits and quiet patience when I was younger.\", \"entryIds\": [\"am01\", \"am02\"]}, {\"title\": \"Meeting You\", \"note\": \"The day you were born and he first held you.\", \"entryIds\": [\"am03\"]}, {\"title\": \"Our Last Fishing Trip\", \"note\": \"One final afternoon together on the water at Lake Orrin.\", \"entryIds\": [\"am04\"]}]}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 7.2,
+    "inputTokens": 561,
+    "outputTokens": 962,
+    "thinkingTokens": 847,
+    "costUsd": 0.008056
+  }
+}

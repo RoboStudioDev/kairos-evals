@@ -1,0 +1,16 @@
+{
+  "case": "ezra-not-chosen",
+  "model": "gemini-3.8-flash",
+  "repeat": 2,
+  "promptSha": "7db5ab1abcf464af",
+  "response": {
+    "text": "{\n  \"bookType\": \"resilience\",\n  \"chapters\": [\n    {\n      \"title\": \"Learning the Trade\",\n      \"note\": \"Early mornings with Uncle Remy and finding my own way to bake.\",\n      \"entryIds\": [\"ep01\", \"ep02\"]\n    },\n    {\n      \"title\": \"Crumb & Kettle\",\n      \"note\": \"Opening on Canal Street and getting to know the neighborhood regulars.\",\n      \"entryIds\": [\"ep03\", \"ep04\"]\n    },\n    {\n      \"title\": \"The Flood\",\n      \"note\": \"The canal breaks its banks, ruining the shop and testing everything.\",\n      \"entryIds\": [\"ep05\", \"ep06\", \"ep07\"]\n    },\n    {\n      \"title\": \"Saved by the Town\",\n      \"note\": \"Baking in the church basement and reopening with community support.\",\n      \"entryIds\": [\"ep08\", \"ep09\", \"ep10\"]\n    },\n    {\n      \"title\": \"The Next Batch\",\n      \"note\": \"Living with the river, passing the craft to Nia, and teaching local kids.\",\n      \"entryIds\": [\"ep11\", \"ep12\", \"ep13\"]\n    }\n  ]\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 6.04,
+    "inputTokens": 1305,
+    "outputTokens": 768,
+    "thinkingTokens": 474,
+    "costUsd": 0.007718
+  }
+}

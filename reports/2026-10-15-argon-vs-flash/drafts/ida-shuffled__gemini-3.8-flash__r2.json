@@ -1,0 +1,16 @@
+{
+  "case": "ida-shuffled",
+  "model": "gemini-3.8-flash",
+  "repeat": 2,
+  "promptSha": "5f5022fef07e41cb",
+  "response": {
+    "text": "{\n  \"bookType\": \"life\",\n  \"chapters\": [\n    {\n      \"title\": \"Growing Up on the Farm\",\n      \"note\": \"Memories of childhood with family, country winters, and the local schoolhouse.\",\n      \"entryIds\": [\"im01\", \"im02\", \"im03\"]\n    },\n    {\n      \"title\": \"Leaving and Returning\",\n      \"note\": \"Working in the typing pool in Merriton before returning home to the farm.\",\n      \"entryIds\": [\"im04\", \"im05\"]\n    },\n    {\n      \"title\": \"The Courier Years\",\n      \"note\": \"Starting at the local paper, taking over as editor, and decades of reporting.\",\n      \"entryIds\": [\"im06\", \"im07\", \"im08\", \"im09\"]\n    },\n    {\n      \"title\": \"Community and Legacy\",\n      \"note\": \"Serving on the county council, making the front-page quilt, and sharing old stories.\",\n      \"entryIds\": [\"im10\", \"im11\", \"im12\"]\n    }\n  ]\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 16.8,
+    "inputTokens": 1117,
+    "outputTokens": 1272,
+    "thinkingTokens": 1012,
+    "costUsd": 0.011215
+  }
+}

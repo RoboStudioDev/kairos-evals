@@ -93,25 +93,30 @@ comes from Google's `gcloud` tool (`gcloud auth login`). The project is gcloud's
 
 ## What a run costs
 
-Priced on 2026-10-15 with Google's token counter. Prices are in `kairos_evals/pricing.py`:
+Priced on 2026-10-15 with Google's token counter, for the six cases. Prices are in
+`kairos_evals/pricing.py`:
 
 | Run | Calls | Likely | At most |
 |---|---|---|---|
-| Full: both models × 3 repeats, with the judge (the default) | 76 | $0.61 | $3.99 |
+| Full: both models × 3 repeats, with the judge (the default) | 76 | $0.82 | $3.99 |
 | Argon only × 3 repeats, with the judge | 40 | $0.34 | $2.25 |
 | Argon only × 3 repeats, no judge | 18 | $0.12 | $1.52 |
 | Argon only × 1 run, no judge | 6 | $0.04 | $0.51 |
 
-"Likely" uses what the first real run measured, rounded up: about 400 output tokens per draft
-and 1,000 per judge reading, thinking included. "At most" is every call using its whole output
-allowance, the most Google can bill. The first real run (Argon × 3 with the judge) cost **$0.27**.
+"Likely" uses the output measured on 2026-10-15, rounded up, with the models' thinking included:
+about 400 tokens per Argon draft, 2,000 per Flash draft (Flash thinks before it answers; Argon
+doesn't) and 1,000 per judge reading. "At most" is every call using its whole output allowance,
+the most Google can bill. The two real runs cost $0.27 (Argon) and $0.47 (Flash).
 
-## Sample report
+## Sample reports
 
-[`reports/2026-10-15-argon/`](reports/2026-10-15-argon/) is the first real run: 18 Outline drafts
-from Gemini 4 Argon, each read by the judge. It holds the [report](reports/2026-10-15-argon/report.md),
-[what the scores say](reports/2026-10-15-argon/README.md), and every raw answer, so it can be
-re-scored for free.
+Every raw answer is kept next to each report, so any of them can be re-scored for free.
+
+- [`reports/2026-10-15-argon/`](reports/2026-10-15-argon/): the first real run, 18 Outline
+  drafts from Gemini 4 Argon. [What the scores say](reports/2026-10-15-argon/README.md).
+- [`reports/2026-10-15-argon-vs-flash/`](reports/2026-10-15-argon-vs-flash/): Argon against
+  Gemini 3.8 Flash on the same cases. Quality is a near tie, but on this task the "Quick" model
+  was twice as slow and three times the cost. [The comparison](reports/2026-10-15-argon-vs-flash/README.md).
 
 ## How it stays honest
 

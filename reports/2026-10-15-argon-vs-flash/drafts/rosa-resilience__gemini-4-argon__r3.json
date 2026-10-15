@@ -1,0 +1,16 @@
+{
+  "case": "rosa-resilience",
+  "model": "gemini-4-argon",
+  "repeat": 3,
+  "promptSha": "7439b340873c6926",
+  "response": {
+    "text": "{\"bookType\": null, \"chapters\": [{\"title\": \"The Life We Built\", \"note\": \"Meeting Ted at the laundromat, raising June and Sam, and the happy years at the kitchen table.\", \"entryIds\": [\"rv07\", \"rv08\", \"rv09\", \"rv10\", \"rv11\", \"rv12\"]}, {\"title\": \"Losing Ted\", \"note\": \"The pancreatic cancer diagnosis, the deck he finished, and his last morning at home.\", \"entryIds\": [\"rv13\", \"rv14\"]}, {\"title\": \"The Empty Side of the Bed\", \"note\": \"The quiet months after Ted died and finding Hattie at the Tuesday grief group.\", \"entryIds\": [\"rv15\", \"rv16\"]}, {\"title\": \"Learning to Go On\", \"note\": \"Driving the highway alone, planting Ted's Garden, and watching life continue with family and friends.\", \"entryIds\": [\"rv17\", \"rv18\", \"rv19\", \"rv20\", \"rv21\"]}]}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-4-argon",
+    "seconds": 7.87,
+    "inputTokens": 1911,
+    "outputTokens": 232,
+    "thinkingTokens": 0,
+    "costUsd": 0.006142
+  }
+}

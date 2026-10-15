@@ -1,0 +1,16 @@
+{
+  "case": "rosa-resilience",
+  "model": "gemini-3.8-flash",
+  "repeat": 1,
+  "promptSha": "d486dfde10e5aa83",
+  "response": {
+    "text": "{\"bookType\": null, \"chapters\": [{\"title\": \"The Life We Shared\", \"note\": \"Meeting Ted, getting married, and the quiet happiness of raising our family together.\", \"entryIds\": [\"rv07\", \"rv08\", \"rv09\", \"rv11\"]}, {\"title\": \"Saying Goodbye\", \"note\": \"Facing Ted's diagnosis, finishing the deck, and his final morning at home.\", \"entryIds\": [\"rv13\", \"rv14\"]}, {\"title\": \"The Empty House\", \"note\": \"Living with the quiet in the early months and leaving his things untouched.\", \"entryIds\": [\"rv15\"]}, {\"title\": \"Finding My Footing\", \"note\": \"Attending grief group with Hattie, driving the highway alone, and planting Ted's Garden.\", \"entryIds\": [\"rv16\", \"rv17\", \"rv18\"]}, {\"title\": \"Carrying Him Forward\", \"note\": \"Watching our granddaughter ride her bike and visiting the ocean while keeping Ted's memory alive.\", \"entryIds\": [\"rv20\", \"rv21\"]}]}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 53.81,
+    "inputTokens": 1840,
+    "outputTokens": 4287,
+    "thinkingTokens": 4049,
+    "costUsd": 0.034912
+  }
+}

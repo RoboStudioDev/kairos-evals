@@ -23,10 +23,11 @@ from .prompt import GENERATION, build_draft_prompt, clean_draft, parse_json_loos
 RUNS_DIR = ROOT / "runs"
 EXAMPLES_DIR = ROOT / "examples"
 
-# Output we expect per call, thinking included, for the "likely" cost. Measured on the first real
-# run (2026-10-15): Argon drafts averaged 227 output tokens with no thinking; the judge (3.8 Flash)
-# 705, of which 656 thinking. Rounded up here; every report shows the real numbers.
-LIKELY_OUTPUT = {"draft": 400, "judge": 1000}
+# Output we expect per call, thinking included, for the "likely" cost. Measured 2026-10-15: Argon
+# drafts averaged 227 output tokens with no thinking; 3.8 Flash drafts 260 plus 1,547 thinking; the
+# judge (3.8 Flash) 705, of which 656 thinking. Rounded up here; every report shows the real numbers.
+LIKELY_DRAFT_OUTPUT = {"gemini-4-argon": 400, "gemini-3.8-flash": 2000}
+LIKELY_JUDGE_OUTPUT = 1000
 
 
 @dataclass
@@ -82,7 +83,7 @@ def estimate(cases: list[Case], models: list[str], repeats: int, judge: bool, pr
             tokens_in += gemini.count_tokens(prompt, model, project, token)
         n = len(cases) * repeats
         cap_out = GENERATION["maxOutputTokens"]
-        lk = repeats * pricing.cost(model, tokens_in, LIKELY_OUTPUT["draft"] * len(cases))
+        lk = repeats * pricing.cost(model, tokens_in, LIKELY_DRAFT_OUTPUT.get(model, 2000) * len(cases))
         cl = repeats * pricing.cost(model, tokens_in, cap_out * len(cases))
         lines.append({"what": f"drafts on {model}", "calls": n, "inputTokens": tokens_in * repeats, "likely": lk, "ceiling": cl})
         likely, ceiling, calls = likely + lk, ceiling + cl, calls + n
@@ -95,7 +96,7 @@ def estimate(cases: list[Case], models: list[str], repeats: int, judge: bool, pr
         per_case_in = tokens_in / len(cases)
         selftest = [i for i in judge_selftest_items() if any(c.id == i["case"] for c in cases)]
         n = len(cases) * repeats * len(models) + 2 * len(selftest)  # self-test: clean + planted
-        lk = pricing.cost(JUDGE_MODEL, int(per_case_in * n), LIKELY_OUTPUT["judge"] * n)
+        lk = pricing.cost(JUDGE_MODEL, int(per_case_in * n), LIKELY_JUDGE_OUTPUT * n)
         cl = pricing.cost(JUDGE_MODEL, int(per_case_in * n), JUDGE_GENERATION["maxOutputTokens"] * n)
         lines.append({"what": f"judge on {JUDGE_MODEL} (incl. its self-test)", "calls": n, "inputTokens": int(per_case_in * n), "likely": lk, "ceiling": cl})
         likely, ceiling, calls = likely + lk, ceiling + cl, calls + n

@@ -1,0 +1,32 @@
+{
+  "note": "Two runs merged for a side-by-side: Gemini 4 Argon (started 2026-10-15T11:21:00) and Gemini 3.8 Flash (started 2026-10-15T11:37:04), same six cases, same judge.",
+  "started": "2026-10-15T11:21:00",
+  "finished": "2026-10-15T11:46:39",
+  "models": [
+    "gemini-4-argon",
+    "gemini-3.8-flash"
+  ],
+  "repeats": 3,
+  "judge": "gemini-3.8-flash",
+  "cases": [
+    "abel-four-memories",
+    "ezra-not-chosen",
+    "ida-shuffled",
+    "june-selfhelp-kept",
+    "rosa-life",
+    "rosa-resilience"
+  ],
+  "generation": {
+    "temperature": 0.4,
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 8192
+  },
+  "judgeGeneration": {
+    "temperature": 0.0,
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 4096
+  },
+  "maxUsd": 4.14,
+  "spentUsd": 0.7374,
+  "stoppedAtCap": false
+}

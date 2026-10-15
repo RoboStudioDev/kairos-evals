@@ -1,0 +1,16 @@
+{
+  "case": "rosa-life",
+  "model": "gemini-4-argon",
+  "repeat": 3,
+  "promptSha": "e1f1ba275d1432e1",
+  "response": {
+    "text": "{\"bookType\": null, \"chapters\": [{\"title\": \"Growing Up in Larkspur Bend\", \"note\": \"Childhood days in Papa's shop, skating on the Tamsin, and finishing high school.\", \"entryIds\": [\"rv01\", \"rv02\", \"rv03\", \"rv04\"]}, {\"title\": \"Corran City and Meeting Ted\", \"note\": \"Leaving home for nursing school, first shifts on the ward, and a quarter at the laundromat.\", \"entryIds\": [\"rv05\", \"rv06\", \"rv07\", \"rv08\"]}, {\"title\": \"The Willet Road Years\", \"note\": \"Raising June and Sam, kitchen table evenings, and becoming head nurse.\", \"entryIds\": [\"rv09\", \"rv10\", \"rv11\", \"rv12\"]}, {\"title\": \"Losing Ted\", \"note\": \"Ted's illness, his last morning at home, and the quiet months that followed.\", \"entryIds\": [\"rv13\", \"rv14\", \"rv15\"]}, {\"title\": \"Finding My Way Forward\", \"note\": \"Meeting Hattie, learning to drive the highway alone, and planting Ted's Garden.\", \"entryIds\": [\"rv16\", \"rv17\", \"rv18\"]}, {\"title\": \"Retirement and New Adventures\", \"note\": \"Retiring after forty-three years of nursing, watching grandchildren grow, and seeing the ocean.\", \"entryIds\": [\"rv19\", \"rv20\", \"rv21\"]}]}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-4-argon",
+    "seconds": 7.64,
+    "inputTokens": 1914,
+    "outputTokens": 335,
+    "thinkingTokens": 0,
+    "costUsd": 0.007178
+  }
+}

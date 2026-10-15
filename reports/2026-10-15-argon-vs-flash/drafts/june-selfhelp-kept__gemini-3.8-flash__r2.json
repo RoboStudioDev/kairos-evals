@@ -1,0 +1,16 @@
+{
+  "case": "june-selfhelp-kept",
+  "model": "gemini-3.8-flash",
+  "repeat": 2,
+  "promptSha": "6bb2ec7bd354ac9c",
+  "response": {
+    "text": "{\"bookType\": null, \"chapters\": [{\"title\": \"Getting Started\", \"note\": \"How to begin with whatever tools you have and find your first work.\", \"entryIds\": [\"jh01\"]}, {\"title\": \"Owning Your Mistakes\", \"note\": \"Why fixing your errors honestly creates lasting client loyalty.\", \"entryIds\": [\"jh04\"]}, {\"keep\": \"price-out-loud\"}, {\"title\": \"Knowing Your Numbers\", \"note\": \"Tracking costs accurately and walking away from bad cash-flow terms.\", \"entryIds\": [\"jh06\", \"jh05\"]}, {\"keep\": \"first-hire\"}, {\"title\": \"Trusting Your People\", \"note\": \"Protecting your team in lean times and learning to let them lead.\", \"entryIds\": [\"jh07\", \"jh09\"]}, {\"title\": \"Setting Boundaries\", \"note\": \"Recognizing burnout and building systems before exhaustion breaks you.\", \"entryIds\": [\"jh10\"]}, {\"title\": \"Passing the Torch\", \"note\": \"Building something lasting and knowing how to step aside.\", \"entryIds\": [\"jh11\"]}]}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 20.01,
+    "inputTokens": 963,
+    "outputTokens": 1350,
+    "thinkingTokens": 1114,
+    "costUsd": 0.011569
+  }
+}

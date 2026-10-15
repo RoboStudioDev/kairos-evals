@@ -1,0 +1,16 @@
+{
+  "case": "abel-four-memories",
+  "model": "gemini-4-argon",
+  "repeat": 1,
+  "promptSha": "defaffb2f98a440c",
+  "response": {
+    "text": "{\n  \"bookType\": null,\n  \"chapters\": [\n    {\n      \"title\": \"Who Your Grandfather Was\",\n      \"note\": \"Stories of your grandfather's patience, humor, and the things he loved.\",\n      \"entryIds\": [\n        \"am01\",\n        \"am02\"\n      ]\n    },\n    {\n      \"title\": \"The Day He Met You\",\n      \"note\": \"When you were born and your grandfather held you for the first time.\",\n      \"entryIds\": [\n        \"am03\"\n      ]\n    },\n    {\n      \"title\": \"One Last Cast\",\n      \"note\": \"Our final fishing trip together at Lake Orrin.\",\n      \"entryIds\": [\n        \"am04\"\n      ]\n    }\n  ]\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-4-argon",
+    "seconds": 5.7,
+    "inputTokens": 652,
+    "outputTokens": 191,
+    "thinkingTokens": 0,
+    "costUsd": 0.003214
+  }
+}

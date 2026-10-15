@@ -1,0 +1,16 @@
+{
+  "case": "ezra-not-chosen",
+  "model": "gemini-3.8-flash",
+  "repeat": 3,
+  "promptSha": "7db5ab1abcf464af",
+  "response": {
+    "text": "{\n  \"bookType\": \"resilience\",\n  \"chapters\": [\n    {\n      \"title\": \"Learning the Craft\",\n      \"note\": \"Learning to bake with Uncle Remy and finding my own way with bread.\",\n      \"entryIds\": [\"ep01\", \"ep02\"]\n    },\n    {\n      \"title\": \"Crumb & Kettle\",\n      \"note\": \"Opening the shop on Canal Street and getting to know our regulars.\",\n      \"entryIds\": [\"ep03\", \"ep04\"]\n    },\n    {\n      \"title\": \"The Flood\",\n      \"note\": \"The canal coming over its banks, cleaning up the ruined shop, and facing bad news.\",\n      \"entryIds\": [\"ep05\", \"ep06\", \"ep07\"]\n    },\n    {\n      \"title\": \"Carried by Neighbors\",\n      \"note\": \"Baking in a church kitchen while the community rallied around us.\",\n      \"entryIds\": [\"ep08\", \"ep09\"]\n    },\n    {\n      \"title\": \"Reopening\",\n      \"note\": \"Opening our doors again and learning to live with the canal.\",\n      \"entryIds\": [\"ep10\", \"ep11\"]\n    },\n    {\n      \"title\": \"Passing It Forward\",\n      \"note\": \"Working alongside Nia and teaching neighborhood kids how to bake.\",\n      \"entryIds\": [\"ep12\", \"ep13\"]\n    }\n  ]\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 18.04,
+    "inputTokens": 1305,
+    "outputTokens": 1610,
+    "thinkingTokens": 1274,
+    "costUsd": 0.014032
+  }
+}
