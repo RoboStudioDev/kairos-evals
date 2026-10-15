@@ -16,6 +16,7 @@ plain Python and free to run.
 
 from __future__ import annotations
 
+import os
 import re
 from dataclasses import asdict, dataclass, field
 from itertools import combinations
@@ -107,8 +108,8 @@ def _name(case: Case, memory_id: str) -> str:
 
 
 # Words that look like names to the "made-up names" check unless we know better. A dictionary is
-# used when the computer has one (/usr/share/dict/words on macOS and most Linux); this short list
-# covers the basics when it doesn't.
+# used when the computer has one (/usr/share/dict/words on macOS; the `wamerican` package on
+# Debian/Ubuntu; or set KAIROS_EVALS_WORDS); this short list covers the basics when it doesn't.
 COMMON_WORDS = set(
     """a an the and or but of in on at to for from with by as into over under after before about
     my our your his her their its we us me you he she they it this that these those who what when
@@ -126,7 +127,7 @@ IRREGULAR = dict(
     fought:fight stood:stand understood:understand began:begin begun:begin wrote:write written:write
     broke:break broken:break fell:fall fallen:fall""".split()
 )
-_DICT_PATH = Path("/usr/share/dict/words")
+_DICT_PATH = Path(os.environ.get("KAIROS_EVALS_WORDS", "/usr/share/dict/words"))
 _dictionary: set[str] | None = None
 
 

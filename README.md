@@ -1,5 +1,7 @@
 # kairos-evals
 
+[![tests](https://github.com/RoboStudioDev/kairos-evals/actions/workflows/tests.yml/badge.svg)](https://github.com/RoboStudioDev/kairos-evals/actions/workflows/tests.yml)
+
 Scores the AI in [Kairos](https://kairosloom.life), a memoir app. Kairos's ghost writing agent
 reads a member's memories and drafts an **Outline** for their book: the chapters, what each one
 is about, and which memories go in it. This kit checks those drafts against **made-up memoirs**
@@ -40,10 +42,14 @@ belong together, which parts of the life they come from, and which notes are noi
 
 ## How to run it
 
-You need Python 3.9 or newer (a Mac already has it). Open Terminal and go to this folder first:
+You need Python 3.9 or newer (a Mac already has it). Get a copy and go into its folder:
 
 ```bash
-cd ~/Developer/kairos-evals
+git clone https://github.com/RoboStudioDev/kairos-evals.git
+```
+
+```bash
+cd kairos-evals
 ```
 
 **Free: prove the checks work.** Scores hand-written drafts, some clean and some with planted
@@ -126,8 +132,9 @@ re-scored for free.
 
 - The answer keys are one person's judgment of where memories belong. They test only clear-cut
   calls, like the same event or decades apart.
-- The names check is a word list. A name that is also a common word ("Rose", "June") gets past
-  it. The judge is there to catch those.
+- The names check uses the computer's dictionary (built into macOS; the `wamerican` package on
+  Ubuntu), so results can differ slightly between computers. A name that is also a common word
+  ("Rose", "June") gets past it. The judge is there to catch those.
 - The judge is a Gemini model grading Gemini's work, so it may go easy on it. The judge self-test
   keeps an eye on that, but a person should still read the drafts. The report includes them.
 - Only the first draft is covered so far. Placing new memories into an existing Outline, and
@@ -150,5 +157,10 @@ kairos_evals/
   selftest.py        testing the checks
   parity.py          comparing the prompt with the app's code
 tests/               unit tests (python3 -m unittest)
+.github/workflows/   the same free checks on every push
 reports/             reports worth keeping
 ```
+
+## Licence
+
+MIT. See [LICENSE](LICENSE).
