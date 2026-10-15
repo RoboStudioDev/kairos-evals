@@ -153,6 +153,15 @@ def run(cases: list[Case], models: list[str], repeats: int, judge: bool, project
         return resp
 
     def do(job: Job) -> None:
+        try:
+            _do(job)
+        except Exception as exc:  # one broken draft must not stop a paid run
+            print(f"  draft  {job.name}: crashed: {exc!r}", flush=True)
+            (out / "drafts" / f"{job.name}.json").write_text(json.dumps(
+                {"case": job.case.id, "model": job.model, "repeat": job.repeat, "promptSha": "",
+                 "response": {"error": f"crashed: {exc!r}"}}, indent=2) + "\n", encoding="utf-8")
+
+    def _do(job: Job) -> None:
         r = request_for(_case_dict(job.case), job.case.memoir, job.model)
         prompt = build_draft_prompt(r)
         (out / "prompts" / f"{job.case.id}__{job.model}.txt").write_text(prompt + "\n", encoding="utf-8")

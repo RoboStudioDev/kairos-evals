@@ -11,7 +11,11 @@ from .prompt import MODEL_LABELS
 
 
 def pct(x: float | None) -> str:
-    return "–" if x is None else f"{x * 100:.0f}"
+    """Out of 100. Only a perfect score shows as 100, so a near miss never hides."""
+    if x is None:
+        return "–"
+    v = round(x * 100)
+    return str(99 if v == 100 and x < 1 else v)
 
 
 def _avg(values) -> float | None:
