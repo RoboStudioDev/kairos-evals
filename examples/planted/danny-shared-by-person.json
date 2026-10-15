@@ -1,0 +1,13 @@
+{
+  "case": "danny-shared-versions",
+  "plants": {
+    "together": "every moment split up: one chapter per Danny instead of one per moment",
+    "placed_what_matters": "Danny II's hunting morning (filed a year early) left out",
+    "left_out_noise": "the dentist note placed in a chapter"
+  },
+  "answer": {"bookType": null, "chapters": [
+    {"title": "Grandpa remembers", "note": "Danny I's side of the family's days.", "entryIds": ["demo-i-1947.11", "demo-i-1970.27", "demo-i-1978.18", "demo-i-1983.45", "demo-i-1985.33", "demo-i-1987.33", "demo-i-2001.42"]},
+    {"title": "Dad remembers", "note": "Danny II's side.", "entryIds": ["demo-ii-1947.11", "demo-ii-1970.27", "demo-ii-1978.18", "demo-ii-1985.33", "demo-ii-1987.26", "demo-ii-1987.33", "demo-ii-2011.25"]},
+    {"title": "Danny remembers", "note": "Danny III's side.", "entryIds": ["demo-iii-1978.18", "demo-iii-1983.45", "demo-iii-1985.33", "demo-iii-1987.26", "demo-iii-1987.33", "demo-iii-2001.42", "demo-iii-2011.25", "demo-iii-2025.6"]}
+  ]}
+}

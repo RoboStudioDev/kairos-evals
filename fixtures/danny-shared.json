@@ -1,0 +1,63 @@
+{
+  "id": "danny-shared",
+  "person": "Danny Phantom I (born 1918), II (born 1947) and III (born 1970), the Kairos demo family",
+  "summary": "The same days, remembered by each Danny: 22 memories of nine moments, plus two noise notes. They arrive grouped by person, so the versions of one moment sit far apart in the list. Some versions disagree: Danny II says his father drove eleven hours and cried when Danny III was born, Danny I says eight hours and no tears; Danny II remembers going quiet when he retired, his son remembers a long speech; Danny II dates the hunting morning to November 1982 and his son to the fall of 1983, so those versions are filed a year apart; and Danny I says the others went ahead up the hill while Danny II says they reached the top together. Built from the demo's memories and its shared-memory scenes drafted on 2026-10-14; the disagreements were added for this eval.",
+  "memories": [
+    {"id": "demo-i-1947.11", "coordinate": "1947.11", "title": "My son", "body": "Danny II, born in March. Held him in the same hands. Swore he would never have to do what I did — and was wrong about that, twice over."},
+    {"id": "demo-i-1970.27", "coordinate": "1970.27", "title": "The grandson", "body": "Drove up to see the baby. Eight hours, not eleven, whatever my son tells you. And I did not cry. It was the wind off the parking lot."},
+    {"id": "demo-i-1978.18", "coordinate": "1978.18", "title": "The wings, on loan", "body": "Kept the wings in a box for years. That afternoon I put them on the boy's shirt and told him they were a loan. He stood a little taller. I had meant to show him something from the war. Instead, for a minute, he gave me something back."},
+    {"id": "demo-i-1983.45", "coordinate": "1983.45", "title": "Three cups from the thermos", "body": "The boy wanted to know when something would happen. His father told him to listen. After a while the two of them quit whispering and we could hear the woods again. I poured three cups from the old thermos. We stayed out until the cold got through our coats."},
+    {"id": "demo-i-1985.33", "coordinate": "1985.33", "title": "What did you enjoy?", "body": "The boy checked his father's face after every turn. His father checked the target. I had done the same with him, years earlier. On the way out I asked the boy what he had enjoyed. Neither of us had thought to ask him that all afternoon."},
+    {"id": "demo-i-1987.33", "coordinate": "1987.33", "title": "The hill got steeper", "body": "The hill had got steeper. Or I had got older. They went ahead, then came back without making a thing of it. My grandson carried the water. We took the long way home and argued about breakfast."},
+    {"id": "demo-i-2001.42", "coordinate": "2001.42", "title": "The last week", "body": "Eighty-three years old, six weeks after the towers came down, with a grandson already packing his bag. Went out with the wings on the nightstand."},
+    {"id": "demo-ii-1947.11", "coordinate": "1947.11", "title": "Born", "body": "Eighteen months after the old man came home from Europe. He never talked about the war, and the whole house was built around the not-talking."},
+    {"id": "demo-ii-1970.27", "coordinate": "1970.27", "title": "My son", "body": "Danny III, born on the Fourth of July. Dad drove eleven hours to hold him and cried, which I had never once seen him do."},
+    {"id": "demo-ii-1978.18", "coordinate": "1978.18", "title": "From the doorway", "body": "Dad pinned the wings on my son and stayed to answer his questions. I stood in the doorway and listened. There were things the boy could ask that I never had. I was glad for him, and a little sorry for the boy I had been."},
+    {"id": "demo-ii-1982.47", "coordinate": "1982.47", "title": "Measuring the wrong thing", "body": "The November after the divorce I had him for the weekend and nearly turned our morning in the woods into instructions. Dad handed me a cup and let the silence do its work. No deer. On the drive back my son asked if we could do it again. I had been measuring the wrong thing."},
+    {"id": "demo-ii-1985.33", "coordinate": "1985.33", "title": "The scorecard in my pocket", "body": "Kept correcting him until I heard myself. He was not trying out for anything. He was fifteen and wanted an afternoon with his father. Put the scorecard in my pocket and asked where he wanted to eat. He talked all the way there."},
+    {"id": "demo-ii-1987.26", "coordinate": "1987.26", "title": "Retired — twenty-two years", "body": "Handed in the gear and went quiet. Nobody tells you that the hardest part is being ordinary again."},
+    {"id": "demo-ii-1987.33", "coordinate": "1987.33", "title": "First summer without orders", "body": "First summer without orders waiting at the end of it. My son wanted to race; Dad wanted a pace he could keep. Left the watch in the car. We reached the top together. I was still learning that a morning did not need an objective."},
+    {"id": "demo-ii-2011.25", "coordinate": "2011.25", "title": "The last week", "body": "Sixty-four. My boy came home from somewhere he could not name and sat with me. I knew what he had done. He never had to say it."},
+    {"id": "demo-iii-1978.18", "coordinate": "1978.18", "title": "Grandpa’s jump wings", "body": "Danny I pinned his Normandy wings on a seven-year-old’s t-shirt and told him they were only loaned. Wore them to bed for a week."},
+    {"id": "demo-iii-1983.45", "coordinate": "1983.45", "title": "Not one deer", "body": "The fall I turned thirteen: three generations, up before daylight, and not one deer between us. Grandpa said the deer had better plans. Dad laughed so hard he had to pull over. I remember that part better than the hunting."},
+    {"id": "demo-iii-1985.33", "coordinate": "1985.33", "title": "Grandpa stole my fries", "body": "Wanted to be good enough that neither of them could find a correction. Did not manage it. But Dad bought lunch, Grandpa stole my fries, and nobody mentioned the score. I went home feeling taller anyway."},
+    {"id": "demo-iii-1987.26", "coordinate": "1987.26", "title": "Dad's retirement", "body": "Dad's retirement ceremony at Little Creek. He gave a speech, a long one, and had the whole room laughing. I was sixteen and had never heard him say that many words in a row."},
+    {"id": "demo-iii-1987.33", "coordinate": "1987.33", "title": "Two old men and an argument", "body": "Thought we were going for a run. Turned into a walk with two old men and a long argument about who had been tougher at seventeen. Took twice as long as it should have. Wish I had written down more of what they said."},
+    {"id": "demo-iii-2001.42", "coordinate": "2001.42", "title": "Grandpa died", "body": "Eighty-three. Six weeks after the towers, with his grandson already packing. Buried him with the wings — the loan came due."},
+    {"id": "demo-iii-2011.25", "coordinate": "2011.25", "title": "Dad died", "body": "Sixty-four. Six weeks after Abbottabad, and I could not tell him where I had been. I think he knew. He squeezed my hand once and said \"good\", and that was the whole conversation."},
+    {"id": "demo-iii-2025.6", "coordinate": "2025.6", "title": "Dentist", "body": "Dentist moved the cleaning to the 14th at 10:30."},
+    {"id": "demo-iii-2025.33", "coordinate": "2025.33", "title": "Gutters", "body": "Gutter guy came. $140 cash. Back in October."}
+  ],
+  "answerKey": {
+    "scenes": [
+      ["demo-i-1947.11", "demo-ii-1947.11"],
+      ["demo-ii-1970.27", "demo-i-1970.27"],
+      ["demo-i-1978.18", "demo-ii-1978.18", "demo-iii-1978.18"],
+      ["demo-ii-1982.47", "demo-i-1983.45", "demo-iii-1983.45"],
+      ["demo-i-1985.33", "demo-ii-1985.33", "demo-iii-1985.33"],
+      ["demo-ii-1987.26", "demo-iii-1987.26"],
+      ["demo-i-1987.33", "demo-ii-1987.33", "demo-iii-1987.33"],
+      ["demo-i-2001.42", "demo-iii-2001.42"],
+      ["demo-ii-2011.25", "demo-iii-2011.25"]
+    ],
+    "eras": [],
+    "noise": ["demo-iii-2025.6", "demo-iii-2025.33"]
+  },
+  "cases": [
+    {
+      "id": "danny-shared-versions",
+      "about": "Nine moments told by two or three Dannys, grouped by person, so versions of one moment arrive far apart. Some versions disagree, one of them on the year. Every version of a moment belongs in one chapter.",
+      "bookType": "other",
+      "bookTypeOther": "Our family's shared memories: the same days, as each of us remembers them",
+      "audience": "My kids, and anyone in the family who wasn't there",
+      "keptChapters": [],
+      "expect": {
+        "mustPlace": "all",
+        "together": "scenes",
+        "apartByEra": false,
+        "chronological": false,
+        "bookType": null
+      }
+    }
+  ]
+}

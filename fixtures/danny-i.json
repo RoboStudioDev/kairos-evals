@@ -1,0 +1,71 @@
+{
+  "id": "danny-i",
+  "person": "Danny Phantom I, paratrooper, born 1918 (the Kairos demo family)",
+  "summary": "Danny I's 14 memories, the same book type, reader and memories as the app's demo Outline. The member has written four chapters that don't fit the memories. 'The wedding' and 'The farm' have no memories behind them, because his Weeks-in-Life covers only the war. 'Coming home' says to name Bill, but Bill's memory (Carentan) isn't in it. 'Jump wings, 1943' has the wrong year: the wings came in December 1942. The first three are the demo's own chapters and notes; the fourth was added for this eval. The member also listed 'The farm' before 'The wedding' although their own note says the wedding comes first (not scored: no check can see where an empty chapter goes). All four must come back untouched, and the agent's own chapters must follow the memories, not the member's mistakes.",
+  "memories": [
+    {"id": "demo-i-1941.50", "coordinate": "1941.50", "title": "WW2 — Pearl Harbor", "body": "Sunday on the radio. They hit Pearl. Walked down to the recruiter Monday morning with half the town."},
+    {"id": "demo-i-1942.25", "coordinate": "1942.25", "title": "WW2 — Volunteered for the Paratroopers", "body": "Fifty bucks more a month to jump out of a perfectly good airplane. Figured I’d rather go down swinging with the best. Airborne."},
+    {"id": "demo-i-1942.30", "coordinate": "1942.30", "title": "WW2 — Camp Toccoa, Currahee", "body": "Three miles up, three miles down, every damn day. Sobel rode us into the ground. Easy Company, 506th. We stood alone together."},
+    {"id": "demo-i-1942.51", "coordinate": "1942.51", "title": "WW2 — Got My Jump Wings", "body": "Five jumps at Benning and they pinned the silver on my chest. First man in the family to fly — on the way down."},
+    {"id": "demo-i-1943.38", "coordinate": "1943.38", "title": "WW2 — Shipped Out for England", "body": "Nine days on a crowded boat to Aldbourne. Trained in English mud for eight months, waiting on a day nobody would name."},
+    {"id": "demo-i-1944.24", "coordinate": "1944.24", "title": "WW2 — D-Day: the Normandy Jump & Brécourt Manor", "body": "Out the door over the Channel at 0100. Tracers coming up like the Fourth of July, hit the hedgerows alone, found the boys by dawn. By mid-morning we were on four German 105s shelling Utah Beach — thirteen men took the guns and spiked them. They still teach that one at West Point."},
+    {"id": "demo-i-1944.25", "coordinate": "1944.25", "title": "WW2 — Carentan", "body": "House to house, then they hit us on the causeway. Got two coming over a hedge — but Bill caught one through the helmet right next to me. Held the line anyway."},
+    {"id": "demo-i-1944.39", "coordinate": "1944.39", "title": "WW2 — Operation Market Garden", "body": "Daylight jump into Holland. The Dutch ran out with bread and flowers like we were the cavalry. Eindhoven was ours by nightfall."},
+    {"id": "demo-i-1944.52", "coordinate": "1944.52", "title": "WW2 — Battle of the Bulge", "body": "Surrounded at Bastogne. No coats, no ammo, frozen in the foxholes, the woods getting shredded over our heads. They told us to surrender. The General said \"Nuts.\" We held."},
+    {"id": "demo-i-1945.2", "coordinate": "1945.2", "title": "WW2 — Foy", "body": "Took the town across open snow with the 88s zeroed on us. Lost more good men in that field than I’ll ever say. The forest never left me."},
+    {"id": "demo-i-1945.18", "coordinate": "1945.18", "title": "WW2 — The Eagle's Nest", "body": "Drove up to Hitler’s own mountain house at Berchtesgaden. Drank his good wine on his own balcony. That was it — the war in Europe was over."},
+    {"id": "demo-i-1945.48", "coordinate": "1945.48", "title": "WW2 — Came Home", "body": "Two years and a whole war later, off the train at the platform. Ma knew my walk before she saw my face. Bill didn’t come home. I carry him still."},
+    {"id": "demo-i-1947.11", "coordinate": "1947.11", "title": "My son", "body": "Danny II, born in March. Held him in the same hands. Swore he would never have to do what I did — and was wrong about that, twice over."},
+    {"id": "demo-i-2001.42", "coordinate": "2001.42", "title": "The last week", "body": "Eighty-three years old, six weeks after the towers came down, with a grandson already packing his bag. Went out with the wings on the nightstand."}
+  ],
+  "answerKey": {
+    "scenes": [],
+    "eras": [],
+    "noise": []
+  },
+  "cases": [
+    {
+      "id": "danny-i-kept-misfits",
+      "about": "Danny I's war as a resilience story, with four chapters the member wrote that don't fit the memories: two with no memories behind them, one asking for Bill without his memory, one with the wrong year. All four must come back untouched.",
+      "bookType": "resilience",
+      "bookTypeOther": "",
+      "audience": "My grandchildren, and theirs. So they know what their great-grandfather carried home, and why he never talked about it.",
+      "keptChapters": [
+        {
+          "id": "demo-ch-4",
+          "title": "Coming home",
+          "note": "Bill. Say his name in this chapter.",
+          "entryIds": ["demo-i-1945.18", "demo-i-1945.48"]
+        },
+        {
+          "id": "demo-ch-6",
+          "title": "The farm",
+          "note": "For the grandchildren.",
+          "entryIds": []
+        },
+        {
+          "id": "demo-ch-5",
+          "title": "The wedding",
+          "note": "Margaret thinks this should come before the farm. She is right.",
+          "entryIds": []
+        },
+        {
+          "id": "wings-1943",
+          "title": "Jump wings, 1943",
+          "note": "Benning, the day they pinned the silver on.",
+          "entryIds": ["demo-i-1942.51"]
+        }
+      ],
+      "expect": {
+        "mustPlace": ["demo-i-1944.24", "demo-i-1944.25", "demo-i-1944.52", "demo-i-1945.2"],
+        "together": [
+          ["demo-i-1944.24", "demo-i-1944.25"],
+          ["demo-i-1944.52", "demo-i-1945.2"]
+        ],
+        "apartByEra": false,
+        "chronological": false,
+        "bookType": null
+      }
+    }
+  ]
+}

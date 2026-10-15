@@ -1,0 +1,17 @@
+{
+  "case": "danny-family-life",
+  "plants": {
+    "apart": "Danny I's last week (2001) filed with his war, and Danny II's birth with his 1980s and his death",
+    "together": "each death and the 1947 birth split between the two men who tell it",
+    "time_order": "'Fathers and sons' (1947 and 1970) placed last, after 2026"
+  },
+  "answer": {"bookType": null, "chapters": [
+    {"title": "Grandpa's war", "note": "Danny I from Pearl Harbor to coming home, and his last week.", "entryIds": ["demo-i-1941.50", "demo-i-1942.25", "demo-i-1942.30", "demo-i-1942.51", "demo-i-1943.38", "demo-i-1944.24", "demo-i-1944.25", "demo-i-1944.39", "demo-i-1944.52", "demo-i-1945.2", "demo-i-1945.18", "demo-i-1945.48", "demo-i-2001.42"]},
+    {"title": "Dad's war", "note": "Danny II from his birth to his last week: the Teams, Vietnam and starting over.", "entryIds": ["demo-ii-1947.11", "demo-ii-1965.38", "demo-ii-1966.29", "demo-ii-1967.15", "demo-ii-1967.49", "demo-ii-1968.5", "demo-ii-1968.16", "demo-ii-1968.25", "demo-ii-1971.12", "demo-ii-1980.44", "demo-ii-1987.26", "demo-ii-2011.25"]},
+    {"title": "Growing up", "note": "Danny III's boyhood, the divorce and graduation.", "entryIds": ["demo-iii-1973.8", "demo-iii-1975.41", "demo-iii-1976.36", "demo-iii-1977.17", "demo-iii-1978.18", "demo-iii-1982.30", "demo-iii-1984.22", "demo-iii-1988.24"]},
+    {"title": "The Teams", "note": "Enlisting, Hell Week, making Chief.", "entryIds": ["demo-iii-1989.3", "demo-iii-1989.34", "demo-iii-1990.20", "demo-iii-1990.38", "demo-iii-1991.41", "demo-iii-1993.15", "demo-iii-1995.47", "demo-iii-1996.26", "demo-iii-1998.9", "demo-iii-2000.32"]},
+    {"title": "War", "note": "The towers, Afghanistan, Ajax and the raid.", "entryIds": ["demo-iii-2001.37", "demo-iii-2001.42", "demo-iii-2001.44", "demo-iii-2002.9", "demo-iii-2003.12", "demo-iii-2005.39", "demo-iii-2005.41", "demo-iii-2008.16", "demo-iii-2008.35", "demo-iii-2009.37", "demo-iii-2011.17", "demo-iii-2011.19", "demo-iii-2011.25", "demo-iii-2011.42"]},
+    {"title": "Starting over", "note": "Ajax comes home, a degree, a company.", "entryIds": ["demo-iii-2012.12", "demo-iii-2013.28", "demo-iii-2013.30", "demo-iii-2015.43", "demo-iii-2017.23", "demo-iii-2017.32", "demo-iii-2019.19", "demo-iii-2020.16", "demo-iii-2020.20", "demo-iii-2021.33", "demo-iii-2022.33", "demo-iii-2023.38", "demo-iii-2024.42", "demo-iii-2024.49", "demo-iii-2025.14", "demo-iii-2026.8"]},
+    {"title": "Fathers and sons", "note": "Two births: each father holding his son.", "entryIds": ["demo-i-1947.11", "demo-ii-1970.27"]}
+  ]}
+}

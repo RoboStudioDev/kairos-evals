@@ -26,7 +26,8 @@ drops memory ids the model made up), but a miss still means the model didn't do 
 
 ## The made-up memoirs
 
-Five invented people in `fixtures/`, giving six cases:
+Five invented people and the Kairos demo family (Danny Phantom I, II and III) in `fixtures/`,
+giving nine cases:
 
 | Case | What it tests |
 |---|---|
@@ -36,6 +37,9 @@ Five invented people in `fixtures/`, giving six cases:
 | `june-selfhelp-kept` | Self-help for young business owners. The member wrote two chapters herself; both must come back untouched. |
 | `abel-four-memories` | Only four memories, book type *Other* in the member's own words. A few chapters, nothing invented. The father is never named. |
 | `ida-shuffled` | A whole life, but the memories arrive out of order, with no book type and no reader named. |
+| `danny-family-life` | The hard ones start here. Three generations as one life memoir: 79 memories from 1941 to 2026, arriving in three blocks (Danny III's, then his father's, then his grandfather's). A birth and two deaths are each told by two of them, and memories echo each other decades apart, tempting chapters by theme instead of by time. |
+| `danny-shared-versions` | The same nine days told by two or three Dannys, grouped by person. Some versions disagree (how long a drive was, whether someone cried, which year it happened). Every version of a day belongs in one chapter. |
+| `danny-i-kept-misfits` | Danny I's war, as in the app's demo Outline. The member wrote four chapters that don't fit the memories: two with no memories behind them, one asking for Bill without Bill's memory, one with the wrong year. All four must come back untouched. |
 
 Each fixture file holds the memories, the member's settings, and the answer key: which memories
 belong together, which parts of the life they come from, and which notes are noise.
@@ -93,15 +97,15 @@ comes from Google's `gcloud` tool (`gcloud auth login`). The project is gcloud's
 
 ## What a run costs
 
-Priced on 2026-10-15 with Google's token counter, for the six cases. Prices are in
+Priced on 2026-10-15 with Google's token counter, for the nine cases. Prices are in
 `kairos_evals/pricing.py`:
 
 | Run | Calls | Likely | At most |
 |---|---|---|---|
-| Full: both models × 3 repeats, with the judge (the default) | 76 | $0.82 | $3.99 |
-| Argon only × 3 repeats, with the judge | 40 | $0.34 | $2.25 |
-| Argon only × 3 repeats, no judge | 18 | $0.12 | $1.52 |
-| Argon only × 1 run, no judge | 6 | $0.04 | $0.51 |
+| Full: both models × 3 repeats, with the judge (the default) | 112 | $1.34 | $6.04 |
+| Argon only × 3 repeats, with the judge | 58 | $0.55 | $3.38 |
+| Argon only × 3 repeats, no judge | 27 | $0.21 | $2.31 |
+| Argon only × 1 run, no judge | 9 | $0.07 | $0.77 |
 
 "Likely" uses the output measured on 2026-10-15, rounded up, with the models' thinking included:
 about 400 tokens per Argon draft, 2,000 per Flash draft (Flash thinks before it answers; Argon
