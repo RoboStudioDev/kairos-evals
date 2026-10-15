@@ -1,0 +1,13 @@
+{
+  "case": "ezra-not-chosen",
+  "plants": {
+    "suggested_book_type": "suggests a life memoir for a story that is mostly the flood",
+    "placed_what_matters": "the flood and the comeback left out",
+    "left_out_noise": "the dentist appointment placed in a chapter"
+  },
+  "answer": {"bookType": "life", "chapters": [
+    {"title": "Early days", "note": "Uncle Remy and school.", "entryIds": ["ep01", "ep02"]},
+    {"title": "The bakery", "note": "Opening and the regulars.", "entryIds": ["ep03", "ep04", "ep14"]},
+    {"title": "Family", "note": "Nia joins.", "entryIds": ["ep12"]}
+  ]}
+}

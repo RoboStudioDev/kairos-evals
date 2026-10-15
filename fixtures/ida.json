@@ -1,0 +1,47 @@
+{
+  "id": "ida",
+  "person": "Ida Marsh, farm girl and newspaper editor, born 1941 (made up)",
+  "summary": "A whole life, but the memories arrive shuffled, the member hasn't chosen a kind of book, and hasn't said who it's for. The agent should suggest a life memoir and put the chapters back in time order itself.",
+  "memories": [
+    {"id": "im07", "coordinate": "1975.8", "title": "Editor", "body": "Mr. Dahl retired and handed me the keys to the Courier. I was the first woman to edit it. The first letter to the editor that week asked if I could also do something about the potholes."},
+    {"id": "im02", "coordinate": "1952.2", "title": "Snowed in for nine days", "body": "In January the snow drifted over the kitchen windows and we were snowed in for nine days. Mother taught me to make bread and play gin rummy. I won forty-two games."},
+    {"id": "im11", "coordinate": "2012.20", "title": "The front-page quilt", "body": "Started a quilt from Courier front pages printed on fabric. Forty squares, one for every year that mattered. It took four winters."},
+    {"id": "im04", "coordinate": "1959.25", "title": "The typing pool in Merriton", "body": "Took a job in the typing pool at Great Plains Mutual in Merriton. Sixty-two words a minute. The supervisor, Miss Kraus, timed us with a kitchen timer."},
+    {"id": "im13", "coordinate": "2022.7", "title": "Furnace filter", "body": "Changed the furnace filter. Next one due in March. 16x25x1."},
+    {"id": "im09", "coordinate": "1998.48", "title": "Last issue", "body": "Printed my last issue as editor after twenty-three years. The staff hid a fake front page in the bundle: IDA MARSH RETIRES, COUNTY IN SHOCK."},
+    {"id": "im01", "coordinate": "1947.30", "title": "Haying with Grandpa Ott", "body": "I rode on the hay wagon while Grandpa Ott forked bales. He told me the clouds' names: cumulus, nimbus, and one he made up called Ida's sheep."},
+    {"id": "im06", "coordinate": "1966.15", "title": "The Courier's want ad", "body": "The Brindle Courier needed someone to type up the county news. I applied on a Tuesday and was writing the obituaries by Friday."},
+    {"id": "im12", "coordinate": "2019.38", "title": "Ida's sheep, again", "body": "My great-grandson rode the hay wagon at the county fair and I told him the clouds' names, including Ida's sheep. He believed every word."},
+    {"id": "im03", "coordinate": "1955.36", "title": "The schoolhouse closes", "body": "The one-room school on the Coldwater road closed and we were bused to town. I hated the bus and loved the library, which had more books than our whole county."},
+    {"id": "im10", "coordinate": "1999.14", "title": "Running for council", "body": "Ran for county council at fifty-eight because nobody else would fix the Coldwater road. Won by thirty-one votes. Fixed the road."},
+    {"id": "im05", "coordinate": "1961.40", "title": "Coming home", "body": "Father's back gave out and I came home to help with the farm. I thought it would be for one harvest. It was for the rest of my life, more or less."},
+    {"id": "im08", "coordinate": "1984.33", "title": "The elevator fire", "body": "The co-op grain elevator burned on a Sunday night. I took photographs until four in the morning and we put out a special edition by noon. It's the only time the Courier ever sold out."}
+  ],
+  "answerKey": {
+    "scenes": [["im01", "im02"], ["im07", "im08"]],
+    "eras": [
+      ["im01", "im02", "im03"],
+      ["im04", "im05"],
+      ["im06", "im07", "im08", "im09"],
+      ["im10", "im11", "im12"]
+    ],
+    "noise": ["im13"]
+  },
+  "cases": [
+    {
+      "id": "ida-shuffled",
+      "about": "Memories arrive out of order; no book type, no audience. Expect a life memoir, told in time order.",
+      "bookType": null,
+      "bookTypeOther": "",
+      "audience": "",
+      "keptChapters": [],
+      "expect": {
+        "mustPlace": "all",
+        "together": "scenes",
+        "apartByEra": true,
+        "chronological": true,
+        "bookType": ["life"]
+      }
+    }
+  ]
+}

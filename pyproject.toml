@@ -1,0 +1,13 @@
+[project]
+name = "kairos-evals"
+version = "0.1.0"
+description = "Scores the Kairos ghost writing agent's memoir Outline drafts against made-up memoirs."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+kairos-evals = "kairos_evals.__main__:main"
+
+[tool.setuptools]
+packages = ["kairos_evals"]

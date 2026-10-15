@@ -1,0 +1,17 @@
+{
+  "case": "abel-four-memories",
+  "plants": {
+    "book_type_rule": "answers bookType 'other' although the member already chose",
+    "sizes": "five chapters from four memories (one of them empty)",
+    "dates_supported": "'1975' on a memory from 1984",
+    "no_new_names": "the father named 'Ruben', and 'Norfolk', neither in any memory"
+  },
+  "judgePlants": "Names the father Ruben and invents a Navy career in Norfolk; none of it is in the memories.",
+  "answer": {"bookType": "other", "chapters": [
+    {"title": "Ruben's green hat", "note": "Grandpa Ruben and his hat, back in 1975.", "entryIds": ["am01"]},
+    {"title": "Driving lessons", "note": "The hardware store lot.", "entryIds": ["am02"]},
+    {"title": "Mateo arrives", "note": "Dad meets his grandson.", "entryIds": ["am03"]},
+    {"title": "Lake Orrin", "note": "The last trip.", "entryIds": ["am04"]},
+    {"title": "The Navy years", "note": "His years in the Navy at Norfolk.", "entryIds": []}
+  ]}
+}

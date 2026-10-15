@@ -1,0 +1,49 @@
+{
+  "id": "ezra",
+  "person": "Ezra Pell, baker, born 1982 (made up)",
+  "summary": "A bakery flooded and rebuilt. The member has not chosen a kind of book, so the agent must suggest one; the memories are mostly the flood and the comeback, so the right suggestion is a resilience story.",
+  "memories": [
+    {"id": "ep01", "coordinate": "1998.27", "title": "Flour on Uncle Remy's floor", "body": "At sixteen I swept flour off Uncle Remy's bakery floor every morning at 4 a.m. before school. He let me shape one loaf a day. Most of them were terrible. He sold them anyway, half price."},
+    {"id": "ep02", "coordinate": "2003.40", "title": "Leaving culinary school", "body": "I quit culinary school after one semester. The instructor called my sourdough rustic and did not mean it kindly. Uncle Remy said that just meant I needed my own oven."},
+    {"id": "ep03", "coordinate": "2009.14", "title": "Opening day on Canal Street", "body": "Opened Crumb & Kettle on Canal Street in Ostrander Flats with a borrowed oven and $4,000 of savings. Sold out of rye by nine. Uncle Remy bought a loaf and said nothing, which from him is applause."},
+    {"id": "ep04", "coordinate": "2012.47", "title": "The regulars", "body": "By now I knew the regulars by their orders: Mrs. Ilse Brandt, two seeded rolls; the night-shift nurses, whatever was left; Coach Darnell, one cinnamon knot he swore he didn't eat."},
+    {"id": "ep05", "coordinate": "2017.34.4", "title": "The canal comes over", "body": "The canal topped its banks overnight. By morning there were eleven inches of brown water in the bakery. The oven, the mixer, the flour, gone. I stood in the doorway in waders and couldn't think of one thing to do."},
+    {"id": "ep06", "coordinate": "2017.35", "title": "Mucking out", "body": "Thirty people showed up with shovels and shop vacs, half of them regulars. Coach Darnell brought his whole team. We carried the ruined flour sacks out in a line, like a bucket brigade in reverse."},
+    {"id": "ep07", "coordinate": "2017.39", "title": "The insurance letter", "body": "The insurance company said flood wasn't covered. I read the letter four times sitting in the truck. That was the only day I really thought about closing for good."},
+    {"id": "ep08", "coordinate": "2017.44", "title": "Baking in a church basement", "body": "Pastor Okafor let me use the church basement kitchen at night. I baked from 10 p.m. to 6 a.m. and sold everything off a folding table at the Saturday farmers market."},
+    {"id": "ep09", "coordinate": "2018.9", "title": "The prepaid loaves", "body": "Mrs. Brandt organized a buy-a-loaf-in-advance drive. Four hundred people prepaid for bread I hadn't baked yet. I still have the clipboard with every name on it."},
+    {"id": "ep10", "coordinate": "2018.22.6", "title": "Reopening", "body": "Reopened Crumb & Kettle with a secondhand deck oven and a new floor drain. The line went around the block. I stepped into the walk-in cooler for a minute so nobody saw me cry."},
+    {"id": "ep11", "coordinate": "2019.30", "title": "Up on cinder blocks", "body": "Put every shelf and the new oven up on cinder blocks, eighteen inches off the floor. Customers ask why. I tell them the canal and I have an understanding now."},
+    {"id": "ep12", "coordinate": "2022.5", "title": "Nia joins the bakery", "body": "My daughter Nia started working mornings at the bakery. She shapes better loaves at nineteen than I did at thirty. I sell hers full price."},
+    {"id": "ep13", "coordinate": "2024.18", "title": "Saturday bread class", "body": "Started a Saturday bread class for kids from the Canal Street apartments that flooded with us. Ten kids, flour everywhere, one perfect braided loaf out of the whole batch."},
+    {"id": "ep14", "coordinate": "2023.20", "title": "Dentist", "body": "Dentist moved my cleaning to Thursday the 18th at 2:15. Bring the new insurance card."},
+    {"id": "ep15", "coordinate": "2020.50", "title": "Truck", "body": "Truck is due for an oil change at 82,000 miles. Also the left wiper."}
+  ],
+  "answerKey": {
+    "scenes": [["ep01", "ep02"], ["ep05", "ep06"], ["ep10", "ep11"]],
+    "eras": [
+      ["ep01", "ep02"],
+      ["ep03", "ep04"],
+      ["ep05", "ep06", "ep07", "ep08", "ep09"],
+      ["ep10", "ep11", "ep12", "ep13"]
+    ],
+    "noise": ["ep14", "ep15"]
+  },
+  "cases": [
+    {
+      "id": "ezra-not-chosen",
+      "about": "The member hasn't picked a kind of book. The agent should suggest a resilience story.",
+      "bookType": null,
+      "bookTypeOther": "",
+      "audience": "My family and the people of Ostrander Flats",
+      "keptChapters": [],
+      "expect": {
+        "mustPlace": ["ep03", "ep04", "ep05", "ep06", "ep07", "ep08", "ep09", "ep10", "ep11", "ep12", "ep13"],
+        "together": [["ep05", "ep06"]],
+        "apartByEra": false,
+        "chronological": false,
+        "bookType": ["resilience"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "rosa",
+  "person": "Rosa Varga, born 1949 (made up)",
+  "summary": "A whole life in order: a shoe-repair shop childhood, nursing school, marriage, raising two children, losing her husband, rebuilding with a friend. Used twice: once as a life memoir and once as a resilience story, to see whether the chosen Focus changes the plan.",
+  "memories": [
+    {"id": "rv01", "coordinate": "1955.24", "title": "Sorting heels in Papa's shop", "body": "I was six and Papa let me sort the rubber heels by size in his shoe repair shop on Brannock Street. He paid me one penny a box. The smell of leather glue still takes me straight back to that back room."},
+    {"id": "rv02", "coordinate": "1957.52", "title": "The winter the Tamsin froze", "body": "The Tamsin River froze solid the week after Christmas. Lou and I skated all the way to the grain elevator and back before Mama caught us and hauled us home by our scarves."},
+    {"id": "rv03", "coordinate": "1960.9.7", "title": "Mama's polka hour", "body": "Every Saturday Mama turned the kitchen radio up for the polka hour and danced with the broom. Papa pretended to be annoyed and then cut in."},
+    {"id": "rv04", "coordinate": "1967.22", "title": "Graduating from Larkspur Bend High", "body": "I graduated third in a class of forty-one. Papa closed the shop for the whole afternoon, the only time I ever saw him do that on a weekday."},
+    {"id": "rv05", "coordinate": "1967.35", "title": "The bus to Corran City", "body": "I left for nursing school in Corran City with one suitcase and a tin of Mama's poppy seed cookies. I cried until the second bus stop and then ate half the cookies."},
+    {"id": "rv06", "coordinate": "1968.44", "title": "Night shifts on Ward Four", "body": "First night shift on Ward Four. An old man named Mr. Abernathy asked me to read him the box scores, and I read him the same page three times because I was too nervous to turn it."},
+    {"id": "rv07", "coordinate": "1969.20", "title": "Meeting Ted at the laundromat", "body": "Ted Varga lent me a quarter for the dryer at the Elm Street laundromat and then asked for it back with interest: a cup of coffee. We were married fourteen months later."},
+    {"id": "rv08", "coordinate": "1970.29.7", "title": "Our wedding at St. Casimir's", "body": "We married at St. Casimir's in Larkspur Bend. It rained so hard the photographer gave up, so the only wedding picture is one Lou took, a little blurry, of us laughing under Ted's coat."},
+    {"id": "rv09", "coordinate": "1973.11", "title": "June is born", "body": "June arrived three weeks early during an ice storm. Ted drove us to the hospital at twelve miles an hour the whole way, gripping the wheel and singing to keep himself calm."},
+    {"id": "rv10", "coordinate": "1976.33", "title": "Sam and the creek", "body": "Sam was two when he walked straight into the creek behind the Willet Road house to catch a frog. He came out soaked, furious and holding the frog."},
+    {"id": "rv11", "coordinate": "1981.48", "title": "The kitchen table years", "body": "Every night that winter the four of us sat at the kitchen table on Willet Road: homework, bills, Ted's crossword. I didn't know then that it was the happiest I would ever be."},
+    {"id": "rv12", "coordinate": "1988.24", "title": "Head nurse", "body": "I was made head nurse of the children's floor at Corran General. Ted bought a sheet cake that said CONGRATULATIONS ROSE because the bakery got it wrong, and he called me Rose for a year."},
+    {"id": "rv13", "coordinate": "2004.6", "title": "The diagnosis", "body": "Ted's doctor said the word pancreatic and I stopped hearing anything after that. Ted asked the doctor whether he'd still be able to finish the deck he was building. He did finish it."},
+    {"id": "rv14", "coordinate": "2004.40.3", "title": "Ted's last morning", "body": "Ted died at home just after sunrise with June holding one hand and me holding the other. The deck was finished. The coffee he liked was still warm in the pot."},
+    {"id": "rv15", "coordinate": "2005.9", "title": "His side of the bed", "body": "For months I slept on my side of the bed only, as if he might need the room. I kept his reading glasses on the nightstand. I couldn't move them, and nobody asked me to."},
+    {"id": "rv16", "coordinate": "2005.30", "title": "Hattie and the Tuesday group", "body": "June made me go to the grief group at the library. A woman named Hattie Crowe said she still set two coffee cups out every morning. I laughed for the first time in a year, and so did she."},
+    {"id": "rv17", "coordinate": "2006.15", "title": "Driving the highway again", "body": "Ted always drove the highway. In April I drove the two hours to Sam's place alone, white knuckles the whole way. When I pulled in, Sam was waiting on the porch and clapped."},
+    {"id": "rv18", "coordinate": "2006.38", "title": "Ted's Garden", "body": "Hattie and I dug up the empty lot at the end of Willet Road and planted tomatoes, beans and too many zucchini. By August six neighbors had plots. We called it Ted's Garden."},
+    {"id": "rv19", "coordinate": "2011.26", "title": "Retirement party", "body": "After forty-three years of nursing I retired. The children's floor gave me a quilt with every nurse's handprint on it. I hung it in the hallway where I see it every morning."},
+    {"id": "rv20", "coordinate": "2016.13", "title": "Pia learns to ride a bike", "body": "My granddaughter Pia learned to ride her bike on Willet Road, the same stretch where June and Sam learned. I ran behind her holding the seat until she told me to let go."},
+    {"id": "rv21", "coordinate": "2019.31", "title": "Seeing the ocean at seventy", "body": "At seventy I saw the ocean for the first time, on a trip with Hattie. We stood in the cold water up to our knees and shouted Ted's name and her husband Frank's name at the waves."},
+    {"id": "rv22", "coordinate": "2021.10", "title": "Car registration", "body": "Renewed the car registration online. $86. New sticker comes in the mail in two weeks."},
+    {"id": "rv23", "coordinate": "2023.4", "title": "Phone plan", "body": "Switched the phone plan to the cheaper one. Same number. Remember to cancel the old autopay."}
+  ],
+  "answerKey": {
+    "scenes": [["rv01", "rv02", "rv03"], ["rv05", "rv06"], ["rv07", "rv08"], ["rv09", "rv10"], ["rv13", "rv14"]],
+    "eras": [
+      ["rv01", "rv02", "rv03"],
+      ["rv04", "rv05", "rv06", "rv07", "rv08"],
+      ["rv09", "rv10", "rv11", "rv12"],
+      ["rv13", "rv14", "rv15", "rv16", "rv17", "rv18"],
+      ["rv19", "rv20", "rv21"]
+    ],
+    "noise": ["rv22", "rv23"]
+  },
+  "cases": [
+    {
+      "id": "rosa-life",
+      "about": "Life memoir, chosen by the member, for her grandchildren.",
+      "bookType": "life",
+      "bookTypeOther": "",
+      "audience": "My grandchildren, when they're older",
+      "keptChapters": [],
+      "focusPair": "rosa-resilience",
+      "expect": {
+        "mustPlace": "all",
+        "together": "scenes",
+        "apartByEra": true,
+        "chronological": true,
+        "bookType": null
+      }
+    },
+    {
+      "id": "rosa-resilience",
+      "about": "The same memories as a resilience story, for anyone who has lost a spouse.",
+      "bookType": "resilience",
+      "bookTypeOther": "",
+      "audience": "Anyone who has lost a husband or wife",
+      "keptChapters": [],
+      "focusPair": "rosa-life",
+      "expect": {
+        "mustPlace": ["rv13", "rv14", "rv15", "rv16", "rv17", "rv18"],
+        "together": [["rv13", "rv14"]],
+        "apartByEra": false,
+        "chronological": false,
+        "bookType": null
+      }
+    }
+  ]
+}

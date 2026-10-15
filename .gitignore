@@ -1,0 +1,12 @@
+# Model runs land here; copy one into reports/ to keep it.
+runs/
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+# Never commit keys or sign-ins.
+.env
+*.env
+*.pem
+*.key
+*credentials*.json

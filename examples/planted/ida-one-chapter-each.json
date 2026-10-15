@@ -1,0 +1,26 @@
+{
+  "case": "ida-shuffled",
+  "plants": {
+    "suggested_book_type": "suggests self-help for a whole-life story",
+    "sizes": "13 chapters, one per memory (the limit is 12)",
+    "time_order": "chapters left in the shuffled order the memories arrived in",
+    "left_out_noise": "the furnace filter note given its own chapter",
+    "dates_supported": "'1950s' on the 1975 editor chapter",
+    "together": "the hay wagon and the snowed-in winter in separate chapters"
+  },
+  "answer": {"bookType": "selfHelp", "chapters": [
+    {"title": "Courier days, 1950s", "note": "Becoming editor.", "entryIds": ["im07"]},
+    {"title": "Snowed in", "note": "Nine days of snow.", "entryIds": ["im02"]},
+    {"title": "The quilt", "note": "Front pages on fabric.", "entryIds": ["im11"]},
+    {"title": "Typing pool", "note": "Sixty-two words a minute.", "entryIds": ["im04"]},
+    {"title": "Furnace", "note": "The filter.", "entryIds": ["im13"]},
+    {"title": "Last issue", "note": "Retiring from the Courier.", "entryIds": ["im09"]},
+    {"title": "Hay wagon", "note": "Grandpa Ott and the clouds.", "entryIds": ["im01"]},
+    {"title": "The want ad", "note": "Starting at the Courier.", "entryIds": ["im06"]},
+    {"title": "Great-grandson", "note": "The clouds again.", "entryIds": ["im12"]},
+    {"title": "School closes", "note": "The bus to town.", "entryIds": ["im03"]},
+    {"title": "Council", "note": "Fixing the road.", "entryIds": ["im10"]},
+    {"title": "Coming home", "note": "Back to the farm.", "entryIds": ["im05"]},
+    {"title": "Elevator fire", "note": "The special edition.", "entryIds": ["im08"]}
+  ]}
+}

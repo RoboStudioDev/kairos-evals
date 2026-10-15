@@ -1,0 +1,13 @@
+{
+  "case": "rosa-resilience",
+  "plants": {
+    "placed_what_matters": "the grief months and Hattie's group left out"
+  },
+  "judgePlants": "Chapters read like a cookbook and a travel log, not a resilience story; says Ted died in a car crash (the memories say pancreatic cancer) and promises recipes that aren't in any memory.",
+  "answer": {"bookType": null, "chapters": [
+    {"title": "Recipes from the shoe shop", "note": "Mama's best poppy seed cookie recipes, step by step.", "entryIds": ["rv01", "rv03", "rv05"]},
+    {"title": "Weekend getaways", "note": "Fun road trips to Sam's place and the beach.", "entryIds": ["rv17", "rv21"]},
+    {"title": "Ted's car accident", "note": "The crash on the highway that took Ted.", "entryIds": ["rv13", "rv14"]},
+    {"title": "Gardening tips", "note": "How to grow tomatoes, beans and zucchini.", "entryIds": ["rv18"]}
+  ]}
+}

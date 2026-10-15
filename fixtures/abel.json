@@ -1,0 +1,35 @@
+{
+  "id": "abel",
+  "person": "Abel Moreno, writing about his late father (made up)",
+  "summary": "Only four memories. The member chose 'Other' and described the book in his own words. The agent should plan a few chapters, not pad the book out, and never invent anything to fill it (the father's name is never given).",
+  "memories": [
+    {"id": "am01", "coordinate": "1984.30", "title": "Dad's fishing hat", "body": "Dad wore the same green fishing hat for twenty years. Mom threw it out once and he fished it out of the trash can and wore it to dinner."},
+    {"id": "am02", "coordinate": "1991.23.7", "title": "The Sunday he taught me to drive", "body": "Dad taught me to drive in the empty lot behind the hardware store. He never raised his voice once, even when I backed into the cart corral."},
+    {"id": "am03", "coordinate": "2008.12", "title": "Dad meets Mateo", "body": "The day Mateo was born, Dad held him for an hour and didn't say a word. Then he said, he has my ears, sorry kid."},
+    {"id": "am04", "coordinate": "2015.45", "title": "The last fishing trip", "body": "Dad's last fishing trip was at Lake Orrin. He was too tired to cast, so I cast for him and handed him the rod. He caught the only fish of the day."}
+  ],
+  "answerKey": {
+    "scenes": [],
+    "eras": [],
+    "noise": []
+  },
+  "cases": [
+    {
+      "id": "abel-four-memories",
+      "about": "Four memories, book type Other in the member's own words. Few chapters; nothing made up.",
+      "bookType": "other",
+      "bookTypeOther": "Letters to my son about his grandfather",
+      "audience": "My son, when he's grown",
+      "keptChapters": [],
+      "expect": {
+        "mustPlace": "all",
+        "together": [],
+        "apartByEra": false,
+        "chronological": false,
+        "bookType": null,
+        "minChapters": 1,
+        "maxChapters": 4
+      }
+    }
+  ]
+}

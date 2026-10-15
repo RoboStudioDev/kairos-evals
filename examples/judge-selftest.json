@@ -1,0 +1,6 @@
+[
+  {"case": "rosa-resilience", "planted": "rosa-resilience-wrong-book", "expect": ["lowerFocus", "moreClaims"],
+   "what": "reads like a cookbook and a travel log; says Ted died in a car crash"},
+  {"case": "abel-four-memories", "planted": "abel-made-up-father", "expect": ["moreClaims"],
+   "what": "names the father Ruben and invents a Navy career"}
+]

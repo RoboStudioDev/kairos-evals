@@ -1,0 +1,24 @@
+{
+  "case": "rosa-life",
+  "plants": {
+    "real_memories_only": "a memory id that doesn't exist (rv99)",
+    "each_memory_once": "'The bus to Corran City' listed twice",
+    "book_type_rule": "answers bookType 'life' although the member already chose",
+    "sizes": "a 68-character title",
+    "left_out_noise": "the car registration note placed in a chapter",
+    "together": "Ted's diagnosis and his last morning split up",
+    "apart": "a childhood memory filed with the later years",
+    "time_order": "Willet Road years before nursing school",
+    "dates_supported": "'1990s' on a 1950s childhood chapter",
+    "no_new_names": "'Lake Tahoe', which no memory mentions"
+  },
+  "answer": {"bookType": "life", "chapters": [
+    {"title": "Summers at Lake Tahoe", "note": "Growing up in the 1990s above the shoe shop.", "entryIds": ["rv01", "rv02", "rv99"]},
+    {"title": "The Willet Road years", "note": "Raising June and Sam.", "entryIds": ["rv09", "rv10", "rv11", "rv12"]},
+    {"title": "Leaving for Corran City and everything that came after it, all of it", "note": "Nursing school.", "entryIds": ["rv05", "rv04", "rv06", "rv05"]},
+    {"title": "Ted", "note": "Meeting Ted and the wedding.", "entryIds": ["rv07", "rv08"]},
+    {"title": "The diagnosis", "note": "Ted's illness.", "entryIds": ["rv13"]},
+    {"title": "After", "note": "Ted's last morning, grief and the garden.", "entryIds": ["rv14", "rv15", "rv16", "rv17", "rv18"]},
+    {"title": "Later years", "note": "Retiring, Pia and the ocean.", "entryIds": ["rv19", "rv20", "rv21", "rv22", "rv03"]}
+  ]}
+}

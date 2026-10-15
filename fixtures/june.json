@@ -1,0 +1,44 @@
+{
+  "id": "june",
+  "person": "June Halvorsen, landscaper, born 1979 (made up)",
+  "summary": "Lessons from twenty years running a small landscaping business, written as self-help for young people starting out. The member has already written two chapters herself; the agent must keep both exactly as they are and only plan around them.",
+  "memories": [
+    {"id": "jh01", "coordinate": "2001.20", "title": "The first mower", "body": "Bought a used push mower for $40 at a yard sale and made flyers at the library: June Mows, $15 a lawn. I was twenty-two and had exactly three customers by July."},
+    {"id": "jh02", "coordinate": "2001.31", "title": "The Ochoa lawn", "body": "Mowed the Ochoa place, an acre and a half on a slope, for $15. It took four hours. Mrs. Ochoa paid me $25 and said, charge what it costs you, honey."},
+    {"id": "jh03", "coordinate": "2002.12", "title": "Saying the price out loud", "body": "I practiced saying forty-five dollars in the truck mirror before every estimate. The first time I said it to a customer without flinching, he just said okay. That was the whole fight."},
+    {"id": "jh04", "coordinate": "2003.27", "title": "The wall that fell down", "body": "Built my first stone retaining wall and it collapsed in the first big rain. I rebuilt it for free over two weekends. The client hired me for three more jobs because of how I handled it."},
+    {"id": "jh05", "coordinate": "2005.8", "title": "Saying no to Fairmont", "body": "Turned down a contract with the Fairmont office park because they paid in 120 days. Everyone said I was crazy. Two other crews took it and one went under waiting for the checks."},
+    {"id": "jh06", "coordinate": "2006.15", "title": "The notebook of every bid", "body": "Started writing down every bid: what I quoted, what it actually took, what I'd charge next time. That notebook taught me more than any class."},
+    {"id": "jh07", "coordinate": "2008.40", "title": "The recession winter", "body": "Half my customers cancelled that fall. I kept the crew busy pulling buckthorn for the county at cost, just to keep everyone paid. We came out of it with the county as a customer."},
+    {"id": "jh08", "coordinate": "2010.10", "title": "Hiring Marcus", "body": "Hired Marcus Teague, nineteen, who showed up to the interview with his own gloves. I paid him more than I could afford because I wanted him to stay. He stayed eleven years."},
+    {"id": "jh09", "coordinate": "2013.33", "title": "Marcus runs a crew", "body": "Gave Marcus his own crew and his own truck. The first week I drove past his job sites three times a day. The second week I made myself stop."},
+    {"id": "jh10", "coordinate": "2016.44", "title": "Asleep at a stoplight", "body": "Worked ninety-hour weeks through the fall and fell asleep at a stoplight. Nobody was hurt. The next Monday I hired an office manager and stopped answering calls after six."},
+    {"id": "jh11", "coordinate": "2021.18", "title": "Selling to Marcus", "body": "Sold Halvorsen Yard & Stone to Marcus for a fair price, paid over five years. He kept the name. I still stop by the shop on Fridays with doughnuts."},
+    {"id": "jh12", "coordinate": "2019.3", "title": "Office Wi-Fi", "body": "Changed the office Wi-Fi password. The new one is on the sticky note under the printer."}
+  ],
+  "answerKey": {
+    "scenes": [["jh09", "jh11"]],
+    "eras": [],
+    "noise": ["jh12"]
+  },
+  "cases": [
+    {
+      "id": "june-selfhelp-kept",
+      "about": "Self-help for young business owners. The member wrote two chapters herself; they must come back untouched.",
+      "bookType": "selfHelp",
+      "bookTypeOther": "",
+      "audience": "Young people starting their first business",
+      "keptChapters": [
+        {"id": "price-out-loud", "title": "Lesson one: say the price out loud", "note": "Underpricing, and learning to charge what the work costs.", "entryIds": ["jh02", "jh03"]},
+        {"id": "first-hire", "title": "Your first hire", "note": "", "entryIds": ["jh08"]}
+      ],
+      "expect": {
+        "mustPlace": ["jh04", "jh05", "jh06", "jh07", "jh09", "jh10", "jh11"],
+        "together": "scenes",
+        "apartByEra": false,
+        "chronological": false,
+        "bookType": null
+      }
+    }
+  ]
+}

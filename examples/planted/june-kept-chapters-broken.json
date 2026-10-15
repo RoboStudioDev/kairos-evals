@@ -1,0 +1,16 @@
+{
+  "case": "june-selfhelp-kept",
+  "plants": {
+    "keeps_member_chapters": "the member's 'Your first hire' dropped, 'Lesson one' included twice",
+    "left_out_noise": "the Wi-Fi password note placed in a chapter",
+    "placed_what_matters": "'Selling to Marcus' left out"
+  },
+  "answer": {"bookType": null, "chapters": [
+    {"keep": "price-out-loud"},
+    {"title": "Getting started", "note": "The first mower.", "entryIds": ["jh01", "jh12"]},
+    {"keep": "price-out-loud"},
+    {"title": "Hard lessons", "note": "Walls, contracts and bids.", "entryIds": ["jh04", "jh05", "jh06", "jh07"]},
+    {"title": "Marcus", "note": "Marcus gets a crew.", "entryIds": ["jh09"]},
+    {"title": "Burnout", "note": "Too many hours.", "entryIds": ["jh10"]}
+  ]}
+}
