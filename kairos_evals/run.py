@@ -23,9 +23,10 @@ from .prompt import GENERATION, build_draft_prompt, clean_draft, parse_json_loos
 RUNS_DIR = ROOT / "runs"
 EXAMPLES_DIR = ROOT / "examples"
 
-# Output we expect per call, thinking included, for the "likely" cost. The real numbers are in
-# every report; adjust these after a run.
-LIKELY_OUTPUT = {"draft": 3000, "judge": 1500}
+# Output we expect per call, thinking included, for the "likely" cost. Measured on the first real
+# run (2026-10-15): Argon drafts averaged 227 output tokens with no thinking; the judge (3.8 Flash)
+# 705, of which 656 thinking. Rounded up here; every report shows the real numbers.
+LIKELY_OUTPUT = {"draft": 400, "judge": 1000}
 
 
 @dataclass

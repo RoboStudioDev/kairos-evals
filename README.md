@@ -91,14 +91,21 @@ Priced on 2026-10-15 with Google's token counter. Prices are in `kairos_evals/pr
 
 | Run | Calls | Likely | At most |
 |---|---|---|---|
-| Full: both models × 3 repeats, with the judge (the default) | 76 | $1.58 | $3.99 |
-| Argon only × 3 repeats, with the judge | 40 | $0.89 | $2.25 |
-| Argon only × 3 repeats, no judge | 18 | $0.59 | $1.52 |
-| Argon only × 1 run, no judge | 6 | $0.20 | $0.51 |
+| Full: both models × 3 repeats, with the judge (the default) | 76 | $0.61 | $3.99 |
+| Argon only × 3 repeats, with the judge | 40 | $0.34 | $2.25 |
+| Argon only × 3 repeats, no judge | 18 | $0.12 | $1.52 |
+| Argon only × 1 run, no judge | 6 | $0.04 | $0.51 |
 
-"Likely" assumes about 3,000 output tokens per draft, counting the model's thinking. "At most" is
-every call using its whole output allowance, the most Google can bill. Each report shows what
-the run really cost.
+"Likely" uses what the first real run measured, rounded up: about 400 output tokens per draft
+and 1,000 per judge reading, thinking included. "At most" is every call using its whole output
+allowance, the most Google can bill. The first real run (Argon × 3 with the judge) cost **$0.27**.
+
+## Sample report
+
+[`reports/2026-10-15-argon/`](reports/2026-10-15-argon/) is the first real run: 18 Outline drafts
+from Gemini 4 Argon, each read by the judge. It holds the [report](reports/2026-10-15-argon/report.md),
+[what the scores say](reports/2026-10-15-argon/README.md), and every raw answer, so it can be
+re-scored for free.
 
 ## How it stays honest
 

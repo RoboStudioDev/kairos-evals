@@ -115,7 +115,16 @@ COMMON_WORDS = set(
     where why how all one two three first last new old early late later years year days day life home
     family love loss work school mom dad mama papa mother father grandma grandpa son daughter brother
     sister husband wife friend friends kids children part chapter prologue epilogue lessons lesson
-    story beginning beginnings end again back still ever never""".split()
+    story beginning beginnings end again back still ever never goodbye okay online email""".split()
+)
+# Past tenses the dictionary lists only as their present form ("paid" -> "pay").
+IRREGULAR = dict(
+    pair.split(":")
+    for pair in """paid:pay said:say laid:lay made:make kept:keep left:leave lost:lose built:build
+    found:find felt:feel took:take gave:give came:come went:go ran:run grew:grow knew:know held:hold
+    met:meet taught:teach brought:bring thought:think bought:buy sold:sell told:tell won:win
+    fought:fight stood:stand understood:understand began:begin begun:begin wrote:write written:write
+    broke:break broken:break fell:fall fallen:fall""".split()
 )
 _DICT_PATH = Path("/usr/share/dict/words")
 _dictionary: set[str] | None = None
@@ -145,9 +154,14 @@ def _stems(word: str) -> list[str]:
     w = word.lower().replace("’", "'")
     w = re.sub(r"'s$", "", w).strip("'-")
     out = [w]
+    if w in IRREGULAR:
+        out.append(IRREGULAR[w])
     for suffix, repl in (("ies", "y"), ("es", ""), ("s", ""), ("ing", ""), ("ing", "e"), ("ed", ""), ("ed", "e"), ("ers", ""), ("er", "")):
-        if w.endswith(suffix) and len(w) - len(suffix) >= 3:
-            out.append(w[: -len(suffix)] + repl)
+        stem = w[: -len(suffix)] + repl
+        if w.endswith(suffix) and len(stem) >= 3:
+            out.append(stem)
+            if not repl and len(stem) >= 4 and stem[-1] == stem[-2]:
+                out.append(stem[:-1])  # "letting" -> "lett" -> "let"
     out.extend(part for part in w.split("-") if part)
     return out
 

@@ -1,0 +1,3836 @@
+{
+ "run": {
+  "started": "2026-10-15T11:21:00",
+  "models": [
+   "gemini-4-argon"
+  ],
+  "repeats": 3,
+  "judge": "gemini-3.8-flash",
+  "cases": [
+   "abel-four-memories",
+   "ezra-not-chosen",
+   "ida-shuffled",
+   "june-selfhelp-kept",
+   "rosa-life",
+   "rosa-resilience"
+  ],
+  "generation": {
+   "temperature": 0.4,
+   "responseMimeType": "application/json",
+   "maxOutputTokens": 8192
+  },
+  "judgeGeneration": {
+   "temperature": 0.0,
+   "responseMimeType": "application/json",
+   "maxOutputTokens": 4096
+  },
+  "maxUsd": 2.26,
+  "finished": "2026-10-15T11:24:51",
+  "spentUsd": 0.2655,
+  "stoppedAtCap": false,
+  "judgeSelftest": [
+   {
+    "case": "rosa-resilience",
+    "what": "reads like a cookbook and a travel log; says Ted died in a car crash",
+    "expect": [
+     "lowerFocus",
+     "moreClaims"
+    ],
+    "reference": {
+     "focusFit": 5,
+     "focusReason": "The outline perfectly traces the emotional and practical arc of losing a spouse and rebuilding life, directly serving readers who have experienced spousal bereavement.",
+     "unsupported": [],
+     "costUsd": 0.010284
+    },
+    "planted": {
+     "focusFit": 1,
+     "focusReason": "The outline completely misses the theme of spousal loss and resilience, framing the memoir as a collection of recipes, lighthearted road trips, gardening tips, and an invented fatal crash.",
+     "unsupported": [
+      {
+       "chapter": "Ted's car accident",
+       "claim": "Ted's car accident",
+       "why": "Ted died at home from pancreatic cancer, not in a car accident."
+      },
+      {
+       "chapter": "Ted's car accident",
+       "claim": "The crash on the highway that took Ted",
+       "why": "Ted passed away from pancreatic cancer, not in a highway crash."
+      }
+     ],
+     "costUsd": 0.011325
+    }
+   },
+   {
+    "case": "abel-four-memories",
+    "what": "names the father Ruben and invents a Navy career",
+    "expect": [
+     "moreClaims"
+    ],
+    "reference": {
+     "focusFit": 5,
+     "focusReason": "Every chapter note speaks directly to the son about his grandfather and aligns perfectly with the intended audience and framing.",
+     "unsupported": [],
+     "costUsd": 0.004026
+    },
+    "planted": {
+     "focusFit": 4,
+     "focusReason": "The chapters generally address stories about the grandfather for the son, though Chapter 5 shifts into an unsupported biographical topic.",
+     "unsupported": [
+      {
+       "chapter": "Ruben's green hat",
+       "claim": "Ruben",
+       "why": "The grandfather is never named Ruben in the memories."
+      },
+      {
+       "chapter": "Ruben's green hat",
+       "claim": "1975",
+       "why": "The year 1975 is never mentioned in the memories."
+      },
+      {
+       "chapter": "The Navy years",
+       "claim": "His years in the Navy at Norfolk",
+       "why": "There is no mention in any memory of service in the Navy or time spent in Norfolk."
+      }
+     ],
+     "costUsd": 0.007526
+    }
+   }
+  ],
+  "judgeCostUsd": 0.175925
+ },
+ "warnings": [],
+ "drafts": [
+  {
+   "case": "abel-four-memories",
+   "model": "gemini-4-argon",
+   "repeat": 1,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": null,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: Every chapter directly addresses the son about his grandfather, perfectly matching the intended audience and epistolary framing."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 1.0,
+    "focus": 1.0
+   },
+   "overall": 1.0,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "Who Your Grandfather Was",
+     "note": "Stories of your grandfather's patience, humor, and the things he loved.",
+     "ids": [
+      "am01",
+      "am02"
+     ],
+     "kept": false
+    },
+    {
+     "title": "The Day He Met You",
+     "note": "When you were born and your grandfather held you for the first time.",
+     "ids": [
+      "am03"
+     ],
+     "kept": false
+    },
+    {
+     "title": "One Last Cast",
+     "note": "Our final fishing trip together at Lake Orrin.",
+     "ids": [
+      "am04"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": null,
+   "cost": 0.003214,
+   "seconds": 5.7,
+   "input_tokens": 652,
+   "output_tokens": 191,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "abel-four-memories",
+   "model": "gemini-4-argon",
+   "repeat": 2,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": null,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: The outline directly frames stories of the grandfather specifically for the son, matching the intended letter format and audience perfectly."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 1.0,
+    "focus": 1.0
+   },
+   "overall": 1.0,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "Who He Was to Me",
+     "note": "The quiet, stubborn, and patient man who raised me.",
+     "ids": [
+      "am01",
+      "am02"
+     ],
+     "kept": false
+    },
+    {
+     "title": "The Day He Met You",
+     "note": "When my father became your grandfather.",
+     "ids": [
+      "am03"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Our Last Days on the Water",
+     "note": "Saying goodbye at Lake Orrin.",
+     "ids": [
+      "am04"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": null,
+   "cost": 0.003114,
+   "seconds": 4.47,
+   "input_tokens": 652,
+   "output_tokens": 181,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "abel-four-memories",
+   "model": "gemini-4-argon",
+   "repeat": 3,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": null,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: The outline directly addresses the member's son with stories highlighting his grandfather's character, life, and their relationship."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 1.0,
+    "focus": 1.0
+   },
+   "overall": 1.0,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "The Man He Was",
+     "note": "Stories of your grandfather's patience, humor, and the things he loved.",
+     "ids": [
+      "am01",
+      "am02"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Becoming Your Grandfather",
+     "note": "The day you were born and the first time he held you.",
+     "ids": [
+      "am03"
+     ],
+     "kept": false
+    },
+    {
+     "title": "One Last Cast",
+     "note": "Our final fishing trip together at Lake Orrin.",
+     "ids": [
+      "am04"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": null,
+   "cost": 0.002524,
+   "seconds": 51.99,
+   "input_tokens": 652,
+   "output_tokens": 122,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "ezra-not-chosen",
+   "model": "gemini-4-argon",
+   "repeat": 1,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": null,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: The outline perfectly frames the bakery's flooding, community-driven recovery, and resilient adaptation for the member's family and neighborhood."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 1.0,
+    "focus": 1.0
+   },
+   "overall": 1.0,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "Learning the Trade",
+     "note": "Starting out on Uncle Remy's floor and opening Crumb & Kettle on Canal Street.",
+     "ids": [
+      "ep01",
+      "ep02",
+      "ep03",
+      "ep04"
+     ],
+     "kept": false
+    },
+    {
+     "title": "When the Canal Came Over",
+     "note": "The flood that ruined the bakery and the neighbors who showed up with shovels.",
+     "ids": [
+      "ep05",
+      "ep06",
+      "ep07"
+     ],
+     "kept": false
+    },
+    {
+     "title": "The Loaves Paid in Advance",
+     "note": "Baking in the church basement and how Ostrander Flats brought the shop back.",
+     "ids": [
+      "ep08",
+      "ep09",
+      "ep10"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Higher Ground",
+     "note": "Cinder blocks, Nia joining the bakery, and passing the craft on to Canal Street kids.",
+     "ids": [
+      "ep11",
+      "ep12",
+      "ep13"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": "resilience",
+   "cost": 0.004924,
+   "seconds": 5.38,
+   "input_tokens": 1382,
+   "output_tokens": 216,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "ezra-not-chosen",
+   "model": "gemini-4-argon",
+   "repeat": 2,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": null,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: The outline perfectly frames the bakery's flooding and community-led rebuilding as a resilience narrative tailored directly for family and neighbors."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 1.0,
+    "focus": 1.0
+   },
+   "overall": 1.0,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "Learning the Trade",
+     "note": "Starting out with Uncle Remy and opening Crumb & Kettle on Canal Street.",
+     "ids": [
+      "ep01",
+      "ep02",
+      "ep03",
+      "ep04"
+     ],
+     "kept": false
+    },
+    {
+     "title": "When the Canal Came Over",
+     "note": "The flood that ruined the bakery and the hard days that followed.",
+     "ids": [
+      "ep05",
+      "ep06",
+      "ep07"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Ostrander Flats Steps In",
+     "note": "Baking in the church basement and the neighbors who brought the shop back.",
+     "ids": [
+      "ep08",
+      "ep09",
+      "ep10"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Higher Ground",
+     "note": "Adapting after the flood and passing the craft to Nia and local kids.",
+     "ids": [
+      "ep11",
+      "ep12",
+      "ep13"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": "resilience",
+   "cost": 0.004824,
+   "seconds": 4.0,
+   "input_tokens": 1382,
+   "output_tokens": 206,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "ezra-not-chosen",
+   "model": "gemini-4-argon",
+   "repeat": 3,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": null,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: The outline perfectly frames the narrative around surviving the devastating bakery flood and rebuilding with the support of the Ostrander Flats community."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 1.0,
+    "focus": 1.0
+   },
+   "overall": 1.0,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "Learning the Trade",
+     "note": "Starting out on Uncle Remy's bakery floor and finding my own way as a baker.",
+     "ids": [
+      "ep01",
+      "ep02"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Crumb & Kettle",
+     "note": "Opening the doors on Canal Street and getting to know the regulars of Ostrander Flats.",
+     "ids": [
+      "ep03",
+      "ep04"
+     ],
+     "kept": false
+    },
+    {
+     "title": "When the Canal Came Over",
+     "note": "The flood that ruined the shop, the neighbors who showed up with shovels, and the day I almost quit.",
+     "ids": [
+      "ep05",
+      "ep06",
+      "ep07"
+     ],
+     "kept": false
+    },
+    {
+     "title": "The Loaves We Owed Each Other",
+     "note": "Baking through the night in a church basement while the town bought bread in advance to bring us back.",
+     "ids": [
+      "ep08",
+      "ep09",
+      "ep10"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Higher Ground",
+     "note": "Building back wiser and passing the craft on to my daughter Nia and the kids from Canal Street.",
+     "ids": [
+      "ep11",
+      "ep12",
+      "ep13"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": "resilience",
+   "cost": 0.005404,
+   "seconds": 21.03,
+   "input_tokens": 1382,
+   "output_tokens": 264,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "ida-shuffled",
+   "model": "gemini-4-argon",
+   "repeat": 1,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": null,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: The outline follows the member's life chronologically from childhood through career and later years, perfectly matching a whole-life memoir."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 1.0,
+    "focus": 1.0
+   },
+   "overall": 1.0,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "Growing Up on the Farm",
+     "note": "Childhood days with family, winter storms, and moving to the town school.",
+     "ids": [
+      "im01",
+      "im02",
+      "im03"
+     ],
+     "kept": false
+    },
+    {
+     "title": "First Jobs and Coming Home",
+     "note": "Working in the Merriton typing pool before returning to the family farm.",
+     "ids": [
+      "im04",
+      "im05"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Years at the Brindle Courier",
+     "note": "Starting as a typist and spending twenty-three years as the county editor.",
+     "ids": [
+      "im06",
+      "im07",
+      "im08",
+      "im09"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Next Chapters and Legacy",
+     "note": "Fixing the Coldwater road, quilting front pages, and passing stories down.",
+     "ids": [
+      "im10",
+      "im11",
+      "im12"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": "life",
+   "cost": 0.00447,
+   "seconds": 11.71,
+   "input_tokens": 1195,
+   "output_tokens": 208,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "ida-shuffled",
+   "model": "gemini-4-argon",
+   "repeat": 2,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": null,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: The chapters follow the member's life chronologically from childhood to later years, perfectly matching a life memoir."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 1.0,
+    "focus": 1.0
+   },
+   "overall": 1.0,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "Growing Up on the Farm",
+     "note": "Childhood days with family, winter snows, and moving from the one-room schoolhouse.",
+     "ids": [
+      "im01",
+      "im02",
+      "im03"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Leaving and Coming Home",
+     "note": "Working in the Merriton typing pool before returning home to help on the family farm.",
+     "ids": [
+      "im04",
+      "im05"
+     ],
+     "kept": false
+    },
+    {
+     "title": "The Brindle Courier",
+     "note": "Starting at the local paper, becoming its first woman editor, and covering the county's biggest stories.",
+     "ids": [
+      "im06",
+      "im07",
+      "im08",
+      "im09"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Later Years and Legacy",
+     "note": "Serving on the county council, piecing together memories, and passing stories to the next generation.",
+     "ids": [
+      "im10",
+      "im11",
+      "im12"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": "life",
+   "cost": 0.0046,
+   "seconds": 21.72,
+   "input_tokens": 1195,
+   "output_tokens": 221,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "ida-shuffled",
+   "model": "gemini-4-argon",
+   "repeat": 3,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": null,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: The chapters follow a clean chronological arc through Ida's life from childhood on the farm to career and retirement."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 1.0,
+    "focus": 1.0
+   },
+   "overall": 1.0,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "Growing Up on the Farm",
+     "note": "Childhood days with family, winter storms, and going to school in town.",
+     "ids": [
+      "im01",
+      "im02",
+      "im03"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Out in the World and Back Again",
+     "note": "Working in the Merriton typing pool before coming home to help on the farm.",
+     "ids": [
+      "im04",
+      "im05"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Years at the Brindle Courier",
+     "note": "Starting at the local paper and spending twenty-three years as its first woman editor.",
+     "ids": [
+      "im06",
+      "im07",
+      "im08",
+      "im09"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Later Years in the County",
+     "note": "Serving on the county council, piecing together memories, and passing stories down.",
+     "ids": [
+      "im10",
+      "im11",
+      "im12"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": "life",
+   "cost": 0.00454,
+   "seconds": 35.8,
+   "input_tokens": 1195,
+   "output_tokens": 215,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "june-selfhelp-kept",
+   "model": "gemini-4-argon",
+   "repeat": 1,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": 0.0,
+     "hard": false,
+     "details": [
+      "split 'Marcus runs a crew' and 'Selling to Marcus'"
+     ]
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: Every chapter title and note directly frames the author's experiences as actionable, hard-won lessons tailored specifically for young people starting a business."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 0.6666666666666666,
+    "facts": 1.0,
+    "focus": 1.0
+   },
+   "overall": 0.9166666666666666,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "Starting with what you have",
+     "note": "How to begin with almost nothing and win trust when you make mistakes.",
+     "ids": [
+      "jh01",
+      "jh04"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Lesson one: say the price out loud",
+     "note": "Underpricing, and learning to charge what the work costs.",
+     "ids": [
+      "jh02",
+      "jh03"
+     ],
+     "kept": true
+    },
+    {
+     "title": "Knowing your numbers and when to walk away",
+     "note": "Tracking what jobs really cost and turning down bad terms.",
+     "ids": [
+      "jh05",
+      "jh06"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Your first hire",
+     "note": "",
+     "ids": [
+      "jh08"
+     ],
+     "kept": true
+    },
+    {
+     "title": "Taking care of your people",
+     "note": "Keeping the crew paid in hard times and learning to let them lead.",
+     "ids": [
+      "jh07",
+      "jh09"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Stepping back and letting go",
+     "note": "Setting boundaries before you burn out, and passing the business on.",
+     "ids": [
+      "jh10",
+      "jh11"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": null,
+   "cost": 0.004098,
+   "seconds": 4.28,
+   "input_tokens": 1049,
+   "output_tokens": 200,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "june-selfhelp-kept",
+   "model": "gemini-4-argon",
+   "repeat": 2,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: Each chapter focuses on practical, hard-won business lessons tailored directly to young entrepreneurs building their first venture."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 1.0,
+    "focus": 1.0
+   },
+   "overall": 1.0,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "Starting small",
+     "note": "How to begin with what you have and get your first customers.",
+     "ids": [
+      "jh01"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Lesson one: say the price out loud",
+     "note": "Underpricing, and learning to charge what the work costs.",
+     "ids": [
+      "jh02",
+      "jh03"
+     ],
+     "kept": true
+    },
+    {
+     "title": "Owning your mistakes",
+     "note": "When the work goes wrong, making it right builds trust.",
+     "ids": [
+      "jh04"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Knowing the numbers",
+     "note": "Protecting your cash flow and tracking what jobs really cost.",
+     "ids": [
+      "jh05",
+      "jh06"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Your first hire",
+     "note": "",
+     "ids": [
+      "jh08"
+     ],
+     "kept": true
+    },
+    {
+     "title": "Weathering hard times",
+     "note": "Keeping the crew paid and finding new work when customers leave.",
+     "ids": [
+      "jh07"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Letting go of the wheel",
+     "note": "Trusting your people, setting limits, and passing the business on.",
+     "ids": [
+      "jh09",
+      "jh10",
+      "jh11"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": null,
+   "cost": 0.004278,
+   "seconds": 78.49,
+   "input_tokens": 1049,
+   "output_tokens": 218,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "june-selfhelp-kept",
+   "model": "gemini-4-argon",
+   "repeat": 3,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: Each agent-written chapter draws directly from the author's business experiences to offer practical, actionable advice tailored for young entrepreneurs."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 1.0,
+    "focus": 1.0
+   },
+   "overall": 1.0,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "Starting with what you have",
+     "note": "How to get your first customers with a small budget and simple tools.",
+     "ids": [
+      "jh01"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Lesson one: say the price out loud",
+     "note": "Underpricing, and learning to charge what the work costs.",
+     "ids": [
+      "jh02",
+      "jh03"
+     ],
+     "kept": true
+    },
+    {
+     "title": "Mistakes, bids, and bad deals",
+     "note": "Making things right when you fail, tracking your costs, and knowing when to walk away.",
+     "ids": [
+      "jh04",
+      "jh05",
+      "jh06"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Your first hire",
+     "note": "",
+     "ids": [
+      "jh08"
+     ],
+     "kept": true
+    },
+    {
+     "title": "Keeping the crew paid in hard times",
+     "note": "Finding a way through a downturn by putting your people first.",
+     "ids": [
+      "jh07"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Letting go of the wheel",
+     "note": "Learning to trust your people, set boundaries, and pass the business on.",
+     "ids": [
+      "jh09",
+      "jh10",
+      "jh11"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": null,
+   "cost": 0.004188,
+   "seconds": 20.77,
+   "input_tokens": 1049,
+   "output_tokens": 209,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "rosa-life",
+   "model": "gemini-4-argon",
+   "repeat": 1,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": null,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan (paired case rosa-resilience)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "chapter titles share 7% of their words with the rosa-resilience draft (at most 50% passes)"
+     ]
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: The outline chronologically captures the full arc of the author's life in meaningful chapters that are well-suited for her grandchildren."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 1.0,
+    "focus": 1.0
+   },
+   "overall": 1.0,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "Growing Up in Larkspur Bend",
+     "note": "Childhood days in Papa's shop, skating with Lou, and graduating high school.",
+     "ids": [
+      "rv01",
+      "rv02",
+      "rv03",
+      "rv04"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Corran City and Meeting Ted",
+     "note": "Leaving home for nursing school, first hospital shifts, and marrying Ted.",
+     "ids": [
+      "rv05",
+      "rv06",
+      "rv07",
+      "rv08"
+     ],
+     "kept": false
+    },
+    {
+     "title": "The Willet Road Years",
+     "note": "Raising June and Sam, family nights at the kitchen table, and becoming head nurse.",
+     "ids": [
+      "rv09",
+      "rv10",
+      "rv11",
+      "rv12"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Losing Ted and Finding My Way",
+     "note": "Ted's illness, grieving his loss, and starting over with Hattie and the garden.",
+     "ids": [
+      "rv13",
+      "rv14",
+      "rv15",
+      "rv16",
+      "rv17",
+      "rv18"
+     ],
+     "kept": false
+    },
+    {
+     "title": "The Years Since",
+     "note": "Retiring from nursing, watching Pia grow, and seeing the ocean at seventy.",
+     "ids": [
+      "rv19",
+      "rv20",
+      "rv21"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": null,
+   "cost": 0.006778,
+   "seconds": 5.22,
+   "input_tokens": 1914,
+   "output_tokens": 295,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "rosa-life",
+   "model": "gemini-4-argon",
+   "repeat": 2,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": null,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan (paired case rosa-resilience)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "chapter titles share 9% of their words with the rosa-resilience draft (at most 50% passes)"
+     ]
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: The outline chronologically captures the author's full life journey from childhood to later years, beautifully tailored as a family legacy for her grandchildren while appropriately omitting trivial administrative notes."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 1.0,
+    "focus": 1.0
+   },
+   "overall": 1.0,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "Growing Up in Larkspur Bend",
+     "note": "Childhood days in Papa's shoe shop, skating on the river, and family life before graduation.",
+     "ids": [
+      "rv01",
+      "rv02",
+      "rv03",
+      "rv04"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Corran City and Meeting Ted",
+     "note": "Leaving home for nursing school, learning the ropes on Ward Four, and meeting Ted.",
+     "ids": [
+      "rv05",
+      "rv06",
+      "rv07",
+      "rv08"
+     ],
+     "kept": false
+    },
+    {
+     "title": "The Willet Road Years",
+     "note": "Raising June and Sam, ordinary evenings at the kitchen table, and becoming head nurse.",
+     "ids": [
+      "rv09",
+      "rv10",
+      "rv11",
+      "rv12"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Losing Ted and Finding My Way",
+     "note": "Ted's illness and passing, the quiet months after, and finding friendship and courage again.",
+     "ids": [
+      "rv13",
+      "rv14",
+      "rv15",
+      "rv16",
+      "rv17",
+      "rv18"
+     ],
+     "kept": false
+    },
+    {
+     "title": "The Chapters After",
+     "note": "Retiring after forty-three years of nursing, watching grandchildren grow, and seeing the ocean.",
+     "ids": [
+      "rv19",
+      "rv20",
+      "rv21"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": null,
+   "cost": 0.006868,
+   "seconds": 5.2,
+   "input_tokens": 1914,
+   "output_tokens": 304,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "rosa-life",
+   "model": "gemini-4-argon",
+   "repeat": 3,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": null,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan (paired case rosa-resilience)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "chapter titles share 8% of their words with the rosa-resilience draft (at most 50% passes)"
+     ]
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: The outline chronologically charts the author's full life journey from childhood to retirement and family milestones, creating a cohesive and heartfelt memoir for her grandchildren while appropriately omitting mundane administrative logs."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 1.0,
+    "focus": 1.0
+   },
+   "overall": 1.0,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "Growing Up in Larkspur Bend",
+     "note": "Childhood days in Papa's shop, skating on the Tamsin, and finishing high school.",
+     "ids": [
+      "rv01",
+      "rv02",
+      "rv03",
+      "rv04"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Corran City and Meeting Ted",
+     "note": "Leaving home for nursing school, first shifts on the ward, and a quarter at the laundromat.",
+     "ids": [
+      "rv05",
+      "rv06",
+      "rv07",
+      "rv08"
+     ],
+     "kept": false
+    },
+    {
+     "title": "The Willet Road Years",
+     "note": "Raising June and Sam, kitchen table evenings, and becoming head nurse.",
+     "ids": [
+      "rv09",
+      "rv10",
+      "rv11",
+      "rv12"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Losing Ted",
+     "note": "Ted's illness, his last morning at home, and the quiet months that followed.",
+     "ids": [
+      "rv13",
+      "rv14",
+      "rv15"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Finding My Way Forward",
+     "note": "Meeting Hattie, learning to drive the highway alone, and planting Ted's Garden.",
+     "ids": [
+      "rv16",
+      "rv17",
+      "rv18"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Retirement and New Adventures",
+     "note": "Retiring after forty-three years of nursing, watching grandchildren grow, and seeing the ocean.",
+     "ids": [
+      "rv19",
+      "rv20",
+      "rv21"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": null,
+   "cost": 0.007178,
+   "seconds": 7.64,
+   "input_tokens": 1914,
+   "output_tokens": 335,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "rosa-resilience",
+   "model": "gemini-4-argon",
+   "repeat": 1,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": null,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan (paired case rosa-life)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "chapter titles share 7% of their words with the rosa-life draft (at most 50% passes)"
+     ]
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: The outline beautifully centers the loss of the author's husband and her gradual journey through grief into renewed resilience, perfectly matching the target audience."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 1.0,
+    "focus": 1.0
+   },
+   "overall": 1.0,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "What We Built Together",
+     "note": "Meeting Ted, raising June and Sam, and the quiet joy of our ordinary days on Willet Road.",
+     "ids": [
+      "rv07",
+      "rv08",
+      "rv09",
+      "rv10",
+      "rv11",
+      "rv12"
+     ],
+     "kept": false
+    },
+    {
+     "title": "The Long Goodbye",
+     "note": "Ted's diagnosis, the deck he finished, and his last morning at home.",
+     "ids": [
+      "rv13",
+      "rv14"
+     ],
+     "kept": false
+    },
+    {
+     "title": "The Empty Side of the Bed",
+     "note": "The quiet months after Ted died and finding a friend who understood.",
+     "ids": [
+      "rv15",
+      "rv16"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Finding My Footing",
+     "note": "Learning to do things on my own and planting something new with Hattie.",
+     "ids": [
+      "rv17",
+      "rv18"
+     ],
+     "kept": false
+    },
+    {
+     "title": "The Life That Kept Growing",
+     "note": "Retiring from nursing, watching my granddaughter grow, and carrying Ted with me to the ocean.",
+     "ids": [
+      "rv19",
+      "rv20",
+      "rv21"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": null,
+   "cost": 0.006432,
+   "seconds": 4.91,
+   "input_tokens": 1911,
+   "output_tokens": 261,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "rosa-resilience",
+   "model": "gemini-4-argon",
+   "repeat": 2,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": null,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan (paired case rosa-life)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "chapter titles share 9% of their words with the rosa-life draft (at most 50% passes)"
+     ]
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: The outline perfectly captures the journey of losing a spouse, moving through the depths of grief, and gradually finding resilience and new life."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 1.0,
+    "focus": 1.0
+   },
+   "overall": 1.0,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "The Life We Built",
+     "note": "How Ted and I met, married, and raised our family on Willet Road.",
+     "ids": [
+      "rv07",
+      "rv08",
+      "rv09",
+      "rv10",
+      "rv11",
+      "rv12"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Losing Ted",
+     "note": "From the day of Ted's diagnosis to his last morning at home.",
+     "ids": [
+      "rv13",
+      "rv14"
+     ],
+     "kept": false
+    },
+    {
+     "title": "The Quiet House",
+     "note": "The first year alone and finding someone who understood.",
+     "ids": [
+      "rv15",
+      "rv16"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Learning to Carry On",
+     "note": "Taking the highway alone, planting Ted's Garden, and the years that followed.",
+     "ids": [
+      "rv17",
+      "rv18",
+      "rv19",
+      "rv20",
+      "rv21"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": null,
+   "cost": 0.005962,
+   "seconds": 9.62,
+   "input_tokens": 1911,
+   "output_tokens": 214,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "rosa-resilience",
+   "model": "gemini-4-argon",
+   "repeat": 3,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": null,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan (paired case rosa-life)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "chapter titles share 8% of their words with the rosa-life draft (at most 50% passes)"
+     ]
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: The outline beautifully charts the arc of losing a spouse and rebuilding a meaningful life, speaking directly to readers coping with spousal bereavement."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 1.0,
+    "focus": 1.0
+   },
+   "overall": 1.0,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "The Life We Built",
+     "note": "Meeting Ted at the laundromat, raising June and Sam, and the happy years at the kitchen table.",
+     "ids": [
+      "rv07",
+      "rv08",
+      "rv09",
+      "rv10",
+      "rv11",
+      "rv12"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Losing Ted",
+     "note": "The pancreatic cancer diagnosis, the deck he finished, and his last morning at home.",
+     "ids": [
+      "rv13",
+      "rv14"
+     ],
+     "kept": false
+    },
+    {
+     "title": "The Empty Side of the Bed",
+     "note": "The quiet months after Ted died and finding Hattie at the Tuesday grief group.",
+     "ids": [
+      "rv15",
+      "rv16"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Learning to Go On",
+     "note": "Driving the highway alone, planting Ted's Garden, and watching life continue with family and friends.",
+     "ids": [
+      "rv17",
+      "rv18",
+      "rv19",
+      "rv20",
+      "rv21"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": null,
+   "cost": 0.006142,
+   "seconds": 7.87,
+   "input_tokens": 1911,
+   "output_tokens": 232,
+   "thinking_tokens": 0
+  }
+ ]
+}

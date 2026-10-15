@@ -1,0 +1,16 @@
+{
+  "case": "abel-four-memories",
+  "model": "gemini-4-argon",
+  "repeat": 3,
+  "promptSha": "defaffb2f98a440c",
+  "response": {
+    "text": "{\"bookType\": null, \"chapters\": [{\"title\": \"The Man He Was\", \"note\": \"Stories of your grandfather's patience, humor, and the things he loved.\", \"entryIds\": [\"am01\", \"am02\"]}, {\"title\": \"Becoming Your Grandfather\", \"note\": \"The day you were born and the first time he held you.\", \"entryIds\": [\"am03\"]}, {\"title\": \"One Last Cast\", \"note\": \"Our final fishing trip together at Lake Orrin.\", \"entryIds\": [\"am04\"]}]}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-4-argon",
+    "seconds": 51.99,
+    "inputTokens": 652,
+    "outputTokens": 122,
+    "thinkingTokens": 0,
+    "costUsd": 0.002524
+  }
+}

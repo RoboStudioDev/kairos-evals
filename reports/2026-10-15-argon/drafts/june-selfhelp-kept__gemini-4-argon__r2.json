@@ -1,0 +1,16 @@
+{
+  "case": "june-selfhelp-kept",
+  "model": "gemini-4-argon",
+  "repeat": 2,
+  "promptSha": "0540625ce69aa941",
+  "response": {
+    "text": "{\"bookType\": null, \"chapters\": [{\"title\": \"Starting small\", \"note\": \"How to begin with what you have and get your first customers.\", \"entryIds\": [\"jh01\"]}, {\"keep\": \"price-out-loud\"}, {\"title\": \"Owning your mistakes\", \"note\": \"When the work goes wrong, making it right builds trust.\", \"entryIds\": [\"jh04\"]}, {\"title\": \"Knowing the numbers\", \"note\": \"Protecting your cash flow and tracking what jobs really cost.\", \"entryIds\": [\"jh05\", \"jh06\"]}, {\"keep\": \"first-hire\"}, {\"title\": \"Weathering hard times\", \"note\": \"Keeping the crew paid and finding new work when customers leave.\", \"entryIds\": [\"jh07\"]}, {\"title\": \"Letting go of the wheel\", \"note\": \"Trusting your people, setting limits, and passing the business on.\", \"entryIds\": [\"jh09\", \"jh10\", \"jh11\"]}]}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-4-argon",
+    "seconds": 78.49,
+    "inputTokens": 1049,
+    "outputTokens": 218,
+    "thinkingTokens": 0,
+    "costUsd": 0.004278
+  }
+}

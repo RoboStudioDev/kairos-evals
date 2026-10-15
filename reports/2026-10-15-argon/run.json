@@ -1,0 +1,30 @@
+{
+  "started": "2026-10-15T11:21:00",
+  "models": [
+    "gemini-4-argon"
+  ],
+  "repeats": 3,
+  "judge": "gemini-3.8-flash",
+  "cases": [
+    "abel-four-memories",
+    "ezra-not-chosen",
+    "ida-shuffled",
+    "june-selfhelp-kept",
+    "rosa-life",
+    "rosa-resilience"
+  ],
+  "generation": {
+    "temperature": 0.4,
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 8192
+  },
+  "judgeGeneration": {
+    "temperature": 0.0,
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 4096
+  },
+  "maxUsd": 2.26,
+  "finished": "2026-10-15T11:24:51",
+  "spentUsd": 0.2655,
+  "stoppedAtCap": false
+}

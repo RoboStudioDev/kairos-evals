@@ -1,0 +1,16 @@
+{
+  "case": "ida-shuffled",
+  "model": "gemini-4-argon",
+  "repeat": 3,
+  "promptSha": "69420c0c262e4c6d",
+  "response": {
+    "text": "{\"bookType\": \"life\", \"chapters\": [{\"title\": \"Growing Up on the Farm\", \"note\": \"Childhood days with family, winter storms, and going to school in town.\", \"entryIds\": [\"im01\", \"im02\", \"im03\"]}, {\"title\": \"Out in the World and Back Again\", \"note\": \"Working in the Merriton typing pool before coming home to help on the farm.\", \"entryIds\": [\"im04\", \"im05\"]}, {\"title\": \"Years at the Brindle Courier\", \"note\": \"Starting at the local paper and spending twenty-three years as its first woman editor.\", \"entryIds\": [\"im06\", \"im07\", \"im08\", \"im09\"]}, {\"title\": \"Later Years in the County\", \"note\": \"Serving on the county council, piecing together memories, and passing stories down.\", \"entryIds\": [\"im10\", \"im11\", \"im12\"]}]}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-4-argon",
+    "seconds": 35.8,
+    "inputTokens": 1195,
+    "outputTokens": 215,
+    "thinkingTokens": 0,
+    "costUsd": 0.00454
+  }
+}

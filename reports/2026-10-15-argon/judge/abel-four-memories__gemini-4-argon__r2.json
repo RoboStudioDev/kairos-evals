@@ -1,0 +1,20 @@
+{
+  "case": "abel-four-memories",
+  "model": "gemini-4-argon",
+  "repeat": 2,
+  "verdict": {
+    "focusFit": 5,
+    "focusReason": "The outline directly frames stories of the grandfather specifically for the son, matching the intended letter format and audience perfectly.",
+    "unsupported": []
+  },
+  "response": {
+    "text": "{\n  \"focusFit\": 5,\n  \"focusReason\": \"The outline directly frames stories of the grandfather specifically for the son, matching the intended letter format and audience perfectly.\",\n  \"unsupported\": []\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 4.75,
+    "inputTokens": 776,
+    "outputTokens": 520,
+    "thinkingTokens": 472,
+    "costUsd": 0.005064
+  }
+}

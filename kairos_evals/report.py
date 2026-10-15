@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from collections import defaultdict
-from statistics import mean
+from statistics import mean, median
 
 from .checks import AREAS, DraftScore, dictionary_in_use
 from .fixtures import Case
@@ -25,6 +25,11 @@ def _avg(values) -> float | None:
 
 def _label(model: str) -> str:
     return MODEL_LABELS.get(model, model)
+
+
+def _seconds(ss: list[DraftScore]) -> str:
+    times = [s.seconds for s in ss if s.seconds is not None]
+    return f"{median(times):.0f}, {max(times):.0f}" if times else "–"
 
 
 def judge_selftest_passed(item: dict) -> bool | None:
@@ -66,7 +71,7 @@ def build_report(scores: list[DraftScore], meta: dict, cases: list[Case], warnin
 
     # Headline, per model.
     out += ["## Scores by model", "",
-            "| Model | Overall | " + " | ".join(AREAS.values()) + " | Drafts with a rule break | Seconds per draft | Cost per draft |",
+            "| Model | Overall | " + " | ".join(AREAS.values()) + " | Drafts with a rule break | Seconds per draft (typical, slowest) | Cost per draft |",
             "|---|---|" + "---|" * len(AREAS) + "---|---|---|"]
     for m in models:
         ss = [s for s in scores if s.model == m]
@@ -76,7 +81,7 @@ def build_report(scores: list[DraftScore], meta: dict, cases: list[Case], warnin
         out.append(
             f"| {_label(m)} | **{pct(_avg(s.overall for s in ss))}** | "
             + " | ".join(pct(_avg(s.areas.get(a) for s in ss)) for a in AREAS)
-            + f" | {breaks} of {len(ss)} | {(_avg(s.seconds for s in ss) or 0):.1f} | ${(_avg(s.cost for s in ss) or 0):.4f} |"
+            + f" | {breaks} of {len(ss)} | {_seconds(ss)} | ${(_avg(s.cost for s in ss) or 0):.4f} |"
         )
     out.append("")
 

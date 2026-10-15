@@ -1,0 +1,20 @@
+{
+  "case": "june-selfhelp-kept",
+  "model": "gemini-4-argon",
+  "repeat": 2,
+  "verdict": {
+    "focusFit": 5,
+    "focusReason": "Each chapter focuses on practical, hard-won business lessons tailored directly to young entrepreneurs building their first venture.",
+    "unsupported": []
+  },
+  "response": {
+    "text": "{\n  \"focusFit\": 5,\n  \"focusReason\": \"Each chapter focuses on practical, hard-won business lessons tailored directly to young entrepreneurs building their first venture.\",\n  \"unsupported\": []\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 11.49,
+    "inputTokens": 1641,
+    "outputTokens": 622,
+    "thinkingTokens": 574,
+    "costUsd": 0.007127
+  }
+}

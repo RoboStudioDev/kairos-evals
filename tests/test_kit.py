@@ -105,6 +105,15 @@ class Checks(unittest.TestCase):
         self.assertEqual(name_like_words("Grief came. Hattie helped.", sentence_case=True), [])
         self.assertEqual(name_like_words("Summers at Lake Tahoe", sentence_case=False), ["Summers", "Lake", "Tahoe"])
 
+    def test_ordinary_words_are_not_names(self):
+        # False alarms from the first real run (2026-10-15): all ordinary words.
+        from kairos_evals.checks import _known
+
+        for word in ("Paid", "Owed", "Letting", "Goodbye", "Stepping", "Weathering"):
+            self.assertTrue(_known(word, set()), word)
+        for word in ("Tahoe", "Ruben"):
+            self.assertFalse(_known(word, set()), word)
+
     def test_unreadable_answer_scores_zero(self):
         case = CASES["abel-four-memories"]
         s = score_draft(case, req(case.id), "Sorry, I can't do that.")

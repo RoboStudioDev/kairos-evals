@@ -1,0 +1,20 @@
+{
+  "case": "ezra-not-chosen",
+  "model": "gemini-4-argon",
+  "repeat": 3,
+  "verdict": {
+    "focusFit": 5,
+    "focusReason": "The outline perfectly frames the narrative around surviving the devastating bakery flood and rebuilding with the support of the Ostrander Flats community.",
+    "unsupported": []
+  },
+  "response": {
+    "text": "{\n  \"focusFit\": 5,\n  \"focusReason\": \"The outline perfectly frames the narrative around surviving the devastating bakery flood and rebuilding with the support of the Ostrander Flats community.\",\n  \"unsupported\": []\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 16.64,
+    "inputTokens": 1824,
+    "outputTokens": 837,
+    "thinkingTokens": 786,
+    "costUsd": 0.009014
+  }
+}
