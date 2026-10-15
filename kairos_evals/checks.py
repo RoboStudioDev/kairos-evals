@@ -298,12 +298,12 @@ def score_draft(
     view = member_view(case, r, cleaned)
     n_ch = len(view)
     count_ok = case.min_chapters <= n_ch <= case.max_chapters
-    lena = [c for c in view if not c["kept"]]
-    long_titles = [c["title"] for c in lena if len(c["title"]) >= TITLE_MAX]
-    long_notes = [c["title"] for c in lena if len(c["note"]) >= NOTE_MAX]
+    drafted = [c for c in view if not c["kept"]]  # the chapters the agent wrote
+    long_titles = [c["title"] for c in drafted if len(c["title"]) >= TITLE_MAX]
+    long_notes = [c["title"] for c in drafted if len(c["note"]) >= NOTE_MAX]
     parts = [1.0 if count_ok else 0.0]
-    if lena:
-        parts += [1 - len(long_titles) / len(lena), 1 - len(long_notes) / len(lena)]
+    if drafted:
+        parts += [1 - len(long_titles) / len(drafted), 1 - len(long_notes) / len(drafted)]
     details = []
     if not count_ok:
         details.append(f"{n_ch} chapters; expected {case.min_chapters} to {case.max_chapters}")
@@ -371,7 +371,7 @@ def score_draft(
     # 3 · Sticks to the facts ───────────────────────────────────────────────────────────────
     source_text = " ".join([m["title"] + " " + m["text"] for m in r["memories"]] + [case.settings["audience"]])
     total, bad = 0, []
-    for c in lena:
+    for c in drafted:
         years = [case.memory_by_id[i]["coordinate"].split(".")[0] for i in c["ids"]]
         lo, hi = (int(min(years)), int(max(years))) if years else (None, None)
         for written, first, last in years_in(c["title"] + " " + c["note"]):
@@ -391,7 +391,7 @@ def score_draft(
 
     vocab = source_vocab(case, r)
     flagged = []
-    for c in lena:
+    for c in drafted:
         for w in name_like_words(c["title"], sentence_case=False) + name_like_words(c["note"], sentence_case=True):
             w = re.sub(r"['\u2019]s$", "", w)
             if not _known(w, vocab) and w not in flagged:
