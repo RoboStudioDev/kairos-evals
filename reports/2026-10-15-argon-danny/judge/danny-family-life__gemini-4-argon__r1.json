@@ -1,0 +1,26 @@
+{
+  "case": "danny-family-life",
+  "model": "gemini-4-argon",
+  "repeat": 1,
+  "verdict": {
+    "focusFit": 5,
+    "focusReason": "The outline chronologically captures the full lives of the great-grandfather, grandfather, and author, directly fulfilling the intended purpose for the author's children.",
+    "unsupported": [
+      {
+        "chapter": "Grandpa's War: Easy Company",
+        "claim": "101st Airborne",
+        "why": "The memories mention Easy Company, the 506th, and paratroopers, but never explicitly name the 101st Airborne."
+      }
+    ]
+  },
+  "response": {
+    "text": "{\n  \"focusFit\": 5,\n  \"focusReason\": \"The outline chronologically captures the full lives of the great-grandfather, grandfather, and author, directly fulfilling the intended purpose for the author's children.\",\n  \"unsupported\": [\n    {\n      \"chapter\": \"Grandpa's War: Easy Company\",\n      \"claim\": \"101st Airborne\",\n      \"why\": \"The memories mention Easy Company, the 506th, and paratroopers, but never explicitly name the 101st Airborne.\"\n    }\n  ]\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 20.93,
+    "inputTokens": 7449,
+    "outputTokens": 2989,
+    "thinkingTokens": 2860,
+    "costUsd": 0.033591
+  }
+}

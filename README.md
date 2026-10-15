@@ -110,7 +110,8 @@ Priced on 2026-10-15 with Google's token counter, for the nine cases. Prices are
 "Likely" uses the output measured on 2026-10-15, rounded up, with the models' thinking included:
 about 400 tokens per Argon draft, 2,000 per Flash draft (Flash thinks before it answers; Argon
 doesn't) and 1,000 per judge reading. "At most" is every call using its whole output allowance,
-the most Google can bill. The two real runs cost $0.27 (Argon) and $0.47 (Flash).
+the most Google can bill. The two real runs cost $0.27 (Argon) and $0.47 (Flash); Argon on the three Danny cases
+alone cost $0.29.
 
 ## Sample reports
 
@@ -121,6 +122,9 @@ Every raw answer is kept next to each report, so any of them can be re-scored fo
 - [`reports/2026-10-15-argon-vs-flash/`](reports/2026-10-15-argon-vs-flash/): Argon against
   Gemini 3.8 Flash on the same cases. Quality is a near tie, but on this task the "Quick" model
   was twice as slow and three times the cost. [The comparison](reports/2026-10-15-argon-vs-flash/README.md).
+- [`reports/2026-10-15-argon-danny/`](reports/2026-10-15-argon-danny/): Argon on the three harder
+  Danny cases. Still 99 with no rule breaks, but on the 79-memory family memoir it writes true facts
+  the memories never state ("101st Airborne", "Pakistan"). [What the scores say](reports/2026-10-15-argon-danny/README.md).
 
 ## How it stays honest
 

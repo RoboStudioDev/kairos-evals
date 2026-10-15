@@ -1,0 +1,2301 @@
+{
+ "run": {
+  "started": "2026-10-15T12:06:34",
+  "models": [
+   "gemini-4-argon"
+  ],
+  "repeats": 3,
+  "judge": "gemini-3.8-flash",
+  "cases": [
+   "danny-family-life",
+   "danny-i-kept-misfits",
+   "danny-shared-versions"
+  ],
+  "generation": {
+   "temperature": 0.4,
+   "responseMimeType": "application/json",
+   "maxOutputTokens": 8192
+  },
+  "judgeGeneration": {
+   "temperature": 0.0,
+   "responseMimeType": "application/json",
+   "maxOutputTokens": 4096
+  },
+  "maxUsd": 1.13,
+  "finished": "2026-10-15T12:07:34",
+  "spentUsd": 0.2864,
+  "stoppedAtCap": false,
+  "judgeSelftest": [],
+  "judgeCostUsd": 0.16654
+ },
+ "warnings": [],
+ "drafts": [
+  {
+   "case": "danny-family-life",
+   "model": "gemini-4-argon",
+   "repeat": 1,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": null,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": 0.9166666666666666,
+     "hard": false,
+     "details": [
+      "split 'My son' and 'Born'"
+     ]
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": 0.9988193624557261,
+     "hard": false,
+     "details": [
+      "'Born' and 'Plankowner — SEAL Team SIX' share 'Dad's War: The Frogmen'",
+      "'Born' and 'Retired — twenty-two years' share 'Dad's War: The Frogmen'"
+     ]
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: The outline chronologically captures the full lives of the great-grandfather, grandfather, and author, directly fulfilling the intended purpose for the author's children."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 0.75,
+     "hard": false,
+     "details": [
+      "'101st Airborne' in 'Grandpa's War: Easy Company': The memories mention Easy Company, the 506th, and paratroopers, but never explicitly name the 101st Airborne."
+     ]
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 0.9830972058244786,
+    "facts": 0.875,
+    "focus": 1.0
+   },
+   "overall": 0.9645243014561197,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "Grandpa's War: Easy Company",
+     "note": "Great-grandfather Danny I answers the call after Pearl Harbor and jumps into Europe with the 101st Airborne.",
+     "ids": [
+      "demo-i-1941.50",
+      "demo-i-1942.25",
+      "demo-i-1942.30",
+      "demo-i-1942.51",
+      "demo-i-1943.38",
+      "demo-i-1944.24",
+      "demo-i-1944.25",
+      "demo-i-1944.39",
+      "demo-i-1944.52",
+      "demo-i-1945.2",
+      "demo-i-1945.18",
+      "demo-i-1945.48",
+      "demo-i-1947.11"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Dad's War: The Frogmen",
+     "note": "Grandfather Danny II grows up in the quiet after the war, joins the Navy, and fights in Vietnam with SEAL Team TWO.",
+     "ids": [
+      "demo-ii-1947.11",
+      "demo-ii-1965.38",
+      "demo-ii-1966.29",
+      "demo-ii-1967.15",
+      "demo-ii-1967.49",
+      "demo-ii-1968.5",
+      "demo-ii-1968.16",
+      "demo-ii-1968.25",
+      "demo-ii-1970.27",
+      "demo-ii-1971.12",
+      "demo-ii-1980.44",
+      "demo-ii-1987.26"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Growing Up Between Two Wars",
+     "note": "My childhood in the seventies and eighties, wearing Grandpa's loaned jump wings and watching Dad.",
+     "ids": [
+      "demo-iii-1973.8",
+      "demo-iii-1975.41",
+      "demo-iii-1976.36",
+      "demo-iii-1977.17",
+      "demo-iii-1978.18",
+      "demo-iii-1982.30",
+      "demo-iii-1984.22",
+      "demo-iii-1988.24"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Third Generation: Following Dad's Footsteps",
+     "note": "Enlisting in the Navy, surviving BUD/S, and checking aboard my father's old team in the nineties.",
+     "ids": [
+      "demo-iii-1989.3",
+      "demo-iii-1989.34",
+      "demo-iii-1990.20",
+      "demo-iii-1990.38",
+      "demo-iii-1991.41",
+      "demo-iii-1993.15",
+      "demo-iii-1995.47",
+      "demo-iii-1996.26",
+      "demo-iii-1998.9",
+      "demo-iii-2000.32"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Everything Changes: September 11th and Afghanistan",
+     "note": "The towers fall, Grandpa passes away as I pack for war, and my first rotations overseas.",
+     "ids": [
+      "demo-iii-2001.37",
+      "demo-i-2001.42",
+      "demo-iii-2001.42",
+      "demo-iii-2001.44",
+      "demo-iii-2002.9",
+      "demo-iii-2003.12",
+      "demo-iii-2005.39"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Green Team, Ajax, and the Long War",
+     "note": "Screening for Dad's old unit, working point with my dog Ajax, the raid in Abbottabad, and losing Dad.",
+     "ids": [
+      "demo-iii-2005.41",
+      "demo-iii-2008.16",
+      "demo-iii-2008.35",
+      "demo-iii-2009.37",
+      "demo-iii-2011.17",
+      "demo-iii-2011.19",
+      "demo-ii-2011.25",
+      "demo-iii-2011.25"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Coming Home and the Quiet After",
+     "note": "Retiring after twenty-two years, bringing Ajax home for good, and saying goodbye to the best partner I ever had.",
+     "ids": [
+      "demo-iii-2011.42",
+      "demo-iii-2012.12",
+      "demo-iii-2013.28",
+      "demo-iii-2013.30",
+      "demo-iii-2015.43"
+     ],
+     "kept": false
+    },
+    {
+     "title": "A Second Life: Building in Peace",
+     "note": "Going back to school, learning to code, starting a company, and finding peace in an ordinary life.",
+     "ids": [
+      "demo-iii-2017.23",
+      "demo-iii-2017.32",
+      "demo-iii-2019.19",
+      "demo-iii-2020.16",
+      "demo-iii-2020.20",
+      "demo-iii-2021.33",
+      "demo-iii-2022.33",
+      "demo-iii-2023.38",
+      "demo-iii-2024.42",
+      "demo-iii-2024.49",
+      "demo-iii-2025.14",
+      "demo-iii-2026.8"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": null,
+   "cost": 0.02372,
+   "seconds": 17.77,
+   "input_tokens": 5205,
+   "output_tokens": 1331,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "danny-family-life",
+   "model": "gemini-4-argon",
+   "repeat": 2,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": null,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 0.75,
+     "hard": false,
+     "details": [
+      "'Pakistan' isn't in the memories or the dictionary"
+     ]
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: The outline seamlessly traces all three generations in chronological order, specifically framing the narrative for the author's children."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 0.75,
+     "hard": false,
+     "details": [
+      "'Pakistan' in 'Green Team, Ajax, and Abbottabad': Pakistan is not mentioned in any of the memories."
+     ]
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 0.75,
+    "focus": 1.0
+   },
+   "overall": 0.9375,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "Danny I: The Jump Into Europe",
+     "note": "Your great-grandfather answers the call after Pearl Harbor and fights across Europe with Easy Company.",
+     "ids": [
+      "demo-i-1941.50",
+      "demo-i-1942.25",
+      "demo-i-1942.30",
+      "demo-i-1942.51",
+      "demo-i-1943.38",
+      "demo-i-1944.24",
+      "demo-i-1944.25",
+      "demo-i-1944.39",
+      "demo-i-1944.52",
+      "demo-i-1945.2",
+      "demo-i-1945.18",
+      "demo-i-1945.48"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Danny II: The Frogmen and Vietnam",
+     "note": "Your grandfather grows up in a quiet house, joins the Navy, and serves with the early SEAL teams in Vietnam.",
+     "ids": [
+      "demo-i-1947.11",
+      "demo-ii-1947.11",
+      "demo-ii-1965.38",
+      "demo-ii-1966.29",
+      "demo-ii-1967.15",
+      "demo-ii-1967.49",
+      "demo-ii-1968.5",
+      "demo-ii-1968.16",
+      "demo-ii-1968.25",
+      "demo-ii-1971.12"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Growing Up Between Two Wars",
+     "note": "My childhood, my father's secret years standing up SEAL Team SIX, and the jump wings Grandpa loaned me.",
+     "ids": [
+      "demo-ii-1970.27",
+      "demo-iii-1973.8",
+      "demo-iii-1975.41",
+      "demo-iii-1976.36",
+      "demo-iii-1977.17",
+      "demo-iii-1978.18",
+      "demo-ii-1980.44",
+      "demo-iii-1982.30",
+      "demo-iii-1984.22",
+      "demo-ii-1987.26",
+      "demo-iii-1988.24"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Third Generation: Earning the Trident",
+     "note": "Following my father into the water, surviving Hell Week, and building a life in the peacetime Navy.",
+     "ids": [
+      "demo-iii-1989.3",
+      "demo-iii-1989.34",
+      "demo-iii-1990.20",
+      "demo-iii-1990.38",
+      "demo-iii-1991.41",
+      "demo-iii-1993.15",
+      "demo-iii-1995.47",
+      "demo-iii-1996.26",
+      "demo-iii-1998.9",
+      "demo-iii-2000.32"
+     ],
+     "kept": false
+    },
+    {
+     "title": "September and the Loan Come Due",
+     "note": "The towers fall, Grandpa goes to his rest with his Normandy wings, and my war begins in Afghanistan.",
+     "ids": [
+      "demo-iii-2001.37",
+      "demo-i-2001.42",
+      "demo-iii-2001.42",
+      "demo-iii-2001.44",
+      "demo-iii-2002.9",
+      "demo-iii-2003.12",
+      "demo-iii-2005.39"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Green Team, Ajax, and Abbottabad",
+     "note": "Selection for my father's old unit, the dog who walked point for us, the raid in Pakistan, and losing Dad.",
+     "ids": [
+      "demo-iii-2005.41",
+      "demo-iii-2008.16",
+      "demo-iii-2008.35",
+      "demo-iii-2009.37",
+      "demo-iii-2011.17",
+      "demo-iii-2011.19",
+      "demo-ii-2011.25",
+      "demo-iii-2011.25"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Coming Home and the Quiet After",
+     "note": "Hanging up the uniform after twenty-two years, bringing Ajax home for good, and learning to be ordinary.",
+     "ids": [
+      "demo-iii-2011.42",
+      "demo-iii-2012.12",
+      "demo-iii-2013.28",
+      "demo-iii-2013.30",
+      "demo-iii-2015.43"
+     ],
+     "kept": false
+    },
+    {
+     "title": "A Second Life",
+     "note": "Going back to school, writing software, building a company, and enjoying the peace three generations paid for.",
+     "ids": [
+      "demo-iii-2017.23",
+      "demo-iii-2017.32",
+      "demo-iii-2019.19",
+      "demo-iii-2020.16",
+      "demo-iii-2020.20",
+      "demo-iii-2021.33",
+      "demo-iii-2022.33",
+      "demo-iii-2023.38",
+      "demo-iii-2024.42",
+      "demo-iii-2024.49",
+      "demo-iii-2025.14",
+      "demo-iii-2026.8"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": null,
+   "cost": 0.0235,
+   "seconds": 17.5,
+   "input_tokens": 5205,
+   "output_tokens": 1309,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "danny-family-life",
+   "model": "gemini-4-argon",
+   "repeat": 3,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": null,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: The outline perfectly follows a chronological multi-generational memoir crafted specifically for the author's children to learn about their great-grandfather, grandfather, and father."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 0.75,
+     "hard": false,
+     "details": [
+      "'101st Airborne' in 'Danny I: The Jump': The memories mention volunteering for the Paratroopers, Airborne, and the 506th, but never mention the 101st Airborne."
+     ]
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 0.875,
+    "focus": 1.0
+   },
+   "overall": 0.96875,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "Danny I: The Jump",
+     "note": "Your great-grandfather answers the call after Pearl Harbor and trains with the 101st Airborne.",
+     "ids": [
+      "demo-i-1941.50",
+      "demo-i-1942.25",
+      "demo-i-1942.30",
+      "demo-i-1942.51",
+      "demo-i-1943.38"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Danny I: Across Europe",
+     "note": "From D-Day and Carentan to Bastogne and the Eagle's Nest, and finally coming home.",
+     "ids": [
+      "demo-i-1944.24",
+      "demo-i-1944.25",
+      "demo-i-1944.39",
+      "demo-i-1944.52",
+      "demo-i-1945.2",
+      "demo-i-1945.18",
+      "demo-i-1945.48"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Danny II: Into the Water",
+     "note": "Your grandfather grows up in a quiet house, joins the Navy, and fights in Vietnam.",
+     "ids": [
+      "demo-i-1947.11",
+      "demo-ii-1947.11",
+      "demo-ii-1965.38",
+      "demo-ii-1966.29",
+      "demo-ii-1967.15",
+      "demo-ii-1967.49",
+      "demo-ii-1968.5",
+      "demo-ii-1968.16",
+      "demo-ii-1968.25"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Growing Up Between Two Wars",
+     "note": "My birth, my father's final years in the Teams, and my childhood under the wing of two veterans.",
+     "ids": [
+      "demo-ii-1970.27",
+      "demo-ii-1971.12",
+      "demo-iii-1973.8",
+      "demo-iii-1975.41",
+      "demo-iii-1976.36",
+      "demo-iii-1977.17",
+      "demo-iii-1978.18",
+      "demo-ii-1980.44",
+      "demo-iii-1982.30",
+      "demo-iii-1984.22",
+      "demo-ii-1987.26",
+      "demo-iii-1988.24"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Third Generation",
+     "note": "Raising my hand for the Navy, surviving BUD/S, and stepping into my father's shoes at SEAL Team TWO.",
+     "ids": [
+      "demo-iii-1989.3",
+      "demo-iii-1989.34",
+      "demo-iii-1990.20",
+      "demo-iii-1990.38",
+      "demo-iii-1991.41",
+      "demo-iii-1993.15",
+      "demo-iii-1995.47",
+      "demo-iii-1996.26",
+      "demo-iii-1998.9",
+      "demo-iii-2000.32"
+     ],
+     "kept": false
+    },
+    {
+     "title": "After September",
+     "note": "The towers fall, we say goodbye to Grandpa, and my war in Afghanistan begins.",
+     "ids": [
+      "demo-iii-2001.37",
+      "demo-i-2001.42",
+      "demo-iii-2001.42",
+      "demo-iii-2001.44",
+      "demo-iii-2002.9",
+      "demo-iii-2003.12",
+      "demo-iii-2005.39",
+      "demo-iii-2005.41"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Ajax and the Quiet Work",
+     "note": "My war dog Ajax, the compound in Paktika, the raid in Abbottabad, and losing Dad.",
+     "ids": [
+      "demo-iii-2008.16",
+      "demo-iii-2008.35",
+      "demo-iii-2009.37",
+      "demo-iii-2011.17",
+      "demo-iii-2011.19",
+      "demo-ii-2011.25",
+      "demo-iii-2011.25",
+      "demo-iii-2011.42"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Coming Home",
+     "note": "Retiring after twenty-two years, bringing Ajax home for his final days, and learning to be ordinary.",
+     "ids": [
+      "demo-iii-2012.12",
+      "demo-iii-2013.28",
+      "demo-iii-2013.30",
+      "demo-iii-2015.43",
+      "demo-iii-2017.23",
+      "demo-iii-2017.32",
+      "demo-iii-2019.19"
+     ],
+     "kept": false
+    },
+    {
+     "title": "A Second Life",
+     "note": "Finishing my degree, building a software company, and finding peace in the quiet years.",
+     "ids": [
+      "demo-iii-2020.16",
+      "demo-iii-2020.20",
+      "demo-iii-2021.33",
+      "demo-iii-2022.33",
+      "demo-iii-2023.38",
+      "demo-iii-2024.42",
+      "demo-iii-2024.49",
+      "demo-iii-2025.14",
+      "demo-iii-2026.8"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": null,
+   "cost": 0.02363,
+   "seconds": 17.56,
+   "input_tokens": 5205,
+   "output_tokens": 1322,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "danny-i-kept-misfits",
+   "model": "gemini-4-argon",
+   "repeat": 1,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: The agent's chapters directly capture the severe trials of wartime service and the lasting burden carried home to future generations."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 1.0,
+    "focus": 1.0
+   },
+   "overall": 1.0,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "Currahee",
+     "note": "Enlisting after Pearl Harbor and earning a place in Easy Company.",
+     "ids": [
+      "demo-i-1941.50",
+      "demo-i-1942.25",
+      "demo-i-1942.30"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Jump wings, 1943",
+     "note": "Benning, the day they pinned the silver on.",
+     "ids": [
+      "demo-i-1942.51"
+     ],
+     "kept": true
+    },
+    {
+     "title": "Into Normandy",
+     "note": "Waiting in England, jumping on D-Day, and losing Bill at Carentan.",
+     "ids": [
+      "demo-i-1943.38",
+      "demo-i-1944.24",
+      "demo-i-1944.25"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Holland and the Bulge",
+     "note": "Jumping into Holland and holding the frozen line from Bastogne to Foy.",
+     "ids": [
+      "demo-i-1944.39",
+      "demo-i-1944.52",
+      "demo-i-1945.2"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Coming home",
+     "note": "Bill. Say his name in this chapter.",
+     "ids": [
+      "demo-i-1945.18",
+      "demo-i-1945.48"
+     ],
+     "kept": true
+    },
+    {
+     "title": "The wedding",
+     "note": "Margaret thinks this should come before the farm. She is right.",
+     "ids": [],
+     "kept": true
+    },
+    {
+     "title": "The farm",
+     "note": "For the grandchildren.",
+     "ids": [],
+     "kept": true
+    },
+    {
+     "title": "What We Pass On",
+     "note": "Holding my newborn son and watching my grandson answer the call years later.",
+     "ids": [
+      "demo-i-1947.11",
+      "demo-i-2001.42"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": null,
+   "cost": 0.007244,
+   "seconds": 7.54,
+   "input_tokens": 1372,
+   "output_tokens": 450,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "danny-i-kept-misfits",
+   "model": "gemini-4-argon",
+   "repeat": 2,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: The agent's chapters directly trace the wartime trauma and its intergenerational legacy, perfectly addressing what he endured and carried home for his descendants."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 1.0,
+    "focus": 1.0
+   },
+   "overall": 1.0,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "Answering the call",
+     "note": "From the radio news of Pearl Harbor to running Currahee with Easy Company.",
+     "ids": [
+      "demo-i-1941.50",
+      "demo-i-1942.25",
+      "demo-i-1942.30"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Jump wings, 1943",
+     "note": "Benning, the day they pinned the silver on.",
+     "ids": [
+      "demo-i-1942.51"
+     ],
+     "kept": true
+    },
+    {
+     "title": "Across the ocean and into Normandy",
+     "note": "Waiting in England, jumping on D-Day, and losing Bill at Carentan.",
+     "ids": [
+      "demo-i-1943.38",
+      "demo-i-1944.24",
+      "demo-i-1944.25"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Holland and the frozen woods",
+     "note": "Daylight jumps in Holland and holding the line in the snow at Bastogne and Foy.",
+     "ids": [
+      "demo-i-1944.39",
+      "demo-i-1944.52",
+      "demo-i-1945.2"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Coming home",
+     "note": "Bill. Say his name in this chapter.",
+     "ids": [
+      "demo-i-1945.18",
+      "demo-i-1945.48"
+     ],
+     "kept": true
+    },
+    {
+     "title": "The wedding",
+     "note": "Margaret thinks this should come before the farm. She is right.",
+     "ids": [],
+     "kept": true
+    },
+    {
+     "title": "The farm",
+     "note": "For the grandchildren.",
+     "ids": [],
+     "kept": true
+    },
+    {
+     "title": "What passes down",
+     "note": "Fathers and sons, and the silver wings left on the nightstand.",
+     "ids": [
+      "demo-i-1947.11",
+      "demo-i-2001.42"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": null,
+   "cost": 0.005674,
+   "seconds": 5.06,
+   "input_tokens": 1372,
+   "output_tokens": 293,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "danny-i-kept-misfits",
+   "model": "gemini-4-argon",
+   "repeat": 3,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: The agent's chapters directly trace the author's harrowing wartime experiences and their enduring generational impact, aligning perfectly with the resilience theme and the intended audience of grandchildren."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 1.0,
+    "focus": 1.0
+   },
+   "overall": 1.0,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "Currahee",
+     "note": "Enlisting after Pearl Harbor and making it through Toccoa into Easy Company.",
+     "ids": [
+      "demo-i-1941.50",
+      "demo-i-1942.25",
+      "demo-i-1942.30"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Jump wings, 1943",
+     "note": "Benning, the day they pinned the silver on.",
+     "ids": [
+      "demo-i-1942.51"
+     ],
+     "kept": true
+    },
+    {
+     "title": "Normandy",
+     "note": "Shipping out to England, jumping on D-Day, and losing Bill at Carentan.",
+     "ids": [
+      "demo-i-1943.38",
+      "demo-i-1944.24",
+      "demo-i-1944.25"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Holland and the Bulge",
+     "note": "From the daylight jump into Holland to the frozen foxholes at Bastogne and Foy.",
+     "ids": [
+      "demo-i-1944.39",
+      "demo-i-1944.52",
+      "demo-i-1945.2"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Coming home",
+     "note": "Bill. Say his name in this chapter.",
+     "ids": [
+      "demo-i-1945.18",
+      "demo-i-1945.48"
+     ],
+     "kept": true
+    },
+    {
+     "title": "The wedding",
+     "note": "Margaret thinks this should come before the farm. She is right.",
+     "ids": [],
+     "kept": true
+    },
+    {
+     "title": "The farm",
+     "note": "For the grandchildren.",
+     "ids": [],
+     "kept": true
+    },
+    {
+     "title": "What we carry on",
+     "note": "A son, a grandson, and the silver wings on the nightstand at the end.",
+     "ids": [
+      "demo-i-1947.11",
+      "demo-i-2001.42"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": null,
+   "cost": 0.007344,
+   "seconds": 7.85,
+   "input_tokens": 1372,
+   "output_tokens": 460,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "danny-shared-versions",
+   "model": "gemini-4-argon",
+   "repeat": 1,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": null,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: The outline perfectly captures the multi-generational perspective of shared family events tailored directly for family members."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 1.0,
+    "focus": 1.0
+   },
+   "overall": 1.0,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "Sons and Grandsons",
+     "note": "The births of Danny II in 1947 and Danny III in 1970, remembered by father and son.",
+     "ids": [
+      "demo-i-1947.11",
+      "demo-ii-1947.11",
+      "demo-i-1970.27",
+      "demo-ii-1970.27"
+     ],
+     "kept": false
+    },
+    {
+     "title": "The Wings on Loan",
+     "note": "Three views of the afternoon in 1978 when Grandpa pinned his war wings on his grandson.",
+     "ids": [
+      "demo-i-1978.18",
+      "demo-ii-1978.18",
+      "demo-iii-1978.18"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Mornings in the Woods",
+     "note": "Cold mornings hunting together, hot cups from the thermos, and not a single deer.",
+     "ids": [
+      "demo-ii-1982.47",
+      "demo-i-1983.45",
+      "demo-iii-1983.45"
+     ],
+     "kept": false
+    },
+    {
+     "title": "The Scorecard in the Pocket",
+     "note": "An afternoon at the range in 1985, and the lunch that mattered more than the score.",
+     "ids": [
+      "demo-i-1985.33",
+      "demo-ii-1985.33",
+      "demo-iii-1985.33"
+     ],
+     "kept": false
+    },
+    {
+     "title": "First Summer Without Orders",
+     "note": "Danny II retires in 1987, and three generations take a slow walk up a steep hill.",
+     "ids": [
+      "demo-ii-1987.26",
+      "demo-iii-1987.26",
+      "demo-i-1987.33",
+      "demo-ii-1987.33",
+      "demo-iii-1987.33"
+     ],
+     "kept": false
+    },
+    {
+     "title": "The Loan Comes Due",
+     "note": "The last weeks of Danny I in 2001 and Danny II in 2011, and the things left unsaid.",
+     "ids": [
+      "demo-i-2001.42",
+      "demo-iii-2001.42",
+      "demo-ii-2011.25",
+      "demo-iii-2011.25"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": null,
+   "cost": 0.009856,
+   "seconds": 8.81,
+   "input_tokens": 2208,
+   "output_tokens": 544,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "danny-shared-versions",
+   "model": "gemini-4-argon",
+   "repeat": 2,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": null,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: The outline precisely organizes the shared family experiences and differing generational perspectives as requested."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 1.0,
+    "focus": 1.0
+   },
+   "overall": 1.0,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "Beginnings",
+     "note": "The births of Danny II in 1947 and Danny III in 1970, remembered by father and son.",
+     "ids": [
+      "demo-i-1947.11",
+      "demo-ii-1947.11",
+      "demo-i-1970.27",
+      "demo-ii-1970.27"
+     ],
+     "kept": false
+    },
+    {
+     "title": "The Wings on Loan",
+     "note": "Three views of the afternoon in 1978 when Grandpa pinned his war wings on his grandson.",
+     "ids": [
+      "demo-i-1978.18",
+      "demo-ii-1978.18",
+      "demo-iii-1978.18"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Mornings in the Woods",
+     "note": "Three generations hunting together in the cold, and the quiet lessons between them.",
+     "ids": [
+      "demo-ii-1982.47",
+      "demo-i-1983.45",
+      "demo-iii-1983.45"
+     ],
+     "kept": false
+    },
+    {
+     "title": "The Scorecard",
+     "note": "An afternoon at the range in 1985, and what mattered more than the target.",
+     "ids": [
+      "demo-i-1985.33",
+      "demo-ii-1985.33",
+      "demo-iii-1985.33"
+     ],
+     "kept": false
+    },
+    {
+     "title": "The Summer of '87",
+     "note": "Leaving the service after twenty-two years, and a slow walk up a steep hill together.",
+     "ids": [
+      "demo-ii-1987.26",
+      "demo-iii-1987.26",
+      "demo-i-1987.33",
+      "demo-ii-1987.33",
+      "demo-iii-1987.33"
+     ],
+     "kept": false
+    },
+    {
+     "title": "The Last Weeks",
+     "note": "Saying goodbye to Grandpa in 2001 and to Dad in 2011, and the unspoken understanding between them.",
+     "ids": [
+      "demo-i-2001.42",
+      "demo-iii-2001.42",
+      "demo-ii-2011.25",
+      "demo-iii-2011.25"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": null,
+   "cost": 0.009716,
+   "seconds": 8.3,
+   "input_tokens": 2208,
+   "output_tokens": 530,
+   "thinking_tokens": 0
+  },
+  {
+   "case": "danny-shared-versions",
+   "model": "gemini-4-argon",
+   "repeat": 3,
+   "usable": true,
+   "checks": [
+    {
+     "id": "valid_answer",
+     "area": "rules",
+     "label": "Gave an answer the app can read (JSON with chapters)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "real_memories_only",
+     "area": "rules",
+     "label": "Used only memories it was given (no made-up memory ids)",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "each_memory_once",
+     "area": "rules",
+     "label": "Put each memory in at most one chapter",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "keeps_member_chapters",
+     "area": "rules",
+     "label": "Kept each chapter the member wrote, exactly once",
+     "score": null,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "book_type_rule",
+     "area": "rules",
+     "label": "Book type answered the way the prompt asks",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "sizes",
+     "area": "rules",
+     "label": "Chapter count, title and note lengths within the limits",
+     "score": 1.0,
+     "hard": true,
+     "details": []
+    },
+    {
+     "id": "placed_what_matters",
+     "area": "chapters",
+     "label": "Placed the memories this book needs",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "left_out_noise",
+     "area": "chapters",
+     "label": "Left out notes that don't belong in a book (car registration, Wi-Fi)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "together",
+     "area": "chapters",
+     "label": "Kept memories of the same event or time in one chapter",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "apart",
+     "area": "chapters",
+     "label": "Didn't mix far-apart parts of life in one chapter",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "time_order",
+     "area": "chapters",
+     "label": "Chapters and their memories in time order",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "dates_supported",
+     "area": "facts",
+     "label": "Every year or decade it names matches the memories",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "no_new_names",
+     "area": "facts",
+     "label": "No names or places that aren't in the memories (word check)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "suggested_book_type",
+     "area": "focus",
+     "label": "Suggested the right kind of book (when the member hadn't chosen)",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "focus_changes_plan",
+     "area": "focus",
+     "label": "Changing the Focus changed the plan",
+     "score": null,
+     "hard": false,
+     "details": []
+    },
+    {
+     "id": "judge_focus_fit",
+     "area": "focus",
+     "label": "Titles and notes fit the chosen Focus and reader (judge, 1-5)",
+     "score": 1.0,
+     "hard": false,
+     "details": [
+      "5/5: The chapters perfectly capture the multi-generational perspectives of the exact same shared family events across time."
+     ]
+    },
+    {
+     "id": "judge_no_invented_facts",
+     "area": "facts",
+     "label": "No claims the memories don't support (judge)",
+     "score": 1.0,
+     "hard": false,
+     "details": []
+    }
+   ],
+   "areas": {
+    "rules": 1.0,
+    "chapters": 1.0,
+    "facts": 1.0,
+    "focus": 1.0
+   },
+   "overall": 1.0,
+   "rule_breaks": 0,
+   "chapters": [
+    {
+     "title": "Two Sons Born",
+     "note": "The births of Danny II in 1947 and Danny III in 1970, told by father and son.",
+     "ids": [
+      "demo-i-1947.11",
+      "demo-ii-1947.11",
+      "demo-i-1970.27",
+      "demo-ii-1970.27"
+     ],
+     "kept": false
+    },
+    {
+     "title": "The Wings on Loan",
+     "note": "An afternoon in 1978 when Grandpa pinned his war wings on his seven-year-old grandson.",
+     "ids": [
+      "demo-i-1978.18",
+      "demo-ii-1978.18",
+      "demo-iii-1978.18"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Mornings in the Woods",
+     "note": "Three generations out in the cold with an old thermos and no deer.",
+     "ids": [
+      "demo-ii-1982.47",
+      "demo-i-1983.45",
+      "demo-iii-1983.45"
+     ],
+     "kept": false
+    },
+    {
+     "title": "Putting the Scorecard Away",
+     "note": "An afternoon of target practice in 1985, and the lunch that mattered more.",
+     "ids": [
+      "demo-i-1985.33",
+      "demo-ii-1985.33",
+      "demo-iii-1985.33"
+     ],
+     "kept": false
+    },
+    {
+     "title": "A Summer Without Orders",
+     "note": "Dad's retirement in 1987, and a slow walk up a steep hill together.",
+     "ids": [
+      "demo-ii-1987.26",
+      "demo-iii-1987.26",
+      "demo-i-1987.33",
+      "demo-ii-1987.33",
+      "demo-iii-1987.33"
+     ],
+     "kept": false
+    },
+    {
+     "title": "The Last Weeks",
+     "note": "Saying goodbye to Grandpa in 2001 and to Dad in 2011.",
+     "ids": [
+      "demo-i-2001.42",
+      "demo-iii-2001.42",
+      "demo-ii-2011.25",
+      "demo-iii-2011.25"
+     ],
+     "kept": false
+    }
+   ],
+   "book_type": null,
+   "cost": 0.009146,
+   "seconds": 7.96,
+   "input_tokens": 2208,
+   "output_tokens": 473,
+   "thinking_tokens": 0
+  }
+ ]
+}

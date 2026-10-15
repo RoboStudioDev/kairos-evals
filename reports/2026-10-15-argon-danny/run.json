@@ -1,0 +1,27 @@
+{
+  "started": "2026-10-15T12:06:34",
+  "models": [
+    "gemini-4-argon"
+  ],
+  "repeats": 3,
+  "judge": "gemini-3.8-flash",
+  "cases": [
+    "danny-family-life",
+    "danny-i-kept-misfits",
+    "danny-shared-versions"
+  ],
+  "generation": {
+    "temperature": 0.4,
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 8192
+  },
+  "judgeGeneration": {
+    "temperature": 0.0,
+    "responseMimeType": "application/json",
+    "maxOutputTokens": 4096
+  },
+  "maxUsd": 1.13,
+  "finished": "2026-10-15T12:07:34",
+  "spentUsd": 0.2864,
+  "stoppedAtCap": false
+}

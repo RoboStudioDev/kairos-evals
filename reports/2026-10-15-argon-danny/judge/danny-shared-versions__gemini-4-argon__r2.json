@@ -1,0 +1,20 @@
+{
+  "case": "danny-shared-versions",
+  "model": "gemini-4-argon",
+  "repeat": 2,
+  "verdict": {
+    "focusFit": 5,
+    "focusReason": "The outline precisely organizes the shared family experiences and differing generational perspectives as requested.",
+    "unsupported": []
+  },
+  "response": {
+    "text": "{\n  \"focusFit\": 5,\n  \"focusReason\": \"The outline precisely organizes the shared family experiences and differing generational perspectives as requested.\",\n  \"unsupported\": []\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 7.16,
+    "inputTokens": 3037,
+    "outputTokens": 926,
+    "thinkingTokens": 885,
+    "costUsd": 0.011501
+  }
+}

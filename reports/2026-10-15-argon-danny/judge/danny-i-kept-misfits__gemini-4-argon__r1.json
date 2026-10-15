@@ -1,0 +1,20 @@
+{
+  "case": "danny-i-kept-misfits",
+  "model": "gemini-4-argon",
+  "repeat": 1,
+  "verdict": {
+    "focusFit": 5,
+    "focusReason": "The agent's chapters directly capture the severe trials of wartime service and the lasting burden carried home to future generations.",
+    "unsupported": []
+  },
+  "response": {
+    "text": "{\n  \"focusFit\": 5,\n  \"focusReason\": \"The agent's chapters directly capture the severe trials of wartime service and the lasting burden carried home to future generations.\",\n  \"unsupported\": []\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 7.11,
+    "inputTokens": 2124,
+    "outputTokens": 999,
+    "thinkingTokens": 950,
+    "costUsd": 0.010679
+  }
+}

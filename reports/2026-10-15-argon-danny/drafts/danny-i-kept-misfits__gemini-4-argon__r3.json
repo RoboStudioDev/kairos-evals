@@ -1,0 +1,16 @@
+{
+  "case": "danny-i-kept-misfits",
+  "model": "gemini-4-argon",
+  "repeat": 3,
+  "promptSha": "ea1e0e13f20c5a1b",
+  "response": {
+    "text": "{\n  \"bookType\": null,\n  \"chapters\": [\n    {\n      \"title\": \"Currahee\",\n      \"note\": \"Enlisting after Pearl Harbor and making it through Toccoa into Easy Company.\",\n      \"entryIds\": [\n        \"demo-i-1941.50\",\n        \"demo-i-1942.25\",\n        \"demo-i-1942.30\"\n      ]\n    },\n    {\n      \"keep\": \"wings-1943\"\n    },\n    {\n      \"title\": \"Normandy\",\n      \"note\": \"Shipping out to England, jumping on D-Day, and losing Bill at Carentan.\",\n      \"entryIds\": [\n        \"demo-i-1943.38\",\n        \"demo-i-1944.24\",\n        \"demo-i-1944.25\"\n      ]\n    },\n    {\n      \"title\": \"Holland and the Bulge\",\n      \"note\": \"From the daylight jump into Holland to the frozen foxholes at Bastogne and Foy.\",\n      \"entryIds\": [\n        \"demo-i-1944.39\",\n        \"demo-i-1944.52\",\n        \"demo-i-1945.2\"\n      ]\n    },\n    {\n      \"keep\": \"demo-ch-4\"\n    },\n    {\n      \"keep\": \"demo-ch-5\"\n    },\n    {\n      \"keep\": \"demo-ch-6\"\n    },\n    {\n      \"title\": \"What we carry on\",\n      \"note\": \"A son, a grandson, and the silver wings on the nightstand at the end.\",\n      \"entryIds\": [\n        \"demo-i-1947.11\",\n        \"demo-i-2001.42\"\n      ]\n    }\n  ]\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-4-argon",
+    "seconds": 7.85,
+    "inputTokens": 1372,
+    "outputTokens": 460,
+    "thinkingTokens": 0,
+    "costUsd": 0.007344
+  }
+}

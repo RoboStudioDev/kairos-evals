@@ -1,0 +1,20 @@
+{
+  "case": "danny-shared-versions",
+  "model": "gemini-4-argon",
+  "repeat": 3,
+  "verdict": {
+    "focusFit": 5,
+    "focusReason": "The chapters perfectly capture the multi-generational perspectives of the exact same shared family events across time.",
+    "unsupported": []
+  },
+  "response": {
+    "text": "{\n  \"focusFit\": 5,\n  \"focusReason\": \"The chapters perfectly capture the multi-generational perspectives of the exact same shared family events across time.\",\n  \"unsupported\": []\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 7.64,
+    "inputTokens": 3033,
+    "outputTokens": 880,
+    "thinkingTokens": 835,
+    "costUsd": 0.011149
+  }
+}

@@ -1,0 +1,97 @@
+You are Kairos, the member's ghost writing agent (powered by Gemini 4 Argon). A member is building a memoir from
+their own memories, and you are planning the book: grouping the memories into chapters.
+The book: a life memoir: the whole life, more or less in order.
+Who it is for: My kids, so they know their great-grandfather, their grandfather, and me.
+Rules:
+- Use ONLY the memory ids listed below. Never invent a memory, a person, a place or an event.
+- Put each memory in at most one chapter. Leave a memory out if it does not belong in this
+  book; it will wait under "Not in a chapter yet".
+- Plan 3 to 12 chapters (fewer if there are only a few memories), in the order the book
+  should read.
+- Chapter titles: short and plain, under 60 characters. Notes: one line under 140 characters
+  saying what the chapter is about, in plain words.
+- List each chapter's memory ids in reading order.
+- Set "bookType" to null.
+Answer with JSON only, in this shape:
+{"bookType": null, "chapters": [{"title": "…", "note": "…", "entryIds": ["…"]}, {"keep": "…"}]}
+KEPT: []
+MEMORIES (one per line: id, week as year.week, title, how it starts):
+{"id":"demo-iii-1973.8","week":"1973.8","title":"First steps","start":"Caught on the camcorder. Everyone cheered."}
+{"id":"demo-iii-1975.41","week":"1975.41","title":"Family dog, Rex","start":"Showed up at the door and never left."}
+{"id":"demo-iii-1976.36","week":"1976.36","title":"First day of school","start":"New backpack, nervous smile."}
+{"id":"demo-iii-1977.17","week":"1977.17","title":"Built a treehouse","start":"Crooked, leaky, perfect."}
+{"id":"demo-iii-1978.18","week":"1978.18","title":"Grandpa’s jump wings","start":"Danny I pinned his Normandy wings on a seven-year-old’s t-shirt and told him they were only loaned. Wore them to bed for a week."}
+{"id":"demo-iii-1982.30","week":"1982.30","title":"Parents’ divorce","start":"Two houses, one kid in the middle."}
+{"id":"demo-iii-1984.22","week":"1984.22","title":"Made the team","start":"Last cut, made it by one spot."}
+{"id":"demo-iii-1988.24","week":"1988.24","title":"High School Graduation","start":"June 10th, 1988. Cap toss, the whole thing. Grandpa came in his old jump boots."}
+{"id":"demo-iii-1989.3","week":"1989.3","title":"Enlisted — U.S. Navy","start":"Third generation to raise his hand. Signed the dotted line eight months out of high school and told nobody until it was done."}
+{"id":"demo-iii-1989.34","week":"1989.34","title":"BUD/S — Hell Week","start":"Five days, no sleep, surf zone in the dark. Started with a class of a hundred and change. Finished with the ones still standing."}
+{"id":"demo-iii-1990.20","week":"1990.20","title":"Checked aboard SEAL Team TWO","start":"Little Creek — his father’s old team. The Chief who signed him in had deployed with Dad in ’68 and just said: \"So you’re the son.\""}
+{"id":"demo-iii-1990.38","week":"1990.38","title":"First deployment","start":"Six months forward. Nothing happened, and that was the whole lesson: most of this job is waiting well."}
+{"id":"demo-iii-1991.41","week":"1991.41","title":"Made Petty Officer","start":"Crimped anchors on the collar. Same rate his father wore, a war and a generation apart."}
+{"id":"demo-iii-1993.15","week":"1993.15","title":"Moved out","start":"First place. Mattress on the floor."}
+{"id":"demo-iii-1995.47","week":"1995.47","title":"Made Chief","start":"Khakis and a hard hazing from men who had earned the right. Dad drove up for the pinning and did not say much, which from him was everything."}
+{"id":"demo-iii-1996.26","week":"1996.26","title":"Wedding Day","start":"Polaroid — the two of you."}
+{"id":"demo-iii-1998.9","week":"1998.9","title":"Bought first car","start":"Used, dented, mine."}
+{"id":"demo-iii-2000.32","week":"2000.32","title":"Y2K survived","start":"The world kept turning after all."}
+{"id":"demo-iii-2001.37","week":"2001.37","title":"September 11th","start":"Tuesday morning. Watched the second one hit on a TV in the team room and nobody said a word. Everything after this is a different life."}
+{"id":"demo-iii-2001.42","week":"2001.42","title":"Grandpa died","start":"Eighty-three. Six weeks after the towers, with his grandson already packing. Buried him with the wings — the loan came due."}
+{"id":"demo-iii-2001.44","week":"2001.44","title":"First house down payment","start":"Emptied the savings, signed anyway."}
+{"id":"demo-iii-2002.9","week":"2002.9","title":"First rotation — Afghanistan","start":"Off the ramp into cold thin air and dust that got into everything. Grandpa jumped into a country to take it back. This one had nothing to take."}
+{"id":"demo-iii-2003.12","week":"2003.12","title":"Totaled the car","start":"Walked away. The car didn’t."}
+{"id":"demo-iii-2005.39","week":"2005.39","title":"Beach weekend","start":"Sand everywhere for a month."}
+{"id":"demo-iii-2005.41","week":"2005.41","title":"Green Team — selected","start":"Nine months of the hardest screening in the Teams, at thirty-five, with the young guys watching to see if the old man would quit. Made it. Dad’s old CO stood up the unit in 1980; the son walked in the door twenty-five years later."}
+{"id":"demo-iii-2008.16","week":"2008.16","title":"Ajax","start":"A seventy-pound Belgian Malinois with a bite like a car door and no concept of fear. They put them together in the canine program and never really separated them again. He worked the point no man could."}
+{"id":"demo-iii-2008.35","week":"2008.35","title":"Tokyo trip","start":"Neon, ramen, missed the last train."}
+{"id":"demo-iii-2009.37","week":"2009.37","title":"The compound in Paktika","start":"Ajax went through the door first, the way he always did. Took rounds meant for the stack behind him. Eleven hours of surgery in Bagram and a vet who would not give up on him. He lived. Not everybody did."}
+{"id":"demo-iii-2011.17","week":"2011.17","title":"A full-scale mock-up, somewhere in North Carolina","start":"They built the house out of plywood and shipping containers and ran it in the dark until it was muscle memory. Nobody told us whose house it was. You could feel that nobody wanted to ask."}
+{"id":"demo-iii-2011.19","week":"2011.19","title":"Abbottabad","start":"Two stealth Black Hawks over the border at midnight, Ajax rigged to my chest for the fast-rope. One bird went down in the courtyard and everybody just kept working. Thirty-eight minutes on the deck. We flew out with the answer to ten years of questions and I have never once said"}
+{"id":"demo-iii-2011.25","week":"2011.25","title":"Dad died","start":"Sixty-four. Six weeks after Abbottabad, and I could not tell him where I had been. I think he knew. He squeezed my hand once and said \"good\", and that was the whole conversation."}
+{"id":"demo-iii-2011.42","week":"2011.42","title":"Retired — twenty-two years","start":"Folded the flag, shook the hands, walked out into a Tuesday with no orders for the first time since 1989. Nobody warns you that the quiet is the hard part."}
+{"id":"demo-iii-2012.12","week":"2012.12","title":"Ajax came home for good","start":"Signed the adoption papers and drove him out of the kennel in the passenger seat like a person. He was grey in the muzzle and still checked every doorway in the house before he would lie down."}
+{"id":"demo-iii-2013.28","week":"2013.28","title":"Lost the big client","start":"Quarter gone. Regrouped."}
+{"id":"demo-iii-2013.30","week":"2013.30","title":"Ajax","start":"Eleven years old, on the kitchen floor in the sun, with my hand on him. He went through more doors ahead of me than any man alive. There is a box of his gear I still have not opened."}
+{"id":"demo-iii-2015.43","week":"2015.43","title":"Ran a half marathon","start":"Slower than planned, finished anyway."}
+{"id":"demo-iii-2017.23","week":"2017.23","title":"Shipped first app","start":"Ten downloads. Eight were me."}
+{"id":"demo-iii-2017.32","week":"2017.32","title":"New Home","start":"Polaroid on the porch."}
+{"id":"demo-iii-2019.19","week":"2019.19","title":"Gave a keynote","start":"Knees shaking, slides solid."}
+{"id":"demo-iii-2020.16","week":"2020.16","title":"Layoff — Old Job","start":"Severance, two months. Used the time to finish the degree."}
+{"id":"demo-iii-2020.20","week":"2020.20","title":"Bachelor of Computer Science","start":"CA University. The thing you actually finished."}
+{"id":"demo-iii-2021.33","week":"2021.33","title":"Hit 1,000 users","start":"Screenshot the number. Framed it."}
+{"id":"demo-iii-2022.10","week":"2022.10","title":"Truck registration","start":"Renewed the truck registration online. $112. New sticker comes in the mail."}
+{"id":"demo-iii-2022.33","week":"2022.33","title":"Camping under the stars","start":"No signal, best sleep in years."}
+{"id":"demo-iii-2023.38","week":"2023.38","title":"Hired the first employee","start":"Now it’s a we, not a me."}
+{"id":"demo-iii-2023.47","week":"2023.47","title":"Wi-Fi password","start":"New Wi-Fi password is on the card taped inside the pantry door."}
+{"id":"demo-iii-2024.42","week":"2024.42","title":"First Talk — DevConf","start":"Forty minutes on coordinate systems for memory."}
+{"id":"demo-iii-2024.49","week":"2024.49","title":"Christmas","start":"Polaroid by the tree."}
+{"id":"demo-iii-2025.6","week":"2025.6","title":"Dentist","start":"Dentist moved the cleaning to the 14th at 10:30."}
+{"id":"demo-iii-2025.14","week":"2025.14","title":"Garden finally bloomed","start":"Three years of trying. Tomatoes at last."}
+{"id":"demo-iii-2025.33","week":"2025.33","title":"Gutters","start":"Gutter guy came. $140 cash. Back in October."}
+{"id":"demo-iii-2026.8","week":"2026.8","title":"Coffee with an old friend","start":"Picked up like no time had passed."}
+{"id":"demo-ii-1947.11","week":"1947.11","title":"Born","start":"Eighteen months after the old man came home from Europe. He never talked about the war, and the whole house was built around the not-talking."}
+{"id":"demo-ii-1965.38","week":"1965.38","title":"Enlisted — U.S. Navy","start":"Dad jumped out of airplanes, so I figured I would go the other direction and get in the water. He signed the papers without a word and shook my hand like a man at a funeral."}
+{"id":"demo-ii-1966.29","week":"1966.29","title":"UDT training — graduated","start":"Cold, wet and sandy for six months straight. Half the class quit. They handed me swim fins and told me I belonged to the frogmen now."}
+{"id":"demo-ii-1967.15","week":"1967.15","title":"SEAL Team TWO — Little Creek","start":"Checked aboard at Little Creek, Virginia. The Teams were five years old and still making it up as they went. Best men I ever stood next to."}
+{"id":"demo-ii-1967.49","week":"1967.49","title":"Vietnam — 8th Platoon, Det Alfa","start":"Shipped out in December with Mr. Marcinko’s platoon. He was the loudest, meanest, most alive officer in the Navy and he would not ask you to go anywhere he was not already standing."}
+{"id":"demo-ii-1968.5","week":"1968.5","title":"Tet — Chau Doc","start":"The whole country came apart on the thirty-first. We went into Chau Doc to help the Green Berets and it turned into a street fight, house by house, all day. Ended up pulling American nurses and a schoolteacher out of the church with a jeep and a lot of noise. That is the one I am"}
+{"id":"demo-ii-1968.16","week":"1968.16","title":"The Rung Sat","start":"The Forest of Assassins. Mangrove, mud to your chest, leeches, and waiting all night on a canal bank without moving. Patches walked point like he could see in the dark. Maybe he could."}
+{"id":"demo-ii-1968.25","week":"1968.25","title":"Rotated home","start":"Six months, and I came back with everyone I left with. Not every platoon could say that. Landed stateside to people spitting the word \"baby killer\" and just kept walking."}
+{"id":"demo-ii-1970.27","week":"1970.27","title":"My son","start":"Danny III, born on the Fourth of July. Dad drove eleven hours to hold him and cried, which I had never once seen him do."}
+{"id":"demo-ii-1971.12","week":"1971.12","title":"Second tour","start":"Went back because the guys were going back. That is the only honest reason any of us had by then."}
+{"id":"demo-ii-1980.44","week":"1980.44","title":"Plankowner — SEAL Team SIX","start":"Marcinko got handed a blank sheet of paper and told to build a counter-terror team from nothing, and he came looking for his old hands. Thirty-three years old and starting over. We had no manual and no name anybody would say out loud."}
+{"id":"demo-ii-1987.26","week":"1987.26","title":"Retired — twenty-two years","start":"Handed in the gear and went quiet. Nobody tells you that the hardest part is being ordinary again."}
+{"id":"demo-ii-2011.25","week":"2011.25","title":"The last week","start":"Sixty-four. My boy came home from somewhere he could not name and sat with me. I knew what he had done. He never had to say it."}
+{"id":"demo-i-1941.50","week":"1941.50","title":"WW2 — Pearl Harbor","start":"Sunday on the radio. They hit Pearl. Walked down to the recruiter Monday morning with half the town."}
+{"id":"demo-i-1942.25","week":"1942.25","title":"WW2 — Volunteered for the Paratroopers","start":"Fifty bucks more a month to jump out of a perfectly good airplane. Figured I’d rather go down swinging with the best. Airborne."}
+{"id":"demo-i-1942.30","week":"1942.30","title":"WW2 — Camp Toccoa, Currahee","start":"Three miles up, three miles down, every damn day. Sobel rode us into the ground. Easy Company, 506th. We stood alone together."}
+{"id":"demo-i-1942.51","week":"1942.51","title":"WW2 — Got My Jump Wings","start":"Five jumps at Benning and they pinned the silver on my chest. First man in the family to fly — on the way down."}
+{"id":"demo-i-1943.38","week":"1943.38","title":"WW2 — Shipped Out for England","start":"Nine days on a crowded boat to Aldbourne. Trained in English mud for eight months, waiting on a day nobody would name."}
+{"id":"demo-i-1944.24","week":"1944.24","title":"WW2 — D-Day: the Normandy Jump & Brécourt Manor","start":"Out the door over the Channel at 0100. Tracers coming up like the Fourth of July, hit the hedgerows alone, found the boys by dawn. By mid-morning we were on four German 105s shelling Utah Beach — thirteen men took the guns and spiked them. They still teach that one at West Point."}
+{"id":"demo-i-1944.25","week":"1944.25","title":"WW2 — Carentan","start":"House to house, then they hit us on the causeway. Got two coming over a hedge — but Bill caught one through the helmet right next to me. Held the line anyway."}
+{"id":"demo-i-1944.39","week":"1944.39","title":"WW2 — Operation Market Garden","start":"Daylight jump into Holland. The Dutch ran out with bread and flowers like we were the cavalry. Eindhoven was ours by nightfall."}
+{"id":"demo-i-1944.52","week":"1944.52","title":"WW2 — Battle of the Bulge","start":"Surrounded at Bastogne. No coats, no ammo, frozen in the foxholes, the woods getting shredded over our heads. They told us to surrender. The General said \"Nuts.\" We held."}
+{"id":"demo-i-1945.2","week":"1945.2","title":"WW2 — Foy","start":"Took the town across open snow with the 88s zeroed on us. Lost more good men in that field than I’ll ever say. The forest never left me."}
+{"id":"demo-i-1945.18","week":"1945.18","title":"WW2 — The Eagle's Nest","start":"Drove up to Hitler’s own mountain house at Berchtesgaden. Drank his good wine on his own balcony. That was it — the war in Europe was over."}
+{"id":"demo-i-1945.48","week":"1945.48","title":"WW2 — Came Home","start":"Two years and a whole war later, off the train at the platform. Ma knew my walk before she saw my face. Bill didn’t come home. I carry him still."}
+{"id":"demo-i-1947.11","week":"1947.11","title":"My son","start":"Danny II, born in March. Held him in the same hands. Swore he would never have to do what I did — and was wrong about that, twice over."}
+{"id":"demo-i-2001.42","week":"2001.42","title":"The last week","start":"Eighty-three years old, six weeks after the towers came down, with a grandson already packing his bag. Went out with the wings on the nightstand."}

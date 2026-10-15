@@ -1,0 +1,26 @@
+{
+  "case": "danny-family-life",
+  "model": "gemini-4-argon",
+  "repeat": 2,
+  "verdict": {
+    "focusFit": 5,
+    "focusReason": "The outline seamlessly traces all three generations in chronological order, specifically framing the narrative for the author's children.",
+    "unsupported": [
+      {
+        "chapter": "Green Team, Ajax, and Abbottabad",
+        "claim": "Pakistan",
+        "why": "Pakistan is not mentioned in any of the memories."
+      }
+    ]
+  },
+  "response": {
+    "text": "{\n \"focusFit\": 5,\n \"focusReason\": \"The outline seamlessly traces all three generations in chronological order, specifically framing the narrative for the author's children.\",\n \"unsupported\": [\n  {\n   \"chapter\": \"Green Team, Ajax, and Abbottabad\",\n   \"claim\": \"Pakistan\",\n   \"why\": \"Pakistan is not mentioned in any of the memories.\"\n  }\n ]\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 27.82,
+    "inputTokens": 7428,
+    "outputTokens": 4022,
+    "thinkingTokens": 3930,
+    "costUsd": 0.041307
+  }
+}

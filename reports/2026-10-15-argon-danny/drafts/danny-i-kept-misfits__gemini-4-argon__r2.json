@@ -1,0 +1,16 @@
+{
+  "case": "danny-i-kept-misfits",
+  "model": "gemini-4-argon",
+  "repeat": 2,
+  "promptSha": "ea1e0e13f20c5a1b",
+  "response": {
+    "text": "{\"bookType\":null,\"chapters\":[{\"title\":\"Answering the call\",\"note\":\"From the radio news of Pearl Harbor to running Currahee with Easy Company.\",\"entryIds\":[\"demo-i-1941.50\",\"demo-i-1942.25\",\"demo-i-1942.30\"]},{\"keep\":\"wings-1943\"},{\"title\":\"Across the ocean and into Normandy\",\"note\":\"Waiting in England, jumping on D-Day, and losing Bill at Carentan.\",\"entryIds\":[\"demo-i-1943.38\",\"demo-i-1944.24\",\"demo-i-1944.25\"]},{\"title\":\"Holland and the frozen woods\",\"note\":\"Daylight jumps in Holland and holding the line in the snow at Bastogne and Foy.\",\"entryIds\":[\"demo-i-1944.39\",\"demo-i-1944.52\",\"demo-i-1945.2\"]},{\"keep\":\"demo-ch-4\"},{\"keep\":\"demo-ch-5\"},{\"keep\":\"demo-ch-6\"},{\"title\":\"What passes down\",\"note\":\"Fathers and sons, and the silver wings left on the nightstand.\",\"entryIds\":[\"demo-i-1947.11\",\"demo-i-2001.42\"]}]}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-4-argon",
+    "seconds": 5.06,
+    "inputTokens": 1372,
+    "outputTokens": 293,
+    "thinkingTokens": 0,
+    "costUsd": 0.005674
+  }
+}

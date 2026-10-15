@@ -1,0 +1,26 @@
+{
+  "case": "danny-family-life",
+  "model": "gemini-4-argon",
+  "repeat": 3,
+  "verdict": {
+    "focusFit": 5,
+    "focusReason": "The outline perfectly follows a chronological multi-generational memoir crafted specifically for the author's children to learn about their great-grandfather, grandfather, and father.",
+    "unsupported": [
+      {
+        "chapter": "Danny I: The Jump",
+        "claim": "101st Airborne",
+        "why": "The memories mention volunteering for the Paratroopers, Airborne, and the 506th, but never mention the 101st Airborne."
+      }
+    ]
+  },
+  "response": {
+    "text": "{\n  \"focusFit\": 5,\n  \"focusReason\": \"The outline perfectly follows a chronological multi-generational memoir crafted specifically for the author's children to learn about their great-grandfather, grandfather, and father.\",\n  \"unsupported\": [\n    {\n      \"chapter\": \"Danny I: The Jump\",\n      \"claim\": \"101st Airborne\",\n      \"why\": \"The memories mention volunteering for the Paratroopers, Airborne, and the 506th, but never mention the 101st Airborne.\"\n    }\n  ]\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-3.8-flash",
+    "seconds": 15.34,
+    "inputTokens": 7471,
+    "outputTokens": 2257,
+    "thinkingTokens": 2130,
+    "costUsd": 0.028134
+  }
+}

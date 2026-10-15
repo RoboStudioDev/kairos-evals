@@ -1,0 +1,16 @@
+{
+  "case": "danny-shared-versions",
+  "model": "gemini-4-argon",
+  "repeat": 3,
+  "promptSha": "aa8630983b3d293e",
+  "response": {
+    "text": "{\"bookType\":null,\"chapters\":[{\"title\":\"Two Sons Born\",\"note\":\"The births of Danny II in 1947 and Danny III in 1970, told by father and son.\",\"entryIds\":[\"demo-i-1947.11\",\"demo-ii-1947.11\",\"demo-i-1970.27\",\"demo-ii-1970.27\"]},{\"title\":\"The Wings on Loan\",\"note\":\"An afternoon in 1978 when Grandpa pinned his war wings on his seven-year-old grandson.\",\"entryIds\":[\"demo-i-1978.18\",\"demo-ii-1978.18\",\"demo-iii-1978.18\"]},{\"title\":\"Mornings in the Woods\",\"note\":\"Three generations out in the cold with an old thermos and no deer.\",\"entryIds\":[\"demo-ii-1982.47\",\"demo-i-1983.45\",\"demo-iii-1983.45\"]},{\"title\":\"Putting the Scorecard Away\",\"note\":\"An afternoon of target practice in 1985, and the lunch that mattered more.\",\"entryIds\":[\"demo-i-1985.33\",\"demo-ii-1985.33\",\"demo-iii-1985.33\"]},{\"title\":\"A Summer Without Orders\",\"note\":\"Dad's retirement in 1987, and a slow walk up a steep hill together.\",\"entryIds\":[\"demo-ii-1987.26\",\"demo-iii-1987.26\",\"demo-i-1987.33\",\"demo-ii-1987.33\",\"demo-iii-1987.33\"]},{\"title\":\"The Last Weeks\",\"note\":\"Saying goodbye to Grandpa in 2001 and to Dad in 2011.\",\"entryIds\":[\"demo-i-2001.42\",\"demo-iii-2001.42\",\"demo-ii-2011.25\",\"demo-iii-2011.25\"]}]}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-4-argon",
+    "seconds": 7.96,
+    "inputTokens": 2208,
+    "outputTokens": 473,
+    "thinkingTokens": 0,
+    "costUsd": 0.009146
+  }
+}

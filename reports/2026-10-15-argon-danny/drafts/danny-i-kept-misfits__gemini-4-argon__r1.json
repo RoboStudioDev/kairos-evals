@@ -1,0 +1,16 @@
+{
+  "case": "danny-i-kept-misfits",
+  "model": "gemini-4-argon",
+  "repeat": 1,
+  "promptSha": "ea1e0e13f20c5a1b",
+  "response": {
+    "text": "{\n  \"bookType\": null,\n  \"chapters\": [\n    {\n      \"title\": \"Currahee\",\n      \"note\": \"Enlisting after Pearl Harbor and earning a place in Easy Company.\",\n      \"entryIds\": [\n        \"demo-i-1941.50\",\n        \"demo-i-1942.25\",\n        \"demo-i-1942.30\"\n      ]\n    },\n    {\n      \"keep\": \"wings-1943\"\n    },\n    {\n      \"title\": \"Into Normandy\",\n      \"note\": \"Waiting in England, jumping on D-Day, and losing Bill at Carentan.\",\n      \"entryIds\": [\n        \"demo-i-1943.38\",\n        \"demo-i-1944.24\",\n        \"demo-i-1944.25\"\n      ]\n    },\n    {\n      \"title\": \"Holland and the Bulge\",\n      \"note\": \"Jumping into Holland and holding the frozen line from Bastogne to Foy.\",\n      \"entryIds\": [\n        \"demo-i-1944.39\",\n        \"demo-i-1944.52\",\n        \"demo-i-1945.2\"\n      ]\n    },\n    {\n      \"keep\": \"demo-ch-4\"\n    },\n    {\n      \"keep\": \"demo-ch-5\"\n    },\n    {\n      \"keep\": \"demo-ch-6\"\n    },\n    {\n      \"title\": \"What We Pass On\",\n      \"note\": \"Holding my newborn son and watching my grandson answer the call years later.\",\n      \"entryIds\": [\n        \"demo-i-1947.11\",\n        \"demo-i-2001.42\"\n      ]\n    }\n  ]\n}",
+    "finishReason": "STOP",
+    "modelVersion": "gemini-4-argon",
+    "seconds": 7.54,
+    "inputTokens": 1372,
+    "outputTokens": 450,
+    "thinkingTokens": 0,
+    "costUsd": 0.007244
+  }
+}
